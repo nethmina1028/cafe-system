@@ -115,6 +115,7 @@
             this.btn_menu.Size = new System.Drawing.Size(251, 70);
             this.btn_menu.TabIndex = 1;
             this.btn_menu.Text = "Menu";
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // btn_inventory
             // 
@@ -133,6 +134,7 @@
             this.btn_inventory.Size = new System.Drawing.Size(251, 70);
             this.btn_inventory.TabIndex = 2;
             this.btn_inventory.Text = "       Inventory";
+            this.btn_inventory.Click += new System.EventHandler(this.btn_inventory_Click);
             // 
             // btn_reports
             // 
@@ -151,6 +153,7 @@
             this.btn_reports.Size = new System.Drawing.Size(251, 70);
             this.btn_reports.TabIndex = 3;
             this.btn_reports.Text = "    Reports";
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
             // 
             // btn_empoyee
             // 
@@ -170,6 +173,7 @@
             this.btn_empoyee.Size = new System.Drawing.Size(251, 70);
             this.btn_empoyee.TabIndex = 4;
             this.btn_empoyee.Text = "       Employee";
+            this.btn_empoyee.Click += new System.EventHandler(this.btn_empoyee_Click);
             // 
             // btn_settings
             // 
@@ -189,6 +193,7 @@
             this.btn_settings.Size = new System.Drawing.Size(251, 70);
             this.btn_settings.TabIndex = 5;
             this.btn_settings.Text = "    Settings";
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // btn_logout
             // 
@@ -209,6 +214,7 @@
             this.btn_logout.Size = new System.Drawing.Size(251, 70);
             this.btn_logout.TabIndex = 6;
             this.btn_logout.Text = "   Logout";
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // home
             // 

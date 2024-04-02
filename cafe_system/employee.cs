@@ -12,9 +12,11 @@ namespace cafe_system
 {
     public partial class employee : UserControl
     {
+        internal FormBorderStyle FormBorderStyle;
         public employee()
         {
             InitializeComponent();
         }
+        public bool TopLevel { get; internal set; }
     }
 }
