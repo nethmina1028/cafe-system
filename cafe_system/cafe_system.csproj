@@ -150,5 +150,8 @@
   <ItemGroup>
     <Folder Include="assests\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Guna.UI2.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
