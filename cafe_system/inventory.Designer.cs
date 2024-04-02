@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "inventory";
-            this.Size = new System.Drawing.Size(814, 603);
+            this.Size = new System.Drawing.Size(1289, 765);
             this.ResumeLayout(false);
 
         }
