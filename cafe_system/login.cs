@@ -16,5 +16,10 @@ namespace cafe_system
         {
             InitializeComponent();
         }
+
+        private void close_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
