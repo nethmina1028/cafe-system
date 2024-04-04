@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace cafe_system
 {
     public partial class login : Form
     {
+        SqlConnection connect = new SqlConnection();
+
         public login()
         {
             InitializeComponent();
@@ -32,11 +35,58 @@ namespace cafe_system
 
         private void user_login_Click(object sender, EventArgs e)
         {
-            if(txt_user.Text=="" || txt_password.Text=="")
+            if(txt_user.Text == "" || txt_password.Text == "")
             {
-                MessageBox.Show("plase fill all blank", "Information message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("please fill all blank", "Information message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+            }
+            else
+            {
+                if(connect.State  == ConnectionState.Closed)
+                {
+                    try
+                    {
+                        connect.Open();
+
+                        string selectData = "SELECT * FROM users WHERE username =@username AND password =@password";
+
+                        using(SqlCommand cmd = new SqlCommand(selectData,connect))
+                        {
+                            cmd.Parameters.AddWithValue("@username",txt_user.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", txt_password.Text.Trim());
+                             
+                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+
+                            if(table.Rows.Count >= 1)
+                            {
+                                MessageBox.Show("Login Sucess!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                home ho = new home();
+                                ho.Show();
+                                this.Hide();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect user name or password", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+
+                        
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error:"+ex, "Error message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
+                }
             }
            
            
