@@ -15,7 +15,13 @@ namespace cafe_system
         public login()
         {
             InitializeComponent();
+            txt_user.Font = new Font(txt_user.Font.FontFamily, 12, FontStyle.Bold);
+
+            txt_password.Font = new Font(txt_password.Font.FontFamily, 12,FontStyle.Bold);
         }
+
+
+
 
         private void close_MouseClick(object sender, MouseEventArgs e)
         {
