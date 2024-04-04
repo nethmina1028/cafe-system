@@ -15,9 +15,11 @@ namespace cafe_system
         public login()
         {
             InitializeComponent();
-            txt_user.Font = new Font(txt_user.Font.FontFamily, 12, FontStyle.Bold);
 
-            txt_password.Font = new Font(txt_password.Font.FontFamily, 12,FontStyle.Bold);
+            // change place holder text size in here
+            txt_user.Font = new Font(txt_user.Font.FontFamily, 12, FontStyle.Regular);
+
+            txt_password.Font = new Font(txt_password.Font.FontFamily, 12,FontStyle.Regular);
         }
 
 
