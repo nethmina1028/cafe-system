@@ -33,7 +33,7 @@
             this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_user = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.user_login = new Guna.UI2.WinForms.Guna2Button();
             this.close = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(69)))), ((int)(((byte)(50)))));
             this.guna2Panel1.Controls.Add(this.txt_user);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.user_login);
             this.guna2Panel1.Controls.Add(this.txt_password);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.close);
@@ -122,22 +122,23 @@
             this.txt_user.Size = new System.Drawing.Size(274, 49);
             this.txt_user.TabIndex = 6;
             // 
-            // guna2Button1
+            // user_login
             // 
-            this.guna2Button1.BorderRadius = 2;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(54, 341);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(274, 45);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "LOGIN";
-            this.guna2Button1.UseWaitCursor = true;
+            this.user_login.BorderRadius = 2;
+            this.user_login.CheckedState.Parent = this.user_login;
+            this.user_login.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.user_login.CustomImages.Parent = this.user_login;
+            this.user_login.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
+            this.user_login.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_login.ForeColor = System.Drawing.Color.Black;
+            this.user_login.HoverState.Parent = this.user_login;
+            this.user_login.Location = new System.Drawing.Point(54, 341);
+            this.user_login.Name = "user_login";
+            this.user_login.ShadowDecoration.Parent = this.user_login;
+            this.user_login.Size = new System.Drawing.Size(274, 45);
+            this.user_login.TabIndex = 5;
+            this.user_login.Text = "LOGIN";
+            this.user_login.Click += new System.EventHandler(this.user_login_Click);
             // 
             // close
             // 
@@ -183,7 +184,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2TextBox txt_password;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button user_login;
         private Guna.UI2.WinForms.Guna2Panel close;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox txt_user;

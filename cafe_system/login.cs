@@ -29,5 +29,19 @@ namespace cafe_system
         {
             Application.Exit();
         }
+
+        private void user_login_Click(object sender, EventArgs e)
+        {
+            if(txt_user.Text=="" || txt_password.Text=="")
+            {
+                MessageBox.Show("plase fill all blank", "Information message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+           
+           
+            
+
+        }
     }
 }
