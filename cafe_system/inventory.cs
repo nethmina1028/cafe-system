@@ -61,7 +61,7 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@Price", Price);
             cmd.Parameters.AddWithValue("@Stock", Stock);
             cmd.Parameters.AddWithValue("@Type", Type);
-            //cmd.Parameters.AddWithValue("@Image", imageData);
+            cmd.Parameters.AddWithValue("@Image", imageData);
 
 
             try
@@ -92,9 +92,13 @@ namespace cafe_system
         {
             DataTable dataTable = new DataTable();
             dataGridView1.DataSource = dataTable;
-            typebox.Items.Add("Breakfast");
-            typebox.Items.Add("Lunch");
-            typebox.Items.Add("Dinner");
+            typebox.Items.Add("Snacks");
+            typebox.Items.Add("Drinks");
+            typebox.Items.Add("Salads");
+            typebox.Items.Add("Pizza");
+            typebox.Items.Add("Soups");
+
+
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
             SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
