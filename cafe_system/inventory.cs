@@ -50,7 +50,7 @@ namespace cafe_system
             int Stock = int.Parse(txtstock.Text);
             string Type = typebox.Text;
 
-            //MessageBox.Show("Successfully Saved");
+           
 
             string query = $"INSERT INTO   [cafe] (ProductId,ProductName,Price,Stock,Type) VALUES({ProductId},'{ProductName}',{Price},{Stock},'{Type}')";
 
@@ -61,6 +61,7 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@Price", Price);
             cmd.Parameters.AddWithValue("@Stock", Stock);
             cmd.Parameters.AddWithValue("@Type", Type);
+            //cmd.Parameters.AddWithValue("@Image", imageData);
 
 
             try
@@ -94,6 +95,16 @@ namespace cafe_system
             typebox.Items.Add("Breakfast");
             typebox.Items.Add("Lunch");
             typebox.Items.Add("Dinner");
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
+            con1.Open();
+            SqlCommand cmd = new SqlCommand("Select * from [cafe]", con1);
+            SqlDataAdapter
+            da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
 
         private void bttnUpdate_Click(object sender, EventArgs e)
@@ -208,17 +219,16 @@ namespace cafe_system
             {
 
                 string imagePath = openFileDialog1.FileName;
-
-
                 imageData = File.ReadAllBytes(imagePath);
-
-
                 imagebox.Image = Image.FromFile(imagePath);
             }
         }
 
         private void imagebox_Click(object sender, EventArgs e)
         {
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
+            
+            
             int ProductId = int.Parse(txtpid.Text);
             string ProductName = txtpname.Text;
             double Price = double.Parse(txtprice.Text);
@@ -236,7 +246,7 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@Price", Price);
             cmd.Parameters.AddWithValue("@Stock", Stock);
             cmd.Parameters.AddWithValue("@Type", Type);
-            cmd.Parameters.AddWithValue("@Image", imageData); // Add image byte array parameter
+            cmd.Parameters.AddWithValue("@Image", imageData); 
 
             try
             {
@@ -248,7 +258,7 @@ namespace cafe_system
                 {
                     MessageBox.Show("Successfully Saved");
 
-                    // Refresh DataGridView
+                    
                     dataSet.Clear();
                     adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
                     adapter.Fill(dataSet, "cafe");
