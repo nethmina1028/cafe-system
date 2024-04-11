@@ -29,7 +29,7 @@ namespace cafe_system
         public inventory()
         {
             InitializeComponent();
-            con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
+            con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database5.mdf;Integrated Security=True");
             adapter = new SqlDataAdapter();
             dataSet = new DataSet();
             openFileDialog1 = new OpenFileDialog();
@@ -42,7 +42,7 @@ namespace cafe_system
         private void bttnAdd_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database5.mdf;Integrated Security=True");
 
             int ProductId = int.Parse(txtpid.Text);
             string ProductName = txtpname.Text;
@@ -101,7 +101,7 @@ namespace cafe_system
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
-            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database5.mdf;Integrated Security=True");
             con1.Open();
             SqlCommand cmd = new SqlCommand("Select * from [cafe]", con1);
             SqlDataAdapter
@@ -168,7 +168,7 @@ namespace cafe_system
             txtprice.Text = "";
             txtstock.Text = "";
             typebox.SelectedIndex = -1;
-
+            search.Text = "";
         }
 
         private void bttnDelete_Click(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace cafe_system
             {
                 int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
 
-                // Get the ProductId from the first column of the selected row
+                
                 int productId = Convert.ToInt32(dataGridView1.Rows[selectedRowIndex].Cells[0].Value);
 
                 string query = "DELETE FROM [cafe] WHERE ProductId = @ProductId";
@@ -195,7 +195,7 @@ namespace cafe_system
                     {
                         MessageBox.Show("Successfully Deleted");
 
-                        // Refresh DataGridView
+                        
                         dataSet.Clear();
                         adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
                         adapter.Fill(dataSet, "cafe");
@@ -230,7 +230,7 @@ namespace cafe_system
 
         private void imagebox_Click(object sender, EventArgs e)
         {
-            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database5.mdf;Integrated Security=True");
             
             
             int ProductId = int.Parse(txtpid.Text);
@@ -290,7 +290,7 @@ namespace cafe_system
 
                     if (con1 == null)
                     {
-                        con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database1.mdf;Integrated Security=True");
+                        con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database5.mdf;Integrated Security=True");
                     }
 
                     string query = "SELECT * FROM [cafe] WHERE ProductId = @SearchText OR ProductName LIKE @SearchText";
