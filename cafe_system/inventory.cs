@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Guna.UI2.WinForms.Suite;
 
 namespace cafe_system
 {
@@ -41,18 +42,15 @@ namespace cafe_system
 
         private void bttnAdd_Click(object sender, EventArgs e)
         {
-
-            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\_USER_\source\repos\cafe-system\cafe_system\Database5.mdf;Integrated Security=True");
-
             int ProductId = int.Parse(txtpid.Text);
             string ProductName = txtpname.Text;
             double Price = double.Parse(txtprice.Text);
             int Stock = int.Parse(txtstock.Text);
             string Type = typebox.Text;
 
-           
+            byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = $"INSERT INTO   [cafe] (ProductId,ProductName,Price,Stock,Type) VALUES({ProductId},'{ProductName}',{Price},{Stock},'{Type}')";
+            string query = "INSERT INTO [cafe] (ProductId, ProductName, Price, Stock, Type, Image) VALUES (@ProductId, @ProductName, @Price, @Stock, @Type, @ImageData)";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -61,8 +59,7 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@Price", Price);
             cmd.Parameters.AddWithValue("@Stock", Stock);
             cmd.Parameters.AddWithValue("@Type", Type);
-            cmd.Parameters.AddWithValue("@Image", imageData);
-
+            cmd.Parameters.AddWithValue("@ImageData", imageData);
 
             try
             {
@@ -70,13 +67,10 @@ namespace cafe_system
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Successfully Saved");
 
-
                 adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
-
-
+                dataSet.Clear();
                 adapter.Fill(dataSet, "cafe");
                 dataGridView1.DataSource = dataSet.Tables["cafe"];
-
             }
             catch (Exception ex)
             {
@@ -90,6 +84,9 @@ namespace cafe_system
 
         private void inventory_Load(object sender, EventArgs e)
         {
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+
             DataTable dataTable = new DataTable();
             dataGridView1.DataSource = dataTable;
             typebox.Items.Add("Snacks");
@@ -221,10 +218,12 @@ namespace cafe_system
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
                 string imagePath = openFileDialog1.FileName;
                 imageData = File.ReadAllBytes(imagePath);
+
                 imagebox.Image = Image.FromFile(imagePath);
+
+                this.imagePath = imagePath;
             }
         }
 
@@ -279,6 +278,11 @@ namespace cafe_system
             }
         }
 
+        private void ProcessSelectedImage(string imagePath)
+        {
+            imagebox.Image = Image.FromFile(imagePath);
+        }
+
         private void bttnSearch_Click(object sender, EventArgs e)
         {
             string searchText = search.Text.Trim();
@@ -325,7 +329,7 @@ namespace cafe_system
                 }
                 finally
                 {
-                    // Close the connection if it's open
+                   
                     if (con1 != null && con1.State == ConnectionState.Open)
                     {
                         con1.Close();
