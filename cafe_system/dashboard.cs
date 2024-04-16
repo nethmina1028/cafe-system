@@ -20,5 +20,15 @@ namespace cafe_system
         }
 
         public bool TopLevel { get; internal set; }
+
+        private void guna2Panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
