@@ -130,13 +130,13 @@ namespace cafe_system
             {
                 con1.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
+                int secondRowsAffected = cmd.ExecuteNonQuery();
                 con1.Close();
 
-                if (rowsAffected > 0)
+                if (rowsAffected > 0 && secondRowsAffected > 0)
                 {
                     MessageBox.Show("Successfully Updated");
 
-                    // Refresh DataGridView
                     dataSet.Clear();
                     adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
                     adapter.Fill(dataSet, "cafe");
@@ -166,6 +166,7 @@ namespace cafe_system
             txtstock.Text = "";
             typebox.SelectedIndex = -1;
             search.Text = "";
+            imagebox.Image = null;
         }
 
         private void bttnDelete_Click(object sender, EventArgs e)
