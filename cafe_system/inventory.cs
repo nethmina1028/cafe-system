@@ -23,8 +23,6 @@ namespace cafe_system
         private OpenFileDialog openFileDialog1;
         private byte[] imageData;
         private string imagePath;
-
-
         internal FormBorderStyle FormBorderStyle;
 
         public inventory()
