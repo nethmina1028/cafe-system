@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,5 +20,36 @@ namespace cafe_system
             InitializeComponent();
         }
         public bool TopLevel { get; internal set; }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Emp_Clear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Emp_Update_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }
+
+
+
