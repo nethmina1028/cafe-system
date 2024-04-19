@@ -35,19 +35,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bttnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.bttnClear = new Guna.UI2.WinForms.Guna2Button();
-            this.bttnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.bttnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.Inven_btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.Inven_btnClear = new Guna.UI2.WinForms.Guna2Button();
+            this.Inven_btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.Inven_btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.bttnUpload = new Guna.UI2.WinForms.Guna2Button();
-            this.imagebox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.typebox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtstock = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtprice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtpname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtpid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Inven_btnUpload = new Guna.UI2.WinForms.Guna2Button();
+            this.Inven_imagebox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.inven_typebox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Inven_stock = new Guna.UI2.WinForms.Guna2TextBox();
+            this.inven_price = new Guna.UI2.WinForms.Guna2TextBox();
+            this.inven_Pname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.inven_pId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,105 +56,105 @@
             this.cafeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cafeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.inven_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.bttnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.Inven_btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.inven_dataGrid = new System.Windows.Forms.DataGridView();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inven_imagebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cafeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cafeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inven_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // bttnDelete
+            // Inven_btnDelete
             // 
-            this.bttnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bttnDelete.BorderRadius = 5;
-            this.bttnDelete.CheckedState.Parent = this.bttnDelete;
-            this.bttnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnDelete.CustomImages.Parent = this.bttnDelete;
-            this.bttnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(44)))), ((int)(((byte)(83)))));
-            this.bttnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnDelete.ForeColor = System.Drawing.Color.White;
-            this.bttnDelete.HoverState.Parent = this.bttnDelete;
-            this.bttnDelete.Location = new System.Drawing.Point(1068, 5);
-            this.bttnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.bttnDelete.Name = "bttnDelete";
-            this.bttnDelete.ShadowDecoration.Parent = this.bttnDelete;
-            this.bttnDelete.Size = new System.Drawing.Size(163, 47);
-            this.bttnDelete.TabIndex = 15;
-            this.bttnDelete.Text = "Delete";
+            this.Inven_btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Inven_btnDelete.BorderRadius = 5;
+            this.Inven_btnDelete.CheckedState.Parent = this.Inven_btnDelete;
+            this.Inven_btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Inven_btnDelete.CustomImages.Parent = this.Inven_btnDelete;
+            this.Inven_btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(44)))), ((int)(((byte)(83)))));
+            this.Inven_btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inven_btnDelete.ForeColor = System.Drawing.Color.White;
+            this.Inven_btnDelete.HoverState.Parent = this.Inven_btnDelete;
+            this.Inven_btnDelete.Location = new System.Drawing.Point(1068, 5);
+            this.Inven_btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.Inven_btnDelete.Name = "Inven_btnDelete";
+            this.Inven_btnDelete.ShadowDecoration.Parent = this.Inven_btnDelete;
+            this.Inven_btnDelete.Size = new System.Drawing.Size(163, 47);
+            this.Inven_btnDelete.TabIndex = 15;
+            this.Inven_btnDelete.Text = "Delete";
             // 
-            // bttnClear
+            // Inven_btnClear
             // 
-            this.bttnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bttnClear.BorderRadius = 5;
-            this.bttnClear.CheckedState.Parent = this.bttnClear;
-            this.bttnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnClear.CustomImages.Parent = this.bttnClear;
-            this.bttnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(100)))), ((int)(((byte)(147)))));
-            this.bttnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnClear.ForeColor = System.Drawing.Color.White;
-            this.bttnClear.HoverState.Parent = this.bttnClear;
-            this.bttnClear.Location = new System.Drawing.Point(890, 5);
-            this.bttnClear.Margin = new System.Windows.Forms.Padding(4);
-            this.bttnClear.Name = "bttnClear";
-            this.bttnClear.ShadowDecoration.Parent = this.bttnClear;
-            this.bttnClear.Size = new System.Drawing.Size(163, 47);
-            this.bttnClear.TabIndex = 14;
-            this.bttnClear.Text = "Clear";
+            this.Inven_btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Inven_btnClear.BorderRadius = 5;
+            this.Inven_btnClear.CheckedState.Parent = this.Inven_btnClear;
+            this.Inven_btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Inven_btnClear.CustomImages.Parent = this.Inven_btnClear;
+            this.Inven_btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(100)))), ((int)(((byte)(147)))));
+            this.Inven_btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inven_btnClear.ForeColor = System.Drawing.Color.White;
+            this.Inven_btnClear.HoverState.Parent = this.Inven_btnClear;
+            this.Inven_btnClear.Location = new System.Drawing.Point(890, 5);
+            this.Inven_btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.Inven_btnClear.Name = "Inven_btnClear";
+            this.Inven_btnClear.ShadowDecoration.Parent = this.Inven_btnClear;
+            this.Inven_btnClear.Size = new System.Drawing.Size(163, 47);
+            this.Inven_btnClear.TabIndex = 14;
+            this.Inven_btnClear.Text = "Clear";
             // 
-            // bttnUpdate
+            // Inven_btnUpdate
             // 
-            this.bttnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bttnUpdate.BorderRadius = 5;
-            this.bttnUpdate.CheckedState.Parent = this.bttnUpdate;
-            this.bttnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnUpdate.CustomImages.Parent = this.bttnUpdate;
-            this.bttnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(147)))), ((int)(((byte)(70)))));
-            this.bttnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnUpdate.ForeColor = System.Drawing.Color.White;
-            this.bttnUpdate.HoverState.Parent = this.bttnUpdate;
-            this.bttnUpdate.Location = new System.Drawing.Point(714, 5);
-            this.bttnUpdate.Margin = new System.Windows.Forms.Padding(4);
-            this.bttnUpdate.Name = "bttnUpdate";
-            this.bttnUpdate.ShadowDecoration.Parent = this.bttnUpdate;
-            this.bttnUpdate.Size = new System.Drawing.Size(163, 47);
-            this.bttnUpdate.TabIndex = 13;
-            this.bttnUpdate.Text = "Update";
+            this.Inven_btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Inven_btnUpdate.BorderRadius = 5;
+            this.Inven_btnUpdate.CheckedState.Parent = this.Inven_btnUpdate;
+            this.Inven_btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Inven_btnUpdate.CustomImages.Parent = this.Inven_btnUpdate;
+            this.Inven_btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(147)))), ((int)(((byte)(70)))));
+            this.Inven_btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inven_btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.Inven_btnUpdate.HoverState.Parent = this.Inven_btnUpdate;
+            this.Inven_btnUpdate.Location = new System.Drawing.Point(714, 5);
+            this.Inven_btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.Inven_btnUpdate.Name = "Inven_btnUpdate";
+            this.Inven_btnUpdate.ShadowDecoration.Parent = this.Inven_btnUpdate;
+            this.Inven_btnUpdate.Size = new System.Drawing.Size(163, 47);
+            this.Inven_btnUpdate.TabIndex = 13;
+            this.Inven_btnUpdate.Text = "Update";
             // 
-            // bttnAdd
+            // Inven_btnAdd
             // 
-            this.bttnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bttnAdd.BorderRadius = 5;
-            this.bttnAdd.CheckedState.Parent = this.bttnAdd;
-            this.bttnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnAdd.CustomImages.Parent = this.bttnAdd;
-            this.bttnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(132)))), ((int)(((byte)(156)))));
-            this.bttnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnAdd.ForeColor = System.Drawing.Color.White;
-            this.bttnAdd.HoverState.Parent = this.bttnAdd;
-            this.bttnAdd.Location = new System.Drawing.Point(539, 5);
-            this.bttnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.bttnAdd.Name = "bttnAdd";
-            this.bttnAdd.ShadowDecoration.Parent = this.bttnAdd;
-            this.bttnAdd.Size = new System.Drawing.Size(163, 47);
-            this.bttnAdd.TabIndex = 12;
-            this.bttnAdd.Text = "Add";
+            this.Inven_btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Inven_btnAdd.BorderRadius = 5;
+            this.Inven_btnAdd.CheckedState.Parent = this.Inven_btnAdd;
+            this.Inven_btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Inven_btnAdd.CustomImages.Parent = this.Inven_btnAdd;
+            this.Inven_btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(132)))), ((int)(((byte)(156)))));
+            this.Inven_btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inven_btnAdd.ForeColor = System.Drawing.Color.White;
+            this.Inven_btnAdd.HoverState.Parent = this.Inven_btnAdd;
+            this.Inven_btnAdd.Location = new System.Drawing.Point(539, 5);
+            this.Inven_btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.Inven_btnAdd.Name = "Inven_btnAdd";
+            this.Inven_btnAdd.ShadowDecoration.Parent = this.Inven_btnAdd;
+            this.Inven_btnAdd.Size = new System.Drawing.Size(163, 47);
+            this.Inven_btnAdd.TabIndex = 12;
+            this.Inven_btnAdd.Text = "Add";
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel4.Controls.Add(this.bttnDelete);
-            this.guna2Panel4.Controls.Add(this.bttnClear);
-            this.guna2Panel4.Controls.Add(this.bttnUpdate);
-            this.guna2Panel4.Controls.Add(this.bttnAdd);
+            this.guna2Panel4.Controls.Add(this.Inven_btnDelete);
+            this.guna2Panel4.Controls.Add(this.Inven_btnClear);
+            this.guna2Panel4.Controls.Add(this.Inven_btnUpdate);
+            this.guna2Panel4.Controls.Add(this.Inven_btnAdd);
             this.guna2Panel4.Location = new System.Drawing.Point(4, 853);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel4.Name = "guna2Panel4";
@@ -166,13 +166,13 @@
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Panel2.BackColor = System.Drawing.Color.LightGray;
-            this.guna2Panel2.Controls.Add(this.bttnUpload);
-            this.guna2Panel2.Controls.Add(this.imagebox);
-            this.guna2Panel2.Controls.Add(this.typebox);
-            this.guna2Panel2.Controls.Add(this.txtstock);
-            this.guna2Panel2.Controls.Add(this.txtprice);
-            this.guna2Panel2.Controls.Add(this.txtpname);
-            this.guna2Panel2.Controls.Add(this.txtpid);
+            this.guna2Panel2.Controls.Add(this.Inven_btnUpload);
+            this.guna2Panel2.Controls.Add(this.Inven_imagebox);
+            this.guna2Panel2.Controls.Add(this.inven_typebox);
+            this.guna2Panel2.Controls.Add(this.Inven_stock);
+            this.guna2Panel2.Controls.Add(this.inven_price);
+            this.guna2Panel2.Controls.Add(this.inven_Pname);
+            this.guna2Panel2.Controls.Add(this.inven_pId);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label3);
@@ -186,175 +186,175 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1695, 252);
             this.guna2Panel2.TabIndex = 9;
             // 
-            // bttnUpload
+            // Inven_btnUpload
             // 
-            this.bttnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bttnUpload.CheckedState.Parent = this.bttnUpload;
-            this.bttnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnUpload.CustomImages.Parent = this.bttnUpload;
-            this.bttnUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bttnUpload.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnUpload.ForeColor = System.Drawing.Color.White;
-            this.bttnUpload.HoverState.Parent = this.bttnUpload;
-            this.bttnUpload.Location = new System.Drawing.Point(1154, 185);
-            this.bttnUpload.Margin = new System.Windows.Forms.Padding(4);
-            this.bttnUpload.Name = "bttnUpload";
-            this.bttnUpload.ShadowDecoration.Parent = this.bttnUpload;
-            this.bttnUpload.Size = new System.Drawing.Size(229, 25);
-            this.bttnUpload.TabIndex = 11;
-            this.bttnUpload.Text = "Upload";
+            this.Inven_btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Inven_btnUpload.CheckedState.Parent = this.Inven_btnUpload;
+            this.Inven_btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Inven_btnUpload.CustomImages.Parent = this.Inven_btnUpload;
+            this.Inven_btnUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Inven_btnUpload.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inven_btnUpload.ForeColor = System.Drawing.Color.White;
+            this.Inven_btnUpload.HoverState.Parent = this.Inven_btnUpload;
+            this.Inven_btnUpload.Location = new System.Drawing.Point(1154, 185);
+            this.Inven_btnUpload.Margin = new System.Windows.Forms.Padding(4);
+            this.Inven_btnUpload.Name = "Inven_btnUpload";
+            this.Inven_btnUpload.ShadowDecoration.Parent = this.Inven_btnUpload;
+            this.Inven_btnUpload.Size = new System.Drawing.Size(229, 25);
+            this.Inven_btnUpload.TabIndex = 11;
+            this.Inven_btnUpload.Text = "Upload";
             // 
-            // imagebox
+            // Inven_imagebox
             // 
-            this.imagebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.imagebox.Image = ((System.Drawing.Image)(resources.GetObject("imagebox.Image")));
-            this.imagebox.Location = new System.Drawing.Point(1154, 14);
-            this.imagebox.Margin = new System.Windows.Forms.Padding(4);
-            this.imagebox.Name = "imagebox";
-            this.imagebox.ShadowDecoration.Parent = this.imagebox;
-            this.imagebox.Size = new System.Drawing.Size(229, 169);
-            this.imagebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagebox.TabIndex = 10;
-            this.imagebox.TabStop = false;
+            this.Inven_imagebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Inven_imagebox.Image = ((System.Drawing.Image)(resources.GetObject("Inven_imagebox.Image")));
+            this.Inven_imagebox.Location = new System.Drawing.Point(1154, 14);
+            this.Inven_imagebox.Margin = new System.Windows.Forms.Padding(4);
+            this.Inven_imagebox.Name = "Inven_imagebox";
+            this.Inven_imagebox.ShadowDecoration.Parent = this.Inven_imagebox;
+            this.Inven_imagebox.Size = new System.Drawing.Size(229, 169);
+            this.Inven_imagebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Inven_imagebox.TabIndex = 10;
+            this.Inven_imagebox.TabStop = false;
             // 
-            // typebox
+            // inven_typebox
             // 
-            this.typebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.typebox.BackColor = System.Drawing.Color.Transparent;
-            this.typebox.BorderColor = System.Drawing.Color.Transparent;
-            this.typebox.BorderThickness = 0;
-            this.typebox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.typebox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.typebox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.typebox.FocusedColor = System.Drawing.Color.Empty;
-            this.typebox.FocusedState.Parent = this.typebox;
-            this.typebox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.typebox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.typebox.FormattingEnabled = true;
-            this.typebox.HoverState.Parent = this.typebox;
-            this.typebox.ItemHeight = 30;
-            this.typebox.ItemsAppearance.Parent = this.typebox;
-            this.typebox.Location = new System.Drawing.Point(316, 174);
-            this.typebox.Margin = new System.Windows.Forms.Padding(4);
-            this.typebox.Name = "typebox";
-            this.typebox.ShadowDecoration.Parent = this.typebox;
-            this.typebox.Size = new System.Drawing.Size(261, 36);
-            this.typebox.TabIndex = 9;
+            this.inven_typebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.inven_typebox.BackColor = System.Drawing.Color.Transparent;
+            this.inven_typebox.BorderColor = System.Drawing.Color.Transparent;
+            this.inven_typebox.BorderThickness = 0;
+            this.inven_typebox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.inven_typebox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inven_typebox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.inven_typebox.FocusedColor = System.Drawing.Color.Empty;
+            this.inven_typebox.FocusedState.Parent = this.inven_typebox;
+            this.inven_typebox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inven_typebox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.inven_typebox.FormattingEnabled = true;
+            this.inven_typebox.HoverState.Parent = this.inven_typebox;
+            this.inven_typebox.ItemHeight = 30;
+            this.inven_typebox.ItemsAppearance.Parent = this.inven_typebox;
+            this.inven_typebox.Location = new System.Drawing.Point(316, 174);
+            this.inven_typebox.Margin = new System.Windows.Forms.Padding(4);
+            this.inven_typebox.Name = "inven_typebox";
+            this.inven_typebox.ShadowDecoration.Parent = this.inven_typebox;
+            this.inven_typebox.Size = new System.Drawing.Size(261, 36);
+            this.inven_typebox.TabIndex = 9;
             // 
-            // txtstock
+            // Inven_stock
             // 
-            this.txtstock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtstock.BorderColor = System.Drawing.Color.Transparent;
-            this.txtstock.BorderThickness = 0;
-            this.txtstock.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtstock.DefaultText = "";
-            this.txtstock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtstock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtstock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtstock.DisabledState.Parent = this.txtstock;
-            this.txtstock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtstock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtstock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtstock.FocusedState.Parent = this.txtstock;
-            this.txtstock.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtstock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtstock.HoverState.Parent = this.txtstock;
-            this.txtstock.Location = new System.Drawing.Point(751, 105);
-            this.txtstock.Margin = new System.Windows.Forms.Padding(49, 44, 49, 44);
-            this.txtstock.Name = "txtstock";
-            this.txtstock.PasswordChar = '\0';
-            this.txtstock.PlaceholderText = "";
-            this.txtstock.SelectedText = "";
-            this.txtstock.ShadowDecoration.Parent = this.txtstock;
-            this.txtstock.Size = new System.Drawing.Size(261, 46);
-            this.txtstock.TabIndex = 8;
+            this.Inven_stock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Inven_stock.BorderColor = System.Drawing.Color.Transparent;
+            this.Inven_stock.BorderThickness = 0;
+            this.Inven_stock.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Inven_stock.DefaultText = "";
+            this.Inven_stock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Inven_stock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Inven_stock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Inven_stock.DisabledState.Parent = this.Inven_stock;
+            this.Inven_stock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Inven_stock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.Inven_stock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Inven_stock.FocusedState.Parent = this.Inven_stock;
+            this.Inven_stock.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Inven_stock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Inven_stock.HoverState.Parent = this.Inven_stock;
+            this.Inven_stock.Location = new System.Drawing.Point(751, 105);
+            this.Inven_stock.Margin = new System.Windows.Forms.Padding(49, 44, 49, 44);
+            this.Inven_stock.Name = "Inven_stock";
+            this.Inven_stock.PasswordChar = '\0';
+            this.Inven_stock.PlaceholderText = "";
+            this.Inven_stock.SelectedText = "";
+            this.Inven_stock.ShadowDecoration.Parent = this.Inven_stock;
+            this.Inven_stock.Size = new System.Drawing.Size(261, 46);
+            this.Inven_stock.TabIndex = 8;
             // 
-            // txtprice
+            // inven_price
             // 
-            this.txtprice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtprice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.txtprice.BorderColor = System.Drawing.Color.Black;
-            this.txtprice.BorderThickness = 0;
-            this.txtprice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtprice.DefaultText = "";
-            this.txtprice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtprice.DisabledState.Parent = this.txtprice;
-            this.txtprice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtprice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtprice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtprice.FocusedState.Parent = this.txtprice;
-            this.txtprice.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtprice.HoverState.Parent = this.txtprice;
-            this.txtprice.Location = new System.Drawing.Point(751, 28);
-            this.txtprice.Margin = new System.Windows.Forms.Padding(49, 44, 49, 44);
-            this.txtprice.Name = "txtprice";
-            this.txtprice.PasswordChar = '\0';
-            this.txtprice.PlaceholderText = "";
-            this.txtprice.SelectedText = "";
-            this.txtprice.ShadowDecoration.Parent = this.txtprice;
-            this.txtprice.Size = new System.Drawing.Size(261, 46);
-            this.txtprice.TabIndex = 7;
+            this.inven_price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.inven_price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.inven_price.BorderColor = System.Drawing.Color.Black;
+            this.inven_price.BorderThickness = 0;
+            this.inven_price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inven_price.DefaultText = "";
+            this.inven_price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.inven_price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.inven_price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_price.DisabledState.Parent = this.inven_price;
+            this.inven_price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_price.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.inven_price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_price.FocusedState.Parent = this.inven_price;
+            this.inven_price.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inven_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_price.HoverState.Parent = this.inven_price;
+            this.inven_price.Location = new System.Drawing.Point(751, 28);
+            this.inven_price.Margin = new System.Windows.Forms.Padding(49, 44, 49, 44);
+            this.inven_price.Name = "inven_price";
+            this.inven_price.PasswordChar = '\0';
+            this.inven_price.PlaceholderText = "";
+            this.inven_price.SelectedText = "";
+            this.inven_price.ShadowDecoration.Parent = this.inven_price;
+            this.inven_price.Size = new System.Drawing.Size(261, 46);
+            this.inven_price.TabIndex = 7;
             // 
-            // txtpname
+            // inven_Pname
             // 
-            this.txtpname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtpname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.txtpname.BorderColor = System.Drawing.Color.Black;
-            this.txtpname.BorderThickness = 0;
-            this.txtpname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpname.DefaultText = "";
-            this.txtpname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtpname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtpname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpname.DisabledState.Parent = this.txtpname;
-            this.txtpname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpname.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtpname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpname.FocusedState.Parent = this.txtpname;
-            this.txtpname.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtpname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpname.HoverState.Parent = this.txtpname;
-            this.txtpname.Location = new System.Drawing.Point(317, 105);
-            this.txtpname.Margin = new System.Windows.Forms.Padding(21, 20, 21, 20);
-            this.txtpname.Name = "txtpname";
-            this.txtpname.PasswordChar = '\0';
-            this.txtpname.PlaceholderText = "";
-            this.txtpname.SelectedText = "";
-            this.txtpname.ShadowDecoration.Parent = this.txtpname;
-            this.txtpname.Size = new System.Drawing.Size(261, 46);
-            this.txtpname.TabIndex = 6;
+            this.inven_Pname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.inven_Pname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.inven_Pname.BorderColor = System.Drawing.Color.Black;
+            this.inven_Pname.BorderThickness = 0;
+            this.inven_Pname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inven_Pname.DefaultText = "";
+            this.inven_Pname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.inven_Pname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.inven_Pname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_Pname.DisabledState.Parent = this.inven_Pname;
+            this.inven_Pname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_Pname.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.inven_Pname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_Pname.FocusedState.Parent = this.inven_Pname;
+            this.inven_Pname.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inven_Pname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_Pname.HoverState.Parent = this.inven_Pname;
+            this.inven_Pname.Location = new System.Drawing.Point(317, 105);
+            this.inven_Pname.Margin = new System.Windows.Forms.Padding(21, 20, 21, 20);
+            this.inven_Pname.Name = "inven_Pname";
+            this.inven_Pname.PasswordChar = '\0';
+            this.inven_Pname.PlaceholderText = "";
+            this.inven_Pname.SelectedText = "";
+            this.inven_Pname.ShadowDecoration.Parent = this.inven_Pname;
+            this.inven_Pname.Size = new System.Drawing.Size(261, 46);
+            this.inven_Pname.TabIndex = 6;
             // 
-            // txtpid
+            // inven_pId
             // 
-            this.txtpid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtpid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.txtpid.BorderColor = System.Drawing.Color.Black;
-            this.txtpid.BorderThickness = 0;
-            this.txtpid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpid.DefaultText = "";
-            this.txtpid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtpid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtpid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpid.DisabledState.Parent = this.txtpid;
-            this.txtpid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpid.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtpid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpid.FocusedState.Parent = this.txtpid;
-            this.txtpid.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtpid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpid.HoverState.Parent = this.txtpid;
-            this.txtpid.Location = new System.Drawing.Point(316, 28);
-            this.txtpid.Margin = new System.Windows.Forms.Padding(9);
-            this.txtpid.Name = "txtpid";
-            this.txtpid.PasswordChar = '\0';
-            this.txtpid.PlaceholderText = "";
-            this.txtpid.SelectedText = "";
-            this.txtpid.ShadowDecoration.Parent = this.txtpid;
-            this.txtpid.Size = new System.Drawing.Size(261, 46);
-            this.txtpid.TabIndex = 5;
+            this.inven_pId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.inven_pId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.inven_pId.BorderColor = System.Drawing.Color.Black;
+            this.inven_pId.BorderThickness = 0;
+            this.inven_pId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inven_pId.DefaultText = "";
+            this.inven_pId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.inven_pId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.inven_pId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_pId.DisabledState.Parent = this.inven_pId;
+            this.inven_pId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_pId.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.inven_pId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_pId.FocusedState.Parent = this.inven_pId;
+            this.inven_pId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inven_pId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_pId.HoverState.Parent = this.inven_pId;
+            this.inven_pId.Location = new System.Drawing.Point(316, 28);
+            this.inven_pId.Margin = new System.Windows.Forms.Padding(9);
+            this.inven_pId.Name = "inven_pId";
+            this.inven_pId.PasswordChar = '\0';
+            this.inven_pId.PlaceholderText = "";
+            this.inven_pId.SelectedText = "";
+            this.inven_pId.ShadowDecoration.Parent = this.inven_pId;
+            this.inven_pId.Size = new System.Drawing.Size(261, 46);
+            this.inven_pId.TabIndex = 5;
             // 
             // label5
             // 
@@ -448,43 +448,43 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // search
+            // inven_search
             // 
-            this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.search.BorderRadius = 8;
-            this.search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.search.DefaultText = "";
-            this.search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.search.DisabledState.Parent = this.search;
-            this.search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.search.FocusedState.Parent = this.search;
-            this.search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.search.HoverState.Parent = this.search;
-            this.search.Location = new System.Drawing.Point(20, 28);
-            this.search.Margin = new System.Windows.Forms.Padding(5);
-            this.search.Name = "search";
-            this.search.PasswordChar = '\0';
-            this.search.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(146)))), ((int)(((byte)(142)))));
-            this.search.PlaceholderText = "Search using Product ID";
-            this.search.SelectedText = "";
-            this.search.ShadowDecoration.Parent = this.search;
-            this.search.Size = new System.Drawing.Size(330, 47);
-            this.search.TabIndex = 0;
-            this.search.TextOffset = new System.Drawing.Point(20, 0);
+            this.inven_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.inven_search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.inven_search.BorderRadius = 8;
+            this.inven_search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inven_search.DefaultText = "";
+            this.inven_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.inven_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.inven_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_search.DisabledState.Parent = this.inven_search;
+            this.inven_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.inven_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.inven_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_search.FocusedState.Parent = this.inven_search;
+            this.inven_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.inven_search.HoverState.Parent = this.inven_search;
+            this.inven_search.Location = new System.Drawing.Point(20, 28);
+            this.inven_search.Margin = new System.Windows.Forms.Padding(5);
+            this.inven_search.Name = "inven_search";
+            this.inven_search.PasswordChar = '\0';
+            this.inven_search.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(146)))), ((int)(((byte)(142)))));
+            this.inven_search.PlaceholderText = "Search using Product ID";
+            this.inven_search.SelectedText = "";
+            this.inven_search.ShadowDecoration.Parent = this.inven_search;
+            this.inven_search.Size = new System.Drawing.Size(330, 47);
+            this.inven_search.TabIndex = 0;
+            this.inven_search.TextOffset = new System.Drawing.Point(20, 0);
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.LightGray;
-            this.guna2Panel1.Controls.Add(this.bttnSearch);
+            this.guna2Panel1.Controls.Add(this.Inven_btnSearch);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Controls.Add(this.search);
+            this.guna2Panel1.Controls.Add(this.inven_search);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 4);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -492,53 +492,53 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1719, 106);
             this.guna2Panel1.TabIndex = 7;
             // 
-            // bttnSearch
+            // Inven_btnSearch
             // 
-            this.bttnSearch.BorderRadius = 5;
-            this.bttnSearch.CheckedState.Parent = this.bttnSearch;
-            this.bttnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnSearch.CustomImages.Parent = this.bttnSearch;
-            this.bttnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(113)))), ((int)(((byte)(103)))));
-            this.bttnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnSearch.ForeColor = System.Drawing.Color.White;
-            this.bttnSearch.HoverState.Parent = this.bttnSearch;
-            this.bttnSearch.Location = new System.Drawing.Point(393, 28);
-            this.bttnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.bttnSearch.Name = "bttnSearch";
-            this.bttnSearch.ShadowDecoration.Parent = this.bttnSearch;
-            this.bttnSearch.Size = new System.Drawing.Size(140, 47);
-            this.bttnSearch.TabIndex = 3;
-            this.bttnSearch.Text = "Search";
+            this.Inven_btnSearch.BorderRadius = 5;
+            this.Inven_btnSearch.CheckedState.Parent = this.Inven_btnSearch;
+            this.Inven_btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Inven_btnSearch.CustomImages.Parent = this.Inven_btnSearch;
+            this.Inven_btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(113)))), ((int)(((byte)(103)))));
+            this.Inven_btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inven_btnSearch.ForeColor = System.Drawing.Color.White;
+            this.Inven_btnSearch.HoverState.Parent = this.Inven_btnSearch;
+            this.Inven_btnSearch.Location = new System.Drawing.Point(393, 28);
+            this.Inven_btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.Inven_btnSearch.Name = "Inven_btnSearch";
+            this.Inven_btnSearch.ShadowDecoration.Parent = this.Inven_btnSearch;
+            this.Inven_btnSearch.Size = new System.Drawing.Size(140, 47);
+            this.Inven_btnSearch.TabIndex = 3;
+            this.Inven_btnSearch.Text = "Search";
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.inven_dataGrid);
             this.panel1.Location = new System.Drawing.Point(0, 118);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1719, 473);
             this.panel1.TabIndex = 8;
             // 
-            // dataGridView1
+            // inven_dataGrid
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.inven_dataGrid.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.inven_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.inven_dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.inven_dataGrid.AutoGenerateColumns = false;
+            this.inven_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.inven_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.inven_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.inven_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.inven_dataGrid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -546,11 +546,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeight = 52;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.DataSource = this.cafeBindingSource1;
+            this.inven_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.inven_dataGrid.ColumnHeadersHeight = 52;
+            this.inven_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.inven_dataGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inven_dataGrid.DataSource = this.cafeBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -558,12 +558,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.dataGridView1.Location = new System.Drawing.Point(20, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
+            this.inven_dataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.inven_dataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.inven_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.inven_dataGrid.Location = new System.Drawing.Point(20, 4);
+            this.inven_dataGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.inven_dataGrid.Name = "inven_dataGrid";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -571,16 +571,16 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowHeadersWidth = 51;
+            this.inven_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.inven_dataGrid.RowHeadersWidth = 51;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.Size = new System.Drawing.Size(1591, 470);
-            this.dataGridView1.TabIndex = 0;
+            this.inven_dataGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.inven_dataGrid.Size = new System.Drawing.Size(1591, 470);
+            this.inven_dataGrid.TabIndex = 0;
             // 
             // inventory
             // 
@@ -597,32 +597,32 @@
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inven_imagebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cafeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cafeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inven_dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button bttnDelete;
-        private Guna.UI2.WinForms.Guna2Button bttnClear;
-        private Guna.UI2.WinForms.Guna2Button bttnUpdate;
-        private Guna.UI2.WinForms.Guna2Button bttnAdd;
+        private Guna.UI2.WinForms.Guna2Button Inven_btnDelete;
+        private Guna.UI2.WinForms.Guna2Button Inven_btnClear;
+        private Guna.UI2.WinForms.Guna2Button Inven_btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button Inven_btnAdd;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button bttnUpload;
-        private Guna.UI2.WinForms.Guna2PictureBox imagebox;
-        private Guna.UI2.WinForms.Guna2ComboBox typebox;
-        private Guna.UI2.WinForms.Guna2TextBox txtstock;
-        private Guna.UI2.WinForms.Guna2TextBox txtprice;
-        private Guna.UI2.WinForms.Guna2TextBox txtpname;
-        private Guna.UI2.WinForms.Guna2TextBox txtpid;
+        private Guna.UI2.WinForms.Guna2Button Inven_btnUpload;
+        private Guna.UI2.WinForms.Guna2PictureBox Inven_imagebox;
+        private Guna.UI2.WinForms.Guna2ComboBox inven_typebox;
+        private Guna.UI2.WinForms.Guna2TextBox Inven_stock;
+        private Guna.UI2.WinForms.Guna2TextBox inven_price;
+        private Guna.UI2.WinForms.Guna2TextBox inven_Pname;
+        private Guna.UI2.WinForms.Guna2TextBox inven_pId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -631,10 +631,10 @@
         private System.Windows.Forms.BindingSource cafeBindingSource;
         private System.Windows.Forms.BindingSource cafeBindingSource1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox search;
+        private Guna.UI2.WinForms.Guna2TextBox inven_search;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button bttnSearch;
+        private Guna.UI2.WinForms.Guna2Button Inven_btnSearch;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView inven_dataGrid;
     }
 }
