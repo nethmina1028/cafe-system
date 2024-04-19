@@ -64,6 +64,12 @@
     <Compile Include="employee.Designer.cs">
       <DependentUpon>employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="addAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addAccount.Designer.cs">
+      <DependentUpon>addAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
