@@ -18,5 +18,17 @@ namespace cafe_system
             InitializeComponent();
         }
         public bool TopLevel { get; internal set; }
+
+        private void btn_addAccount_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SettBtn_add_Click(object sender, EventArgs e)
+        {
+            addAccount f1 = new addAccount();
+            f1.Show();
+            // Visible = false;
+        }
     }
 }

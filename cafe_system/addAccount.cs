@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace cafe_system
 {
-    public partial class employee : UserControl
+    public partial class addAccount : Form
     {
-        internal FormBorderStyle FormBorderStyle;
-        public employee()
+        public addAccount()
         {
             InitializeComponent();
-        }
-        public bool TopLevel { get; internal set; }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
