@@ -49,7 +49,7 @@ namespace cafe_system
 
         private void UpdateLabel()
         {
-            // Update the label text with current date and time
+            
             lbl_dateTime.Text = DateTime.Now.ToString();
         }
 
