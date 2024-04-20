@@ -230,6 +230,52 @@ namespace cafe_system
             inven_search.Text = "";
             Inven_imagebox.Image = null;
         }
+
+        private void Inven_btnDelete_Click(object sender, EventArgs e)
+        {
+            if (inven_dataGrid.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = inven_dataGrid.SelectedRows[0].Index;
+
+
+                int productId = Convert.ToInt32(inven_dataGrid.Rows[selectedRowIndex].Cells[0].Value);
+
+                string query = "DELETE FROM [inventory] WHERE ProductId = @ProductId";
+
+                SqlCommand cmd = new SqlCommand(query, con1);
+                cmd.Parameters.AddWithValue("@ProductId", productId);
+
+                try
+                {
+                    con1.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con1.Close();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Successfully Deleted");
+
+
+                        dataSet.Clear();
+                        adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
+                        adapter.Fill(dataSet, "inventory");
+                        inven_dataGrid.DataSource = dataSet.Tables["inventory"];
+                    }
+                    else
+                    {
+                        MessageBox.Show("No rows deleted");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete");
+            }
+        }
     }
 
 }
