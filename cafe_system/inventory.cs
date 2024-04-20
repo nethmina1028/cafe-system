@@ -170,6 +170,11 @@ namespace cafe_system
             }
         }
 
+        private void ProcessSelectedImage(string imagePath)
+        {
+            Inven_imagebox.Image = Image.FromFile(imagePath);
+        }
+
         private void Inven_btnUpdate_Click(object sender, EventArgs e)
         {
             int ProductId = int.Parse(inven_pId.Text);
@@ -276,6 +281,66 @@ namespace cafe_system
                 MessageBox.Show("Please select a row to delete");
             }
         }
+
+        private void Inven_btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchText = inven_search.Text.Trim();
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                try
+                {
+
+                    if (con1 == null)
+                    {
+                        con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
+                    }
+
+                    string query = "SELECT * FROM [inventory] WHERE ProductId = @SearchText OR ProductName LIKE @SearchText";
+
+                    SqlCommand cmd = new SqlCommand(query, con1);
+
+                    if (int.TryParse(searchText, out int productId))
+                    {
+
+                        cmd.Parameters.AddWithValue("@SearchText", productId);
+                    }
+
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
+                    }
+
+                    con1.Open();
+                    adapter.SelectCommand = cmd;
+                    dataSet.Clear();
+                    adapter.Fill(dataSet, "inventory");
+                    inven_dataGrid.DataSource = dataSet.Tables["inventory"];
+
+                    if (inven_dataGrid.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No matching records found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+
+                    if (con1 != null && con1.State == ConnectionState.Open)
+                    {
+                        con1.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter search criteria.");
+            }
+        }
+
     }
 
 }
