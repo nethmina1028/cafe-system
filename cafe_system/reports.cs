@@ -18,5 +18,10 @@ namespace cafe_system
             InitializeComponent();
         }
         public bool TopLevel { get; internal set; }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
