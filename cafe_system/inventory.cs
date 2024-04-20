@@ -169,6 +169,51 @@ namespace cafe_system
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Inven_btnUpdate_Click(object sender, EventArgs e)
+        {
+            int ProductId = int.Parse(inven_pId.Text);
+            string ProductName = inven_Pname.Text;
+            double Price = double.Parse(inven_price.Text);
+            int Stock = int.Parse(Inven_stock.Text);
+            string Type = inven_typebox.Text;
+
+            string query = "UPDATE [inventory] SET ProductName = @ProductName, Price = @Price, Stock = @Stock, Type = @Type WHERE ProductId = @ProductId";
+
+            SqlCommand cmd = new SqlCommand(query, con1);
+
+            cmd.Parameters.AddWithValue("@ProductId", ProductId);
+            cmd.Parameters.AddWithValue("@ProductName", ProductName);
+            cmd.Parameters.AddWithValue("@Price", Price);
+            cmd.Parameters.AddWithValue("@Stock", Stock);
+            cmd.Parameters.AddWithValue("@Type", Type);
+
+            try
+            {
+                con1.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                int secondRowsAffected = cmd.ExecuteNonQuery();
+                con1.Close();
+
+                if (rowsAffected > 0 && secondRowsAffected > 0)
+                {
+                    MessageBox.Show("Successfully Updated");
+
+                    dataSet.Clear();
+                    adapter.SelectCommand = new SqlCommand("SELECT * FROM [inventory]", con1);
+                    adapter.Fill(dataSet, "inventory");
+                    inven_dataGrid.DataSource = dataSet.Tables["inventory"];
+                }
+                else
+                {
+                    MessageBox.Show("No rows updated");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 
 }

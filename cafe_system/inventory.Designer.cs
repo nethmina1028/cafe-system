@@ -125,6 +125,7 @@
             this.Inven_btnUpdate.Size = new System.Drawing.Size(122, 38);
             this.Inven_btnUpdate.TabIndex = 13;
             this.Inven_btnUpdate.Text = "Update";
+            this.Inven_btnUpdate.Click += new System.EventHandler(this.Inven_btnUpdate_Click);
             // 
             // Inven_btnAdd
             // 
@@ -312,7 +313,7 @@
             this.inven_Pname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_Pname.HoverState.Parent = this.inven_Pname;
             this.inven_Pname.Location = new System.Drawing.Point(238, 85);
-            this.inven_Pname.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.inven_Pname.Margin = new System.Windows.Forms.Padding(16);
             this.inven_Pname.Name = "inven_Pname";
             this.inven_Pname.PasswordChar = '\0';
             this.inven_Pname.PlaceholderText = "";
@@ -341,7 +342,7 @@
             this.inven_pId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_pId.HoverState.Parent = this.inven_pId;
             this.inven_pId.Location = new System.Drawing.Point(237, 23);
-            this.inven_pId.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.inven_pId.Margin = new System.Windows.Forms.Padding(7);
             this.inven_pId.Name = "inven_pId";
             this.inven_pId.PasswordChar = '\0';
             this.inven_pId.PlaceholderText = "";
@@ -454,7 +455,7 @@
             this.inven_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_search.HoverState.Parent = this.inven_search;
             this.inven_search.Location = new System.Drawing.Point(15, 23);
-            this.inven_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inven_search.Margin = new System.Windows.Forms.Padding(4);
             this.inven_search.Name = "inven_search";
             this.inven_search.PasswordChar = '\0';
             this.inven_search.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(146)))), ((int)(((byte)(142)))));
