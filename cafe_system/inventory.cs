@@ -214,6 +214,22 @@ namespace cafe_system
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Inven_btnClear_Click(object sender, EventArgs e)
+        {
+            clearField();
+        }
+
+        public void clearField()
+        {
+            inven_pId.Text = "";
+            inven_Pname.Text = "";
+            inven_price.Text = "";
+            Inven_stock.Text = "";
+            inven_typebox.SelectedIndex = -1;
+            inven_search.Text = "";
+            Inven_imagebox.Image = null;
+        }
     }
 
 }
