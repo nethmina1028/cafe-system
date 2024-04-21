@@ -42,7 +42,7 @@ namespace cafe_system
         private void inventory_Load(object sender, EventArgs e)
         {
             openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            
 
             DataTable dataTable = new DataTable();
             inven_dataGrid.DataSource = dataTable;
@@ -62,6 +62,7 @@ namespace cafe_system
             DataTable dt = new DataTable();
             da.Fill(dt);
             inven_dataGrid.DataSource = dt;
+            
         }
 
         private void Inven_btnAdd_Click(object sender, EventArgs e)
@@ -242,8 +243,9 @@ namespace cafe_system
             {
                 int selectedRowIndex = inven_dataGrid.SelectedRows[0].Index;
 
-
                 int productId = Convert.ToInt32(inven_dataGrid.Rows[selectedRowIndex].Cells[0].Value);
+
+                Console.WriteLine("Deleting product with ID: " + productId);
 
                 string query = "DELETE FROM [inventory] WHERE ProductId = @ProductId";
 
@@ -258,11 +260,10 @@ namespace cafe_system
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Successfully Deleted");
-
+                        MessageBox.Show("Successfully Deleted " + rowsAffected + " row(s)");
 
                         dataSet.Clear();
-                        adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
+                        adapter.SelectCommand = new SqlCommand("SELECT * FROM [inventory]", con1);
                         adapter.Fill(dataSet, "inventory");
                         inven_dataGrid.DataSource = dataSet.Tables["inventory"];
                     }
@@ -273,7 +274,7 @@ namespace cafe_system
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Error deleting row: " + ex.Message);
                 }
             }
             else

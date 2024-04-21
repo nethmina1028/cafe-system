@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inventory));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Inven_btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.Inven_btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.Inven_btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.Inven_btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Inven_btnUpload = new Guna.UI2.WinForms.Guna2Button();
             this.Inven_imagebox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Inven_btnUpload = new Guna.UI2.WinForms.Guna2Button();
             this.inven_typebox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Inven_stock = new Guna.UI2.WinForms.Guna2TextBox();
             this.inven_price = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,6 +61,14 @@
             this.Inven_btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.inven_dataGrid = new System.Windows.Forms.DataGridView();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dashboard1 = new cafe_system.dashboard();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Inven_imagebox)).BeginInit();
@@ -165,8 +173,9 @@
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Panel2.BackColor = System.Drawing.Color.LightGray;
-            this.guna2Panel2.Controls.Add(this.Inven_btnUpload);
+            this.guna2Panel2.Controls.Add(this.dashboard1);
             this.guna2Panel2.Controls.Add(this.Inven_imagebox);
+            this.guna2Panel2.Controls.Add(this.Inven_btnUpload);
             this.guna2Panel2.Controls.Add(this.inven_typebox);
             this.guna2Panel2.Controls.Add(this.Inven_stock);
             this.guna2Panel2.Controls.Add(this.inven_price);
@@ -184,6 +193,19 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1271, 205);
             this.guna2Panel2.TabIndex = 9;
             // 
+            // Inven_imagebox
+            // 
+            this.Inven_imagebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Inven_imagebox.Image = ((System.Drawing.Image)(resources.GetObject("Inven_imagebox.Image")));
+            this.Inven_imagebox.Location = new System.Drawing.Point(866, 7);
+            this.Inven_imagebox.Name = "Inven_imagebox";
+            this.Inven_imagebox.ShadowDecoration.Parent = this.Inven_imagebox;
+            this.Inven_imagebox.Size = new System.Drawing.Size(172, 137);
+            this.Inven_imagebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Inven_imagebox.TabIndex = 10;
+            this.Inven_imagebox.TabStop = false;
+            this.Inven_imagebox.Click += new System.EventHandler(this.Inven_imagebox_Click);
+            // 
             // Inven_btnUpload
             // 
             this.Inven_btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -194,26 +216,13 @@
             this.Inven_btnUpload.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnUpload.ForeColor = System.Drawing.Color.White;
             this.Inven_btnUpload.HoverState.Parent = this.Inven_btnUpload;
-            this.Inven_btnUpload.Location = new System.Drawing.Point(866, 150);
+            this.Inven_btnUpload.Location = new System.Drawing.Point(866, 157);
             this.Inven_btnUpload.Name = "Inven_btnUpload";
             this.Inven_btnUpload.ShadowDecoration.Parent = this.Inven_btnUpload;
             this.Inven_btnUpload.Size = new System.Drawing.Size(172, 20);
             this.Inven_btnUpload.TabIndex = 11;
             this.Inven_btnUpload.Text = "Upload";
             this.Inven_btnUpload.Click += new System.EventHandler(this.Inven_btnUpload_Click);
-            // 
-            // Inven_imagebox
-            // 
-            this.Inven_imagebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Inven_imagebox.Image = ((System.Drawing.Image)(resources.GetObject("Inven_imagebox.Image")));
-            this.Inven_imagebox.Location = new System.Drawing.Point(866, 11);
-            this.Inven_imagebox.Name = "Inven_imagebox";
-            this.Inven_imagebox.ShadowDecoration.Parent = this.Inven_imagebox;
-            this.Inven_imagebox.Size = new System.Drawing.Size(172, 137);
-            this.Inven_imagebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Inven_imagebox.TabIndex = 10;
-            this.Inven_imagebox.TabStop = false;
-            this.Inven_imagebox.Click += new System.EventHandler(this.Inven_imagebox_Click);
             // 
             // inven_typebox
             // 
@@ -492,7 +501,7 @@
             this.Inven_btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnSearch.ForeColor = System.Drawing.Color.White;
             this.Inven_btnSearch.HoverState.Parent = this.Inven_btnSearch;
-            this.Inven_btnSearch.Location = new System.Drawing.Point(295, 23);
+            this.Inven_btnSearch.Location = new System.Drawing.Point(294, 23);
             this.Inven_btnSearch.Name = "Inven_btnSearch";
             this.Inven_btnSearch.ShadowDecoration.Parent = this.Inven_btnSearch;
             this.Inven_btnSearch.Size = new System.Drawing.Size(105, 38);
@@ -506,20 +515,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.inven_dataGrid);
-            this.panel1.Location = new System.Drawing.Point(0, 96);
+            this.panel1.Location = new System.Drawing.Point(0, 192);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1289, 384);
+            this.panel1.Size = new System.Drawing.Size(1289, 288);
             this.panel1.TabIndex = 8;
             // 
             // inven_dataGrid
             // 
             this.inven_dataGrid.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.inven_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.inven_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.inven_dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inven_dataGrid.AutoGenerateColumns = false;
@@ -528,47 +537,99 @@
             this.inven_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.inven_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.inven_dataGrid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inven_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inven_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.inven_dataGrid.ColumnHeadersHeight = 52;
             this.inven_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.inven_dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.ProductName,
+            this.Type,
+            this.Stock,
+            this.Price,
+            this.Status,
+            this.Date});
             this.inven_dataGrid.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inven_dataGrid.DataSource = this.cafeBindingSource1;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.inven_dataGrid.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.inven_dataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.inven_dataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.inven_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.inven_dataGrid.Location = new System.Drawing.Point(15, 3);
             this.inven_dataGrid.Name = "inven_dataGrid";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inven_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.inven_dataGrid.RowHeadersWidth = 51;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.inven_dataGrid.RowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.inven_dataGrid.Size = new System.Drawing.Size(1193, 382);
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inven_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.inven_dataGrid.RowHeadersWidth = 53;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.inven_dataGrid.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.inven_dataGrid.Size = new System.Drawing.Size(1235, 282);
             this.inven_dataGrid.TabIndex = 0;
+            // 
+            // ProductId
+            // 
+            this.ProductId.HeaderText = "Product Id";
+            this.ProductId.Name = "ProductId";
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
+            this.dashboard1.Location = new System.Drawing.Point(717, 162);
+            this.dashboard1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(117, 132);
+            this.dashboard1.TabIndex = 12;
             // 
             // inventory
             // 
@@ -605,7 +666,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button Inven_btnUpload;
-        private Guna.UI2.WinForms.Guna2PictureBox Inven_imagebox;
         private Guna.UI2.WinForms.Guna2ComboBox inven_typebox;
         private Guna.UI2.WinForms.Guna2TextBox Inven_stock;
         private Guna.UI2.WinForms.Guna2TextBox inven_price;
@@ -624,5 +684,14 @@
         private Guna.UI2.WinForms.Guna2Button Inven_btnSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView inven_dataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private Guna.UI2.WinForms.Guna2PictureBox Inven_imagebox;
+        private dashboard dashboard1;
     }
 }
