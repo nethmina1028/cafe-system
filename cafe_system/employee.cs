@@ -36,6 +36,61 @@ namespace cafe_system
 
         private void empBtn_search_Click(object sender, EventArgs e)
         {
+            string searchText = emp_Search.Text.Trim();
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                try
+                {
+
+                    if (con1 == null)
+                    {
+                        con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
+                    }
+
+                    string query = "SELECT * FROM [employee] WHERE ProductId = @SearchText OR EmployeeName LIKE @SearchText";
+
+                    SqlCommand cmd = new SqlCommand(query, con1);
+
+                    if (int.TryParse(searchText, out int employeeId))
+                    {
+
+                        cmd.Parameters.AddWithValue("@SearchText", employeeId);
+                    }
+
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
+                    }
+
+                    con1.Open();
+                    adapter.SelectCommand = cmd;
+                    dataSet.Clear();
+                    adapter.Fill(dataSet, "employee");
+                    emp_datagridview.DataSource = dataSet.Tables["employee"];
+
+                    if (emp_datagridview.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No matching records found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+
+                    if (con1 != null && con1.State == ConnectionState.Open)
+                    {
+                        con1.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter search criteria.");
+            }
 
 
         }
@@ -150,7 +205,7 @@ namespace cafe_system
 
             byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = "INSERT INTO [inventory] (EmployeetId, EmployeeName, JobRole, Bin, NIC, Phone No) VALUES (@EmployeetId, @EmployeeName, @JobRole, @Bin, @NIC, @Phone No)";
+            string query = "INSERT INTO [Employee] (EmployeetId, EmployeeName, JobRole, Bin, NIC, Phone No,Address) VALUES (@EmployeetId, @EmployeeName, @JobRole, @Bin, @NIC, @Phone No,@Address)";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -160,6 +215,7 @@ namespace cafe_system
             //cmd.Parameters.AddWithValue("@Bin",Bin);
             cmd.Parameters.AddWithValue("@NIC", NIC);
             cmd.Parameters.AddWithValue("@PhoneNO", PhoneNo);
+            cmd.Parameters.AddWithValue("@Address", Address);
 
             try
             {
@@ -180,6 +236,55 @@ namespace cafe_system
                 else
                 {
                     MessageBox.Show("No rows inserted");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void empBtn_update_Click(object sender, EventArgs e)
+        {
+            int EmployeeId = int.Parse(txtEmp_Id.Text);
+            string EmployeeName = txtEmp_Name.Text;
+            double JobRole = double.Parse(typebEmp_jobrole.Text);
+            int NIC = int.Parse(txtEmp_nic.Text);
+            int PhoneNo = int.Parse(txtEmp_phoneNo.Text);
+            string Address = textEmp_address.Text;
+
+            string query = "INSERT INTO [Employee] (EmployeetId, EmployeeName, JobRole, Bin, NIC, Phone No,Address) VALUES (@EmployeetId, @EmployeeName, @JobRole, @Bin, @NIC, @Phone No,@Address)";
+
+            SqlCommand cmd = new SqlCommand(query, con1);
+
+            cmd.Parameters.AddWithValue("@EmployeeId", EmployeeId);
+            cmd.Parameters.AddWithValue("@EmployeeName", EmployeeName);
+            cmd.Parameters.AddWithValue("@JobRole", JobRole);
+            //cmd.Parameters.AddWithValue("@Bin",Bin);
+            cmd.Parameters.AddWithValue("@NIC", NIC);
+            cmd.Parameters.AddWithValue("@PhoneNO", PhoneNo);
+            cmd.Parameters.AddWithValue("@Address", Address);
+
+            try
+            {
+                con1.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                int secondRowsAffected = cmd.ExecuteNonQuery();
+                con1.Close();
+
+                if (rowsAffected > 0 && secondRowsAffected > 0)
+                {
+                    MessageBox.Show("Successfully Updated");
+
+                    dataSet.Clear();
+                    adapter.SelectCommand = new SqlCommand("SELECT * FROM [employee]", con1);
+                    adapter.Fill(dataSet, "employee");
+                    emp_datagridview.DataSource = dataSet.Tables["employee"];
+                }
+                else
+                {
+                    MessageBox.Show("No rows updated");
                 }
             }
             catch (Exception ex)
