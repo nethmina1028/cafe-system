@@ -26,6 +26,14 @@ namespace cafe_system
         public employee()
         {
             InitializeComponent();
+            con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
+            adapter = new SqlDataAdapter();
+            dataSet = new DataSet();
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
+            DataTable dataTable = new DataTable();
+            emp_datagridview.DataSource = dataTable;
+
         }
         public bool TopLevel { get; internal set; }
 
@@ -99,23 +107,24 @@ namespace cafe_system
         {
             int EmployeeId = int.Parse(txtEmp_Id.Text);
             string EmployeeName = txtEmp_Name.Text;
-
-
             string JobRole = typebEmp_jobrole.Text;
             int NIC = int.Parse(txtEmp_nic.Text);
-            int Phone = int.Parse(txtEmp_phoneNo.Text);
+            int PhoneNo = int.Parse(txtEmp_phoneNo.Text);
             string Address = textEmp_address.Text;
+            byte[] imageData = File.ReadAllBytes(imagePath);
 
-            //byte[] imageData = File.ReadAllBytes(imagePath);
+            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole,  NIC, PhoneNo,Address) VALUES (@EmployeeId, @EmployeeName, @JobRole, @NIC, @PhoneNo,@Address)";
 
-            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole, NIC, Phone, Address) VALUES (@EmployeetId, @EmployeeName, @JobRole, @NIC, @Phone, @Address)";
+
+
             SqlCommand cmd = new SqlCommand(query, con1);
 
             cmd.Parameters.AddWithValue("@EmployeeId", EmployeeId);
             cmd.Parameters.AddWithValue("@EmployeeName", EmployeeName);
             cmd.Parameters.AddWithValue("@JobRole", JobRole);
+            //cmd.Parameters.AddWithValue("@Bin",Bin);
             cmd.Parameters.AddWithValue("@NIC", NIC);
-            cmd.Parameters.AddWithValue("@Phone", Phone);
+            cmd.Parameters.AddWithValue("@PhoneNO", PhoneNo);
             cmd.Parameters.AddWithValue("@Address", Address);
 
             try
@@ -137,6 +146,7 @@ namespace cafe_system
             {
                 con1.Close();
             }
+
         }
         private void employee_Load(object sender, EventArgs e)
         {
@@ -163,7 +173,7 @@ namespace cafe_system
         private void employee_Load_1(object sender, EventArgs e)
         {
             openFileDialog1 = new OpenFileDialog();
-            //openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
+            openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
 
             DataTable dataTable = new DataTable();
             emp_datagridview.DataSource = dataTable;
@@ -198,14 +208,14 @@ namespace cafe_system
             
             int EmployeeId = int.Parse(txtEmp_Id.Text);
             string EmployeeName = txtEmp_Name.Text;
-            double JobRole = double.Parse(typebEmp_jobrole.Text);
+            string JobRole = typebEmp_jobrole.Text;
             int NIC = int.Parse(txtEmp_nic.Text);
             int PhoneNo = int.Parse(txtEmp_phoneNo.Text);
             string Address = textEmp_address.Text;
 
             byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = "INSERT INTO [Employee] (EmployeetId, EmployeeName, JobRole, Bin, NIC, Phone No,Address) VALUES (@EmployeetId, @EmployeeName, @JobRole, @Bin, @NIC, @Phone No,@Address)";
+            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole,  NIC, PhoneNo,Address) VALUES (@EmployeeId, @EmployeeName, @JobRole,  @NIC, @PhoneNo,@Address)";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -249,12 +259,12 @@ namespace cafe_system
         {
             int EmployeeId = int.Parse(txtEmp_Id.Text);
             string EmployeeName = txtEmp_Name.Text;
-            double JobRole = double.Parse(typebEmp_jobrole.Text);
+            string JobRole = typebEmp_jobrole.Text;
             int NIC = int.Parse(txtEmp_nic.Text);
             int PhoneNo = int.Parse(txtEmp_phoneNo.Text);
             string Address = textEmp_address.Text;
 
-            string query = "INSERT INTO [Employee] (EmployeetId, EmployeeName, JobRole, Bin, NIC, Phone No,Address) VALUES (@EmployeetId, @EmployeeName, @JobRole, @Bin, @NIC, @Phone No,@Address)";
+            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole, NIC, PhoneNo,Address) VALUES (@EmployeeId, @EmployeeName, @JobRole,  @NIC, @PhoneNo,@Address)";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -313,6 +323,67 @@ namespace cafe_system
             typebEmp_jobrole.SelectedIndex = -1;
             txtEmp_phoneNo.Text = "";
             pictureBox1.Image = null;
+        }
+
+        private void empBtn_delete_Click(object sender, EventArgs e)
+        {
+            if (emp_datagridview.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = emp_datagridview.SelectedRows[0].Index;
+
+
+                int employeeId = Convert.ToInt32(emp_datagridview.Rows[selectedRowIndex].Cells[0].Value);
+
+                string query = "DELETE FROM [employee] WHERE EmployeeId = @employeeId";
+
+                SqlCommand cmd = new SqlCommand(query, con1);
+                cmd.Parameters.AddWithValue("@EmployeeId", employeeId);
+
+                try
+                {
+                    con1.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con1.Close();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Successfully Deleted");
+
+
+                        dataSet.Clear();
+                        adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
+                        adapter.Fill(dataSet, "employee");
+                        emp_datagridview.DataSource = dataSet.Tables["employee"];
+                    }
+                    else
+                    {
+                        MessageBox.Show("No rows deleted");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete");
+            }
+
+        }
+
+        private void img_bttn_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog1.FileName;
+                imageData = File.ReadAllBytes(imagePath);
+
+                pictureBox1.Image = Image.FromFile(imagePath);
+
+                this.imagePath = imagePath;
+            }
+
         }
     }
 }

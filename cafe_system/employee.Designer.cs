@@ -60,6 +60,9 @@
             this.emp_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.emp_datagridview = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.img_bttn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -71,6 +74,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2Panel2.Controls.Add(this.img_bttn);
             this.guna2Panel2.Controls.Add(this.typebEmp_jobrole);
             this.guna2Panel2.Controls.Add(this.txtEmp_phoneNo);
             this.guna2Panel2.Controls.Add(this.textEmp_address);
@@ -253,7 +257,7 @@
             // 
             this.img_label7.AutoSize = true;
             this.img_label7.Font = new System.Drawing.Font("Segoe UI", 12.75F);
-            this.img_label7.Location = new System.Drawing.Point(1287, 222);
+            this.img_label7.Location = new System.Drawing.Point(1473, 157);
             this.img_label7.Name = "img_label7";
             this.img_label7.Size = new System.Drawing.Size(74, 30);
             this.img_label7.TabIndex = 11;
@@ -274,6 +278,7 @@
             this.empBtn_delete.Size = new System.Drawing.Size(140, 47);
             this.empBtn_delete.TabIndex = 10;
             this.empBtn_delete.Text = "Delete";
+            this.empBtn_delete.Click += new System.EventHandler(this.empBtn_delete_Click);
             // 
             // empBtn_clear
             // 
@@ -541,6 +546,9 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.emp_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.emp_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.emp_datagridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmployeeID,
+            this.EmployeeName});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -572,7 +580,7 @@
             this.emp_datagridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.emp_datagridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.emp_datagridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.emp_datagridview.ThemeStyle.HeaderStyle.Height = 4;
+            this.emp_datagridview.ThemeStyle.HeaderStyle.Height = 27;
             this.emp_datagridview.ThemeStyle.ReadOnly = false;
             this.emp_datagridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.emp_datagridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -581,6 +589,35 @@
             this.emp_datagridview.ThemeStyle.RowsStyle.Height = 24;
             this.emp_datagridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.emp_datagridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // EmployeeID
+            // 
+            this.EmployeeID.HeaderText = "Employee ID";
+            this.EmployeeID.MinimumWidth = 6;
+            this.EmployeeID.Name = "EmployeeID";
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.HeaderText = "Employee Name";
+            this.EmployeeName.MinimumWidth = 6;
+            this.EmployeeName.Name = "EmployeeName";
+            // 
+            // img_bttn
+            // 
+            this.img_bttn.BorderRadius = 5;
+            this.img_bttn.CheckedState.Parent = this.img_bttn;
+            this.img_bttn.CustomImages.Parent = this.img_bttn;
+            this.img_bttn.FillColor = System.Drawing.Color.Navy;
+            this.img_bttn.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.img_bttn.ForeColor = System.Drawing.Color.White;
+            this.img_bttn.HoverState.Parent = this.img_bttn;
+            this.img_bttn.Location = new System.Drawing.Point(1250, 237);
+            this.img_bttn.Name = "img_bttn";
+            this.img_bttn.ShadowDecoration.Parent = this.img_bttn;
+            this.img_bttn.Size = new System.Drawing.Size(140, 47);
+            this.img_bttn.TabIndex = 20;
+            this.img_bttn.Text = "Upload";
+            this.img_bttn.Click += new System.EventHandler(this.img_bttn_Click);
             // 
             // employee
             // 
@@ -632,5 +669,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox typebEmp_jobrole;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
         private Guna.UI2.WinForms.Guna2DataGridView emp_datagridview;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeName;
+        private Guna.UI2.WinForms.Guna2Button img_bttn;
     }
 }
