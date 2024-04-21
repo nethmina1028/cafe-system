@@ -293,6 +293,27 @@ namespace cafe_system
             }
 
         }
+
+        private void empBtn_clear_Click(object sender, EventArgs e)
+        {
+
+            {
+                clearField();
+            }
+
+            
+
+        }
+        public void clearField()
+        {
+            txtEmp_Id.Text = "";
+            txtEmp_Name.Text = "";
+            txtEmp_nic.Text = "";
+            textEmp_address.Text = "";
+            typebEmp_jobrole.SelectedIndex = -1;
+            txtEmp_phoneNo.Text = "";
+            pictureBox1.Image = null;
+        }
     }
 }
 
