@@ -29,5 +29,10 @@ namespace cafe_system
                 this.Hide();
             }
         }
+
+        private void close_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

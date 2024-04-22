@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loading));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.close = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbl_loading = new System.Windows.Forms.Label();
             this.longbar = new Guna.UI2.WinForms.Guna2Panel();
             this.smallbar = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbl_loading = new System.Windows.Forms.Label();
+            this.close = new Guna.UI2.WinForms.Guna2Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel2.SuspendLayout();
             this.longbar.SuspendLayout();
@@ -66,27 +66,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(382, 420);
             this.guna2Panel2.TabIndex = 2;
             // 
-            // close
-            // 
-            this.close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("close.BackgroundImage")));
-            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.close.Location = new System.Drawing.Point(340, 12);
-            this.close.Name = "close";
-            this.close.ShadowDecoration.Parent = this.close;
-            this.close.Size = new System.Drawing.Size(31, 32);
-            this.close.TabIndex = 0;
-            // 
-            // lbl_loading
-            // 
-            this.lbl_loading.AutoSize = true;
-            this.lbl_loading.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_loading.ForeColor = System.Drawing.Color.White;
-            this.lbl_loading.Location = new System.Drawing.Point(6, 381);
-            this.lbl_loading.Name = "lbl_loading";
-            this.lbl_loading.Size = new System.Drawing.Size(84, 20);
-            this.lbl_loading.TabIndex = 1;
-            this.lbl_loading.Text = "LOADING....";
-            // 
             // longbar
             // 
             this.longbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
@@ -107,6 +86,28 @@
             this.smallbar.Size = new System.Drawing.Size(120, 15);
             this.smallbar.TabIndex = 0;
             // 
+            // lbl_loading
+            // 
+            this.lbl_loading.AutoSize = true;
+            this.lbl_loading.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_loading.ForeColor = System.Drawing.Color.White;
+            this.lbl_loading.Location = new System.Drawing.Point(6, 381);
+            this.lbl_loading.Name = "lbl_loading";
+            this.lbl_loading.Size = new System.Drawing.Size(84, 20);
+            this.lbl_loading.TabIndex = 1;
+            this.lbl_loading.Text = "LOADING....";
+            // 
+            // close
+            // 
+            this.close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("close.BackgroundImage")));
+            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.close.Location = new System.Drawing.Point(339, 12);
+            this.close.Name = "close";
+            this.close.ShadowDecoration.Parent = this.close;
+            this.close.Size = new System.Drawing.Size(31, 32);
+            this.close.TabIndex = 0;
+            this.close.MouseClick += new System.Windows.Forms.MouseEventHandler(this.close_MouseClick);
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -121,7 +122,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "loading";
             this.Text = "loading";
             this.guna2Panel2.ResumeLayout(false);

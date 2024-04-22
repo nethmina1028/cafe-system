@@ -36,7 +36,6 @@
             this.user_login = new Guna.UI2.WinForms.Guna2Button();
             this.close = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,6 +189,5 @@
         private Guna.UI2.WinForms.Guna2Panel close;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox txt_user;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
