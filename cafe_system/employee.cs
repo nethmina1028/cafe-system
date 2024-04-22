@@ -7,8 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.HtmlRenderer.Adapters;
 using System.IO;
 using System.Data.SqlClient;
+using Guna.UI2.WinForms.Suite;
+
 
 
 namespace cafe_system
@@ -37,10 +40,7 @@ namespace cafe_system
         }
         public bool TopLevel { get; internal set; }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void empBtn_search_Click(object sender, EventArgs e)
         {
@@ -91,7 +91,7 @@ namespace cafe_system
 
                     if (con1 != null && con1.State == ConnectionState.Open)
                     {
-                        con1.Close();
+                        con1.Open();
                     }
                 }
             }
@@ -144,7 +144,7 @@ namespace cafe_system
             }
             finally
             {
-                con1.Close();
+                con1.Open();
             }
 
         }
@@ -177,11 +177,11 @@ namespace cafe_system
 
             DataTable dataTable = new DataTable();
             emp_datagridview.DataSource = dataTable;
-            typebEmp_jobrole.Items.Add("Snacks");
-            typebEmp_jobrole.Items.Add("Drinks");
-            typebEmp_jobrole.Items.Add("Salads");
-            typebEmp_jobrole.Items.Add("Pizza");
-            typebEmp_jobrole.Items.Add("Soups");
+            typebEmp_jobrole.Items.Add("Cashier");
+            typebEmp_jobrole.Items.Add("Chief");
+            typebEmp_jobrole.Items.Add("Stuart");
+            typebEmp_jobrole.Items.Add("Barista");
+            typebEmp_jobrole.Items.Add("Shift Supervisor");
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
@@ -239,9 +239,9 @@ namespace cafe_system
 
 
                     dataSet.Clear();
-                    adapter.SelectCommand = new SqlCommand("SELECT * FROM [inventory]", con1);
-                    adapter.Fill(dataSet, "inventory");
-                    emp_datagridview.DataSource = dataSet.Tables["inventory"];
+                    adapter.SelectCommand = new SqlCommand("SELECT * FROM [employee]", con1);
+                    adapter.Fill(dataSet, "employee");
+                    emp_datagridview.DataSource = dataSet.Tables["employee"];
                 }
                 else
                 {
@@ -281,7 +281,7 @@ namespace cafe_system
                 con1.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
                 int secondRowsAffected = cmd.ExecuteNonQuery();
-                con1.Close();
+                con1.Open();
 
                 if (rowsAffected > 0 && secondRowsAffected > 0)
                 {
