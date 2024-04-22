@@ -16,5 +16,18 @@ namespace cafe_system
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            smallbar.Width += 3;
+
+            if (smallbar.Width >= 599)
+            {
+                timer1.Stop();
+                home dashboard = new home();
+                dashboard.Show();
+                this.Hide();
+            }
+        }
     }
 }

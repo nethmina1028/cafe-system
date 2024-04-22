@@ -36,6 +36,7 @@
             this.user_login = new Guna.UI2.WinForms.Guna2Button();
             this.close = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,10 +88,10 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.close);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel1.Location = new System.Drawing.Point(357, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(358, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(383, 420);
+            this.guna2Panel1.Size = new System.Drawing.Size(382, 420);
             this.guna2Panel1.TabIndex = 0;
             // 
             // txt_user
@@ -149,6 +150,7 @@
             this.close.ShadowDecoration.Parent = this.close;
             this.close.Size = new System.Drawing.Size(31, 32);
             this.close.TabIndex = 0;
+            this.close.Paint += new System.Windows.Forms.PaintEventHandler(this.close_Paint);
             this.close.MouseClick += new System.Windows.Forms.MouseEventHandler(this.close_MouseClick);
             // 
             // guna2Panel2
@@ -159,7 +161,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(351, 420);
+            this.guna2Panel2.Size = new System.Drawing.Size(358, 420);
             this.guna2Panel2.TabIndex = 1;
             // 
             // login
@@ -188,5 +190,6 @@
         private Guna.UI2.WinForms.Guna2Panel close;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox txt_user;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
