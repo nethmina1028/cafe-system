@@ -16,5 +16,15 @@ namespace cafe_system
         {
             InitializeComponent();
         }
+
+        private void txt_empID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdAcoountBtn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

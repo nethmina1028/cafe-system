@@ -30,5 +30,10 @@ namespace cafe_system
             f1.Show();
             // Visible = false;
         }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
