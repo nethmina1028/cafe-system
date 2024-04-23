@@ -35,7 +35,7 @@ namespace cafe_system
             openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
             DataTable dataTable = new DataTable();
-            emp_datagridview.DataSource = dataTable;
+            emp_dataGridView2.DataSource = dataTable;
 
         }
         public bool TopLevel { get; internal set; }
@@ -56,7 +56,7 @@ namespace cafe_system
                         con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
                     }
 
-                    string query = "SELECT * FROM [employee] WHERE ProductId = @SearchText OR EmployeeName LIKE @SearchText";
+                    string query = "SELECT * FROM [employee] WHERE EmployeeId = @SearchText OR EmployeeName LIKE @SearchText";
 
                     SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -75,9 +75,9 @@ namespace cafe_system
                     adapter.SelectCommand = cmd;
                     dataSet.Clear();
                     adapter.Fill(dataSet, "employee");
-                    emp_datagridview.DataSource = dataSet.Tables["employee"];
+                    emp_dataGridView2.DataSource = dataSet.Tables["employee"];
 
-                    if (emp_datagridview.Rows.Count == 0)
+                    if (emp_dataGridView2.Rows.Count == 0)
                     {
                         MessageBox.Show("No matching records found.");
                     }
@@ -91,7 +91,7 @@ namespace cafe_system
 
                     if (con1 != null && con1.State == ConnectionState.Open)
                     {
-                        con1.Open();
+                        con1.Close();
                     }
                 }
             }
@@ -136,7 +136,7 @@ namespace cafe_system
                 adapter.SelectCommand = new SqlCommand("SELECT * FROM [employee]", con1);
                 dataSet.Clear();
                 adapter.Fill(dataSet, "employee");
-                emp_datagridview.DataSource = dataSet.Tables["employee"];
+                emp_dataGridView2.DataSource = dataSet.Tables["employee"];
             }
             catch (Exception ex)
             {
@@ -144,31 +144,38 @@ namespace cafe_system
             }
             finally
             {
-                con1.Open();
+                con1.Close();
             }
+            datagridview1();
 
         }
         private void employee_Load(object sender, EventArgs e)
+        {
+            datagridview1();
+        }
+
+        private void datagridview1()
         {
             openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
 
             DataTable dataTable = new DataTable();
-            emp_datagridview.DataSource = dataTable;
+            emp_dataGridView2.DataSource = dataTable;
 
 
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
-            SqlConnection con1 = new SqlConnection(@"Data");
+            SqlConnection con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
             con1.Open();
             SqlCommand cmd = new SqlCommand("Select * from [employee]", con1);
             SqlDataAdapter
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            emp_datagridview.DataSource = dt;
-        }
+            emp_dataGridView2.DataSource = dt;
+            con1.Close();
+        }   
 
         private void employee_Load_1(object sender, EventArgs e)
         {
@@ -176,7 +183,7 @@ namespace cafe_system
             openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
 
             DataTable dataTable = new DataTable();
-            emp_datagridview.DataSource = dataTable;
+            emp_dataGridView2.DataSource = dataTable;
             typebEmp_jobrole.Items.Add("Cashier");
             typebEmp_jobrole.Items.Add("Chief");
             typebEmp_jobrole.Items.Add("Stuart");
@@ -192,7 +199,8 @@ namespace cafe_system
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            emp_datagridview.DataSource = dt;
+            emp_dataGridView2.DataSource = dt;
+            con1.Close();
 
         }
 
@@ -241,7 +249,7 @@ namespace cafe_system
                     dataSet.Clear();
                     adapter.SelectCommand = new SqlCommand("SELECT * FROM [employee]", con1);
                     adapter.Fill(dataSet, "employee");
-                    emp_datagridview.DataSource = dataSet.Tables["employee"];
+                    emp_dataGridView2.DataSource = dataSet.Tables["employee"];
                 }
                 else
                 {
@@ -263,8 +271,9 @@ namespace cafe_system
             int NIC = int.Parse(txtEmp_nic.Text);
             int PhoneNo = int.Parse(txtEmp_phoneNo.Text);
             string Address = textEmp_address.Text;
+            byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole, NIC, PhoneNo,Address) VALUES (@EmployeeId, @EmployeeName, @JobRole,  @NIC, @PhoneNo,@Address)";
+            string query = "UPDATE [employee] SET EmployeeName = @EmployeeName, JobRole = @JobRole, NIC = @NIC,PhoneNo=@PhoneNo,Address=@Address  WHERE EmployeeId = @EmployeeId";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -281,7 +290,7 @@ namespace cafe_system
                 con1.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
                 int secondRowsAffected = cmd.ExecuteNonQuery();
-                con1.Open();
+                con1.Close();
 
                 if (rowsAffected > 0 && secondRowsAffected > 0)
                 {
@@ -290,7 +299,7 @@ namespace cafe_system
                     dataSet.Clear();
                     adapter.SelectCommand = new SqlCommand("SELECT * FROM [employee]", con1);
                     adapter.Fill(dataSet, "employee");
-                    emp_datagridview.DataSource = dataSet.Tables["employee"];
+                    emp_dataGridView2.DataSource = dataSet.Tables["employee"];
                 }
                 else
                 {
@@ -301,6 +310,7 @@ namespace cafe_system
             {
                 MessageBox.Show(ex.Message);
             }
+
 
         }
 
@@ -327,17 +337,18 @@ namespace cafe_system
 
         private void empBtn_delete_Click(object sender, EventArgs e)
         {
-            if (emp_datagridview.SelectedRows.Count > 0)
+            if (emp_dataGridView2.SelectedRows.Count > 0)
             {
-                int selectedRowIndex = emp_datagridview.SelectedRows[0].Index;
+                int selectedRowIndex = emp_dataGridView2.SelectedRows[0].Index;
 
+                int employeeId = Convert.ToInt32(emp_dataGridView2.Rows[selectedRowIndex].Cells[0].Value);
 
-                int employeeId = Convert.ToInt32(emp_datagridview.Rows[selectedRowIndex].Cells[0].Value);
+                Console.WriteLine("Deleting employee with ID: " + employeeId);
 
                 string query = "DELETE FROM [employee] WHERE EmployeeId = @employeeId";
 
                 SqlCommand cmd = new SqlCommand(query, con1);
-                cmd.Parameters.AddWithValue("@EmployeeId", employeeId);
+                cmd.Parameters.AddWithValue("@employeeId", employeeId);
 
                 try
                 {
@@ -347,13 +358,12 @@ namespace cafe_system
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Successfully Deleted");
-
+                        MessageBox.Show("Successfully Deleted ");
 
                         dataSet.Clear();
-                        adapter.SelectCommand = new SqlCommand("SELECT * FROM [cafe]", con1);
+                        adapter.SelectCommand = new SqlCommand("SELECT * FROM [employee]", con1);
                         adapter.Fill(dataSet, "employee");
-                        emp_datagridview.DataSource = dataSet.Tables["employee"];
+                        emp_dataGridView2.DataSource = dataSet.Tables["employee"];
                     }
                     else
                     {
@@ -362,13 +372,16 @@ namespace cafe_system
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Error deleting row: " + ex.Message);
                 }
             }
             else
             {
                 MessageBox.Show("Please select a row to delete");
             }
+
+
+
 
         }
 
@@ -385,6 +398,12 @@ namespace cafe_system
             }
 
         }
+
+       
+
+
+
+        
     }
 }
 

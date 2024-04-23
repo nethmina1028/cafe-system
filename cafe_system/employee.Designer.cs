@@ -56,12 +56,12 @@
             this.empBtn_search = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.emp_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.emp_datagridview = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.emp_dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emp_datagridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -256,7 +256,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Snow;
-            this.pictureBox1.Location = new System.Drawing.Point(1247, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(1247, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(143, 138);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,7 +268,7 @@
             // 
             this.img_label7.AutoSize = true;
             this.img_label7.Font = new System.Drawing.Font("Segoe UI", 12.75F);
-            this.img_label7.Location = new System.Drawing.Point(1473, 157);
+            this.img_label7.Location = new System.Drawing.Point(1285, 204);
             this.img_label7.Name = "img_label7";
             this.img_label7.Size = new System.Drawing.Size(74, 30);
             this.img_label7.TabIndex = 11;
@@ -283,7 +283,7 @@
             this.empBtn_delete.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.empBtn_delete.ForeColor = System.Drawing.Color.White;
             this.empBtn_delete.HoverState.Parent = this.empBtn_delete;
-            this.empBtn_delete.Location = new System.Drawing.Point(1075, 305);
+            this.empBtn_delete.Location = new System.Drawing.Point(1083, 305);
             this.empBtn_delete.Name = "empBtn_delete";
             this.empBtn_delete.ShadowDecoration.Parent = this.empBtn_delete;
             this.empBtn_delete.Size = new System.Drawing.Size(140, 47);
@@ -480,15 +480,15 @@
             this.emp_Search.TabIndex = 0;
             this.emp_Search.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // emp_datagridview
+            // emp_dataGridView2
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.emp_datagridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.emp_datagridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.emp_datagridview.BackgroundColor = System.Drawing.Color.White;
-            this.emp_datagridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emp_datagridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.emp_datagridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.emp_dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.emp_dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.emp_dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.emp_dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emp_dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.emp_dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -496,8 +496,8 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.emp_datagridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.emp_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.emp_dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.emp_dataGridView2.ColumnHeadersHeight = 20;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -505,46 +505,46 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.emp_datagridview.DefaultCellStyle = dataGridViewCellStyle3;
-            this.emp_datagridview.EnableHeadersVisualStyles = false;
-            this.emp_datagridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.emp_datagridview.Location = new System.Drawing.Point(16, 119);
-            this.emp_datagridview.Name = "emp_datagridview";
-            this.emp_datagridview.RowHeadersVisible = false;
-            this.emp_datagridview.RowHeadersWidth = 51;
-            this.emp_datagridview.RowTemplate.Height = 24;
-            this.emp_datagridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.emp_datagridview.Size = new System.Drawing.Size(1686, 428);
-            this.emp_datagridview.TabIndex = 9;
-            this.emp_datagridview.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.emp_datagridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.emp_datagridview.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.emp_datagridview.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.emp_datagridview.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.emp_datagridview.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.emp_datagridview.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.emp_datagridview.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.emp_datagridview.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.emp_datagridview.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.emp_datagridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.emp_datagridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.emp_datagridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.emp_datagridview.ThemeStyle.HeaderStyle.Height = 4;
-            this.emp_datagridview.ThemeStyle.ReadOnly = false;
-            this.emp_datagridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.emp_datagridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.emp_datagridview.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.emp_datagridview.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.emp_datagridview.ThemeStyle.RowsStyle.Height = 24;
-            this.emp_datagridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.emp_datagridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.emp_dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.emp_dataGridView2.EnableHeadersVisualStyles = false;
+            this.emp_dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.emp_dataGridView2.Location = new System.Drawing.Point(21, 119);
+            this.emp_dataGridView2.Name = "emp_dataGridView2";
+            this.emp_dataGridView2.RowHeadersVisible = false;
+            this.emp_dataGridView2.RowHeadersWidth = 60;
+            this.emp_dataGridView2.RowTemplate.Height = 24;
+            this.emp_dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.emp_dataGridView2.Size = new System.Drawing.Size(1681, 428);
+            this.emp_dataGridView2.TabIndex = 9;
+            this.emp_dataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.emp_dataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.emp_dataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.emp_dataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.emp_dataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.emp_dataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.emp_dataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.emp_dataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.emp_dataGridView2.ThemeStyle.HeaderStyle.Height = 20;
+            this.emp_dataGridView2.ThemeStyle.ReadOnly = false;
+            this.emp_dataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.emp_dataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.emp_dataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.emp_dataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.emp_dataGridView2.ThemeStyle.RowsStyle.Height = 24;
+            this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.Controls.Add(this.emp_datagridview);
+            this.Controls.Add(this.emp_dataGridView2);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -556,7 +556,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emp_datagridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -586,6 +586,6 @@
         private Guna.UI2.WinForms.Guna2TextBox emp_Search;
         private Guna.UI2.WinForms.Guna2ComboBox typebEmp_jobrole;
         private Guna.UI2.WinForms.Guna2Button img_bttn;
-        private Guna.UI2.WinForms.Guna2DataGridView emp_datagridview;
+        private Guna.UI2.WinForms.Guna2DataGridView emp_dataGridView2;
     }
 }
