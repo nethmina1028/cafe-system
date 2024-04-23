@@ -189,6 +189,7 @@
             this.AdAcoountBtn_add.Size = new System.Drawing.Size(105, 38);
             this.AdAcoountBtn_add.TabIndex = 22;
             this.AdAcoountBtn_add.Text = "Add";
+            this.AdAcoountBtn_add.Click += new System.EventHandler(this.AdAcoountBtn_add_Click);
             // 
             // AdAcoountBtn_close
             // 
@@ -227,6 +228,7 @@
             this.Name = "addAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.addAccount_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
