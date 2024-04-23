@@ -33,7 +33,8 @@ namespace cafe_system
             adapter = new SqlDataAdapter();
             dataSet = new DataSet();
             openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
+
             DataTable dataTable = new DataTable();
             inven_dataGrid.DataSource = dataTable;
         }
@@ -42,7 +43,9 @@ namespace cafe_system
         private void inventory_Load(object sender, EventArgs e)
         {
             openFileDialog1 = new OpenFileDialog();
-            
+            //openFileDialog1.Filter = "Image Files(.jpg; *.jpeg; *.png)|.jpg; *.jpeg; *.png";
+
+
 
             DataTable dataTable = new DataTable();
             inven_dataGrid.DataSource = dataTable;
@@ -260,7 +263,7 @@ namespace cafe_system
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Successfully Deleted " + rowsAffected + " row(s)");
+                        MessageBox.Show("Successfully Deleted ");
 
                         dataSet.Clear();
                         adapter.SelectCommand = new SqlCommand("SELECT * FROM [inventory]", con1);
