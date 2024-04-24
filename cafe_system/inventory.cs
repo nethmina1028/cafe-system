@@ -345,6 +345,10 @@ namespace cafe_system
             }
         }
 
+        private void inven_dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }
