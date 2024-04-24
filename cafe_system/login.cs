@@ -93,5 +93,10 @@ namespace cafe_system
             
 
         }
+
+        private void close_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
