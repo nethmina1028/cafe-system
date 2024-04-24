@@ -12,7 +12,7 @@ namespace cafe_system
 {
     public partial class dashboard : UserControl
     {
-
+        string connectionString = "Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;";
         internal FormBorderStyle FormBorderStyle;
         public dashboard()
         {
@@ -27,6 +27,11 @@ namespace cafe_system
         }
 
         private void dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDTotalOrders_Click(object sender, EventArgs e)
         {
 
         }
