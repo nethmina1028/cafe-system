@@ -294,6 +294,65 @@ namespace cafe_system
             }
 
         }
+
+        private void Inven_btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchText = inven_search.Text.Trim();
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                try
+                {
+
+                    if (con1 == null)
+                    {
+                        con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
+                    }
+
+                    string query = "SELECT * FROM [inventory] WHERE ID = @SearchText OR Name LIKE @SearchText";
+
+                    SqlCommand cmd = new SqlCommand(query, con1);
+
+                    if (int.TryParse(searchText, out int ID))
+                    {
+
+                        cmd.Parameters.AddWithValue("@SearchText", ID);
+                    }
+
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
+                    }
+
+                    con1.Open();
+                    adapter.SelectCommand = cmd;
+                    dataSet.Clear();
+                    adapter.Fill(dataSet, "inventory");
+                    inven_dataGrid.DataSource = dataSet.Tables["inventory"];
+
+                    if (inven_dataGrid.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No matching records found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+
+                    if (con1 != null && con1.State == ConnectionState.Open)
+                    {
+                        con1.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter search criteria.");
+            }
+        }
     }
 }
 
