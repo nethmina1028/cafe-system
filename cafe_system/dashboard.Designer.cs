@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -463,18 +463,18 @@
             // chart1
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea17.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.chart1.Legends.Add(legend17);
+            chartArea18.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            this.chart1.Legends.Add(legend18);
             this.chart1.Location = new System.Drawing.Point(87, 0);
             this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            this.chart1.Series.Add(series17);
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series18.Legend = "Legend1";
+            series18.Name = "Series1";
+            this.chart1.Series.Add(series18);
             this.chart1.Size = new System.Drawing.Size(736, 480);
             this.chart1.TabIndex = 31;
             this.chart1.Text = "chart1";
@@ -916,9 +916,9 @@
             this.pname1.Location = new System.Drawing.Point(77, 25);
             this.pname1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pname1.Name = "pname1";
-            this.pname1.Size = new System.Drawing.Size(3, 2);
+            this.pname1.Size = new System.Drawing.Size(79, 31);
             this.pname1.TabIndex = 15;
-            this.pname1.Text = null;
+            this.pname1.Text = "Cocola";
             // 
             // ProgressBar1
             // 
