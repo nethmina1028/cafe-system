@@ -248,6 +248,52 @@ namespace cafe_system
             Inven_imagebox.Image = null;
         }
 
+        private void Inven_btnDelete_Click(object sender, EventArgs e)
+        {
+            if (inven_dataGrid.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = inven_dataGrid.SelectedRows[0].Index;
+
+                int ID = Convert.ToInt32(inven_dataGrid.Rows[selectedRowIndex].Cells[0].Value);
+
+                Console.WriteLine("Deleting product with ID: " + ID);
+
+                string query = "DELETE FROM [inventory] WHERE ID = @ID";
+
+                SqlCommand cmd = new SqlCommand(query, con1);
+                cmd.Parameters.AddWithValue("@ID", ID);
+
+                try
+                {
+                    con1.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con1.Close();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Successfully Deleted ");
+
+                        dataSet.Clear();
+                        adapter.SelectCommand = new SqlCommand("SELECT * FROM [inventory]", con1);
+                        adapter.Fill(dataSet, "inventory");
+                        inven_dataGrid.DataSource = dataSet.Tables["inventory"];
+                    }
+                    else
+                    {
+                        MessageBox.Show("No rows deleted");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting row: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete");
+            }
+
+        }
     }
 }
 
