@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employee));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -57,11 +58,21 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.emp_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.emp_dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this._cafe_systemDataSet = new cafe_system._cafe_systemDataSet();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeTableAdapter = new cafe_system._cafe_systemDataSetTableAdapters.EmployeeTableAdapter();
+            this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.binDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -482,8 +493,10 @@
             // 
             // emp_dataGridView2
             // 
+            this.emp_dataGridView2.AllowDrop = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.emp_dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.emp_dataGridView2.AutoGenerateColumns = false;
             this.emp_dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.emp_dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.emp_dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -498,6 +511,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.emp_dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.emp_dataGridView2.ColumnHeadersHeight = 20;
+            this.emp_dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.photoDataGridViewImageColumn,
+            this.employeeIDDataGridViewTextBoxColumn,
+            this.employeeNameDataGridViewTextBoxColumn,
+            this.jobRoleDataGridViewTextBoxColumn,
+            this.binDataGridViewImageColumn});
+            this.emp_dataGridView2.DataSource = this.employeeBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -508,7 +528,7 @@
             this.emp_dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.emp_dataGridView2.EnableHeadersVisualStyles = false;
             this.emp_dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.emp_dataGridView2.Location = new System.Drawing.Point(21, 119);
+            this.emp_dataGridView2.Location = new System.Drawing.Point(35, 119);
             this.emp_dataGridView2.Name = "emp_dataGridView2";
             this.emp_dataGridView2.RowHeadersVisible = false;
             this.emp_dataGridView2.RowHeadersWidth = 60;
@@ -538,6 +558,56 @@
             this.emp_dataGridView2.ThemeStyle.RowsStyle.Height = 24;
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.emp_dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.emp_dataGridView2_CellContentClick);
+            // 
+            // _cafe_systemDataSet
+            // 
+            this._cafe_systemDataSet.DataSetName = "_cafe_systemDataSet";
+            this._cafe_systemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this._cafe_systemDataSet;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // photoDataGridViewImageColumn
+            // 
+            this.photoDataGridViewImageColumn.DataPropertyName = "Photo";
+            this.photoDataGridViewImageColumn.HeaderText = "Photo";
+            this.photoDataGridViewImageColumn.MinimumWidth = 6;
+            this.photoDataGridViewImageColumn.Name = "photoDataGridViewImageColumn";
+            // 
+            // employeeIDDataGridViewTextBoxColumn
+            // 
+            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            // 
+            // employeeNameDataGridViewTextBoxColumn
+            // 
+            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "EmployeeName";
+            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "EmployeeName";
+            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
+            // 
+            // jobRoleDataGridViewTextBoxColumn
+            // 
+            this.jobRoleDataGridViewTextBoxColumn.DataPropertyName = "JobRole";
+            this.jobRoleDataGridViewTextBoxColumn.HeaderText = "JobRole";
+            this.jobRoleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jobRoleDataGridViewTextBoxColumn.Name = "jobRoleDataGridViewTextBoxColumn";
+            // 
+            // binDataGridViewImageColumn
+            // 
+            this.binDataGridViewImageColumn.DataPropertyName = "Bin";
+            this.binDataGridViewImageColumn.HeaderText = "Bin";
+            this.binDataGridViewImageColumn.MinimumWidth = 6;
+            this.binDataGridViewImageColumn.Name = "binDataGridViewImageColumn";
             // 
             // employee
             // 
@@ -557,6 +627,8 @@
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -587,5 +659,13 @@
         private Guna.UI2.WinForms.Guna2ComboBox typebEmp_jobrole;
         private Guna.UI2.WinForms.Guna2Button img_bttn;
         private Guna.UI2.WinForms.Guna2DataGridView emp_dataGridView2;
+        private System.Windows.Forms.DataGridViewImageColumn photoDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jobRoleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn binDataGridViewImageColumn;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private _cafe_systemDataSet _cafe_systemDataSet;
+        private _cafe_systemDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
     }
 }

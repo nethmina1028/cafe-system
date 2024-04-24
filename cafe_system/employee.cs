@@ -146,6 +146,8 @@ namespace cafe_system
             {
                 con1.Close();
             }
+
+
             datagridview1();
 
         }
@@ -201,10 +203,12 @@ namespace cafe_system
             da.Fill(dt);
             emp_dataGridView2.DataSource = dt;
             con1.Close();
+            
 
-        }
 
-        private void typebEmp_jobrole_SelectedIndexChanged(object sender, EventArgs e)
+            }
+
+            private void typebEmp_jobrole_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -341,14 +345,14 @@ namespace cafe_system
             {
                 int selectedRowIndex = emp_dataGridView2.SelectedRows[0].Index;
 
-                int employeeId = Convert.ToInt32(emp_dataGridView2.Rows[selectedRowIndex].Cells[0].Value);
+                int EmployeeId = Convert.ToInt32(emp_dataGridView2.Rows[selectedRowIndex].Cells[1].Value);
 
-                Console.WriteLine("Deleting employee with ID: " + employeeId);
+                Console.WriteLine("Deleting employee with ID: " + EmployeeId);
 
                 string query = "DELETE FROM [employee] WHERE EmployeeId = @employeeId";
 
                 SqlCommand cmd = new SqlCommand(query, con1);
-                cmd.Parameters.AddWithValue("@employeeId", employeeId);
+                cmd.Parameters.AddWithValue("@employeeId", EmployeeId);
 
                 try
                 {
@@ -399,11 +403,10 @@ namespace cafe_system
 
         }
 
-       
+        private void emp_dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-
-        
+        }
     }
 }
 
