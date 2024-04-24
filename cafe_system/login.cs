@@ -13,7 +13,7 @@ namespace cafe_system
 {
     public partial class login : Form
     {
-        SqlConnection connect = new SqlConnection();
+        SqlConnection connect = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
 
         public login()
         {
