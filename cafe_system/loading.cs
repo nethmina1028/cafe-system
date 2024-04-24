@@ -24,8 +24,8 @@ namespace cafe_system
             if (smallbar.Width >= 599)
             {
                 timer1.Stop();
-                home dashboard = new home();
-                dashboard.Show();
+                login log = new login();
+                log.Show();
                 this.Hide();
             }
         }
