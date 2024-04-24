@@ -35,5 +35,35 @@ namespace cafe_system
         {
 
         }
+
+        private void guna2CirclePictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalItems_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProgressBar5_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblTotalIncome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
