@@ -58,21 +58,21 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.emp_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.emp_dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this._cafe_systemDataSet = new cafe_system._cafe_systemDataSet();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new cafe_system._cafe_systemDataSetTableAdapters.EmployeeTableAdapter();
             this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.binDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._cafe_systemDataSet = new cafe_system._cafe_systemDataSet();
+            this.employeeTableAdapter = new cafe_system._cafe_systemDataSetTableAdapters.EmployeeTableAdapter();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -263,6 +263,7 @@
             this.txtEmp_Id.ShadowDecoration.Parent = this.txtEmp_Id;
             this.txtEmp_Id.Size = new System.Drawing.Size(261, 46);
             this.txtEmp_Id.TabIndex = 13;
+            this.txtEmp_Id.TextChanged += new System.EventHandler(this.txtEmp_Id_TextChanged);
             // 
             // pictureBox1
             // 
@@ -528,13 +529,13 @@
             this.emp_dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.emp_dataGridView2.EnableHeadersVisualStyles = false;
             this.emp_dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.emp_dataGridView2.Location = new System.Drawing.Point(35, 119);
+            this.emp_dataGridView2.Location = new System.Drawing.Point(16, 119);
             this.emp_dataGridView2.Name = "emp_dataGridView2";
             this.emp_dataGridView2.RowHeadersVisible = false;
             this.emp_dataGridView2.RowHeadersWidth = 60;
             this.emp_dataGridView2.RowTemplate.Height = 24;
             this.emp_dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.emp_dataGridView2.Size = new System.Drawing.Size(1681, 428);
+            this.emp_dataGridView2.Size = new System.Drawing.Size(1686, 428);
             this.emp_dataGridView2.TabIndex = 9;
             this.emp_dataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -559,20 +560,6 @@
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.emp_dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.emp_dataGridView2_CellContentClick);
-            // 
-            // _cafe_systemDataSet
-            // 
-            this._cafe_systemDataSet.DataSetName = "_cafe_systemDataSet";
-            this._cafe_systemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this._cafe_systemDataSet;
-            // 
-            // employeeTableAdapter
-            // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
             // 
             // photoDataGridViewImageColumn
             // 
@@ -609,6 +596,20 @@
             this.binDataGridViewImageColumn.MinimumWidth = 6;
             this.binDataGridViewImageColumn.Name = "binDataGridViewImageColumn";
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this._cafe_systemDataSet;
+            // 
+            // _cafe_systemDataSet
+            // 
+            this._cafe_systemDataSet.DataSetName = "_cafe_systemDataSet";
+            this._cafe_systemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
             // employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -627,8 +628,8 @@
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
