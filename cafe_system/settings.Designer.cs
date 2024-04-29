@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.settings_pic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
@@ -51,8 +51,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SettBtn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.settingsBtn_refresh = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.settings_pic)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -94,7 +95,7 @@
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel2.Location = new System.Drawing.Point(18, 180);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(536, 242);
@@ -115,7 +116,7 @@
             this.Settxt_confirmpass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Settxt_confirmpass.HoverState.Parent = this.Settxt_confirmpass;
             this.Settxt_confirmpass.Location = new System.Drawing.Point(191, 180);
-            this.Settxt_confirmpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Settxt_confirmpass.Margin = new System.Windows.Forms.Padding(4);
             this.Settxt_confirmpass.Name = "Settxt_confirmpass";
             this.Settxt_confirmpass.PasswordChar = '*';
             this.Settxt_confirmpass.PlaceholderText = "";
@@ -148,7 +149,7 @@
             this.Settxt_Newpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Settxt_Newpassword.HoverState.Parent = this.Settxt_Newpassword;
             this.Settxt_Newpassword.Location = new System.Drawing.Point(191, 130);
-            this.Settxt_Newpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Settxt_Newpassword.Margin = new System.Windows.Forms.Padding(4);
             this.Settxt_Newpassword.Name = "Settxt_Newpassword";
             this.Settxt_Newpassword.PasswordChar = '*';
             this.Settxt_Newpassword.PlaceholderText = "";
@@ -171,7 +172,7 @@
             this.Settxt_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Settxt_Username.HoverState.Parent = this.Settxt_Username;
             this.Settxt_Username.Location = new System.Drawing.Point(191, 30);
-            this.Settxt_Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Settxt_Username.Margin = new System.Windows.Forms.Padding(4);
             this.Settxt_Username.Name = "Settxt_Username";
             this.Settxt_Username.PasswordChar = '\0';
             this.Settxt_Username.PlaceholderText = "";
@@ -194,7 +195,7 @@
             this.Settxt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Settxt_password.HoverState.Parent = this.Settxt_password;
             this.Settxt_password.Location = new System.Drawing.Point(191, 80);
-            this.Settxt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Settxt_password.Margin = new System.Windows.Forms.Padding(4);
             this.Settxt_password.Name = "Settxt_password";
             this.Settxt_password.PasswordChar = '*';
             this.Settxt_password.PlaceholderText = "";
@@ -243,7 +244,7 @@
             this.settingsBtn_delete.ForeColor = System.Drawing.Color.White;
             this.settingsBtn_delete.HoverState.Parent = this.settingsBtn_delete;
             this.settingsBtn_delete.Location = new System.Drawing.Point(266, 449);
-            this.settingsBtn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settingsBtn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.settingsBtn_delete.Name = "settingsBtn_delete";
             this.settingsBtn_delete.ShadowDecoration.Parent = this.settingsBtn_delete;
             this.settingsBtn_delete.Size = new System.Drawing.Size(105, 38);
@@ -261,7 +262,7 @@
             this.settingsBtn_update.ForeColor = System.Drawing.Color.White;
             this.settingsBtn_update.HoverState.Parent = this.settingsBtn_update;
             this.settingsBtn_update.Location = new System.Drawing.Point(148, 449);
-            this.settingsBtn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settingsBtn_update.Margin = new System.Windows.Forms.Padding(2);
             this.settingsBtn_update.Name = "settingsBtn_update";
             this.settingsBtn_update.ShadowDecoration.Parent = this.settingsBtn_update;
             this.settingsBtn_update.Size = new System.Drawing.Size(105, 38);
@@ -273,7 +274,7 @@
             // 
             this.guna2Panel11.Controls.Add(this.label6);
             this.guna2Panel11.Location = new System.Drawing.Point(14, 10);
-            this.guna2Panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel11.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel11.Name = "guna2Panel11";
             this.guna2Panel11.ShadowDecoration.Parent = this.guna2Panel11;
             this.guna2Panel11.Size = new System.Drawing.Size(264, 66);
@@ -308,10 +309,10 @@
             this.guna2Panel1.Controls.Add(this.SettBtn_add);
             this.guna2Panel1.Controls.Add(this.guna2DataGridView1);
             this.guna2Panel1.Location = new System.Drawing.Point(14, 81);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(554, 526);
+            this.guna2Panel1.Size = new System.Drawing.Size(560, 430);
             this.guna2Panel1.TabIndex = 35;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -325,7 +326,7 @@
             this.SettBtn_add.ForeColor = System.Drawing.Color.White;
             this.SettBtn_add.HoverState.Parent = this.SettBtn_add;
             this.SettBtn_add.Location = new System.Drawing.Point(38, 18);
-            this.SettBtn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SettBtn_add.Margin = new System.Windows.Forms.Padding(2);
             this.SettBtn_add.Name = "SettBtn_add";
             this.SettBtn_add.ShadowDecoration.Parent = this.SettBtn_add;
             this.SettBtn_add.Size = new System.Drawing.Size(128, 38);
@@ -333,41 +334,32 @@
             this.SettBtn_add.Text = "Add Account";
             this.SettBtn_add.Click += new System.EventHandler(this.SettBtn_add_Click);
             // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(73)))));
-            this.guna2VSeparator1.Location = new System.Drawing.Point(578, 80);
-            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(8, 687);
-            this.guna2VSeparator1.TabIndex = 31;
-            // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.guna2DataGridView1.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(2, 103);
@@ -378,7 +370,7 @@
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(549, 430);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(558, 318);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -406,11 +398,38 @@
             this.guna2DataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.guna2DataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(73)))));
+            this.guna2VSeparator1.Location = new System.Drawing.Point(578, 80);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(8, 687);
+            this.guna2VSeparator1.TabIndex = 31;
+            // 
+            // settingsBtn_refresh
+            // 
+            this.settingsBtn_refresh.BorderRadius = 5;
+            this.settingsBtn_refresh.CheckedState.Parent = this.settingsBtn_refresh;
+            this.settingsBtn_refresh.CustomImages.Parent = this.settingsBtn_refresh;
+            this.settingsBtn_refresh.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.settingsBtn_refresh.ForeColor = System.Drawing.Color.White;
+            this.settingsBtn_refresh.HoverState.Parent = this.settingsBtn_refresh;
+            this.settingsBtn_refresh.Location = new System.Drawing.Point(433, 529);
+            this.settingsBtn_refresh.Margin = new System.Windows.Forms.Padding(2);
+            this.settingsBtn_refresh.Name = "settingsBtn_refresh";
+            this.settingsBtn_refresh.ShadowDecoration.Parent = this.settingsBtn_refresh;
+            this.settingsBtn_refresh.Size = new System.Drawing.Size(105, 38);
+            this.settingsBtn_refresh.TabIndex = 28;
+            this.settingsBtn_refresh.Text = "Refresh";
+            this.settingsBtn_refresh.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
+            this.Controls.Add(this.settingsBtn_refresh);
             this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel11);
@@ -453,5 +472,6 @@
         private Guna.UI2.WinForms.Guna2Button SettBtn_add;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2Button settingsBtn_refresh;
     }
 }

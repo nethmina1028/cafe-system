@@ -54,9 +54,9 @@
             this.txt_confirmpass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_confirmpass.HoverState.Parent = this.txt_confirmpass;
             this.txt_confirmpass.Location = new System.Drawing.Point(254, 260);
-            this.txt_confirmpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_confirmpass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_confirmpass.Name = "txt_confirmpass";
-            this.txt_confirmpass.PasswordChar = '\0';
+            this.txt_confirmpass.PasswordChar = '*';
             this.txt_confirmpass.PlaceholderText = "";
             this.txt_confirmpass.SelectedText = "";
             this.txt_confirmpass.ShadowDecoration.Parent = this.txt_confirmpass;
@@ -77,9 +77,9 @@
             this.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_password.HoverState.Parent = this.txt_password;
             this.txt_password.Location = new System.Drawing.Point(254, 190);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '\0';
+            this.txt_password.PasswordChar = '*';
             this.txt_password.PlaceholderText = "";
             this.txt_password.SelectedText = "";
             this.txt_password.ShadowDecoration.Parent = this.txt_password;
@@ -100,7 +100,7 @@
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_username.HoverState.Parent = this.txt_username;
             this.txt_username.Location = new System.Drawing.Point(254, 120);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
             this.txt_username.PlaceholderText = "";
@@ -123,7 +123,7 @@
             this.txt_empID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_empID.HoverState.Parent = this.txt_empID;
             this.txt_empID.Location = new System.Drawing.Point(254, 50);
-            this.txt_empID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_empID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_empID.Name = "txt_empID";
             this.txt_empID.PasswordChar = '\0';
             this.txt_empID.PlaceholderText = "";
@@ -183,7 +183,7 @@
             this.AdAcoountBtn_add.ForeColor = System.Drawing.Color.White;
             this.AdAcoountBtn_add.HoverState.Parent = this.AdAcoountBtn_add;
             this.AdAcoountBtn_add.Location = new System.Drawing.Point(172, 348);
-            this.AdAcoountBtn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdAcoountBtn_add.Margin = new System.Windows.Forms.Padding(2);
             this.AdAcoountBtn_add.Name = "AdAcoountBtn_add";
             this.AdAcoountBtn_add.ShadowDecoration.Parent = this.AdAcoountBtn_add;
             this.AdAcoountBtn_add.Size = new System.Drawing.Size(105, 38);

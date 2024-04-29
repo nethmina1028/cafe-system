@@ -46,20 +46,20 @@ namespace cafe_system
 
 
         }
-        private void datagridview()
+        public void datagridview()
         {
             string query = "SELECT * FROM users;";
 
-            //create the dataAdapter & New dataset
+            
 
             SqlDataAdapter adapter1 = new SqlDataAdapter(query, con1);
             DataSet dataSet = new DataSet();
 
-            //pass data into dataset and view it in the view
+            
 
             adapter1.Fill(dataSet, "users");
             guna2DataGridView1.DataSource = dataSet.Tables["users"];
-            con1.Close();
+           
             
         }
 
@@ -78,14 +78,14 @@ namespace cafe_system
             if (guna2DataGridView1.SelectedRows.Count > 0)
             {
 
-                // Retrieve data from the selected row
+               
                 DataGridViewRow selectedRow = guna2DataGridView1.SelectedRows[0];
 
                 string username = selectedRow.Cells["username"].Value.ToString();
 
 
 
-                // Populate another panel with the selected data for updating
+               
 
                 Settxt_Username.Text = username;
 
@@ -105,7 +105,7 @@ namespace cafe_system
             string newPassword = Settxt_Newpassword.Text;
             string confirmedPassword = Settxt_confirmpass.Text;
 
-            // Fetch the old password from the database
+           
             string query = "SELECT password FROM users WHERE username = @username";
 
             SqlCommand command = new SqlCommand(query, con1);
@@ -119,7 +119,7 @@ namespace cafe_system
                 string oldPasswordDB = reader["password"].ToString();
                 reader.Close();
 
-                // Check if the input old password matches the old password from the database
+                
                 if (oldPasswordInput != oldPasswordDB)
                 {
                     MessageBox.Show("Password needs to match with your current password.");
@@ -130,7 +130,7 @@ namespace cafe_system
                 }
                 else
                 {
-                    // Construct the UPDATE query to update the password for the specified username
+                    
                     string updateQuery = "UPDATE users SET password = @newPassword WHERE username = @username";
 
                     SqlCommand updateCommand = new SqlCommand(updateQuery, con1);
@@ -139,7 +139,7 @@ namespace cafe_system
 
                     try
                     {
-                        // Execute the UPDATE query
+                        
                         int rowsAffected = updateCommand.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
@@ -185,7 +185,7 @@ namespace cafe_system
                 con1.Close();
                 reader.Close();
 
-                // Check if the input old password matches the old password from the database
+                
                 if (oldPasswordInput != oldPasswordDB)
                 {
                     MessageBox.Show("Password needs to match with your current password.");
@@ -223,7 +223,14 @@ namespace cafe_system
             {
                 string password = e.Value.ToString();
                 e.Value = new string('*',password.Length);
-            }
+            } 
+           
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            datagridview();
+
         }
     }
 }

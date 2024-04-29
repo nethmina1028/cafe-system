@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms.Suite;
+﻿using Guna.UI2.WinForms;
+using Guna.UI2.WinForms.Suite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,15 @@ using System.Xml.Linq;
 
 namespace cafe_system
 {
+    
     public partial class addAccount : Form
-
     {
+       
         SqlConnection con2= new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
         public addAccount()
         {
             InitializeComponent();
+            
         }
 
         private void txt_empID_TextChanged(object sender, EventArgs e)
@@ -29,9 +32,15 @@ namespace cafe_system
 
         private void AdAcoountBtn_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            settings settings = new settings();
+            settings.datagridview();
+            settings.Show();
+            this.Hide();
+
         }
 
+            
         private void AdAcoountBtn_add_Click(object sender, EventArgs e)
         {
             if (txt_password.Text != txt_confirmpass.Text)
@@ -49,23 +58,22 @@ namespace cafe_system
             }
             else
             {
-                // Get input values
+                
                 string userName = txt_username.Text;
                 string password = txt_password.Text;
                 int empID = Convert.ToInt32(txt_empID.Text);
 
-                // Create the SQL query
+                
                 string query = $"INSERT INTO users (username,password,employeeID) VALUES ('{userName}', '{password}', '{empID}');";
                 SqlCommand cmd = new SqlCommand(query, con2);
 
-                // Execute the command
+               
                 try
                 {
-                    con2.Open(); // Open the connection
-                    cmd.ExecuteNonQuery(); // Execute the query
+                    con2.Open(); 
+                    cmd.ExecuteNonQuery(); 
                     MessageBox.Show("Successful data entry!");
-                    settings form = new settings();
-                    form.Show();
+                   
                 }
                 catch (SqlException sqlex)
                 {
@@ -73,15 +81,16 @@ namespace cafe_system
                 }
                 finally
                 {
-                    con2.Close(); // Close the connection
+                    con2.Close(); 
                 }
+               
             }
-
+           
         }
 
         private void addAccount_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
