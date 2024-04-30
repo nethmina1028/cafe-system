@@ -17,6 +17,7 @@ namespace cafe_system
         public dashboard()
         {
             InitializeComponent();
+
         }
 
         public bool TopLevel { get; internal set; }
