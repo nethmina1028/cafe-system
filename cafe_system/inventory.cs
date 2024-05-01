@@ -31,6 +31,11 @@ namespace cafe_system
         public inventory()
         {
             InitializeComponent();
+            int red = 237 ;
+            int green = 242;
+            int blue = 246;
+            Color customcolor = Color.FromArgb(red, green, blue);
+            inven_dataGrid.ColumnHeadersDefaultCellStyle.BackColor = customcolor;
             con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
             adapter = new SqlDataAdapter();
             dataSet = new DataSet();
@@ -75,10 +80,11 @@ namespace cafe_system
             decimal Price = decimal.Parse(inven_price.Text);
             int Stock = int.Parse(Inven_stock.Text);
             string Type = inven_typebox.Text;
+            DateTime orderDateTime = DateTime.Now;
 
             byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = "INSERT INTO [inventory] (ID, Name, Price, Stock, Type, Image) VALUES (@ID, @Name, @Price, @Stock, @Type, @ImageData)";
+            string query = "INSERT INTO [inventory] (ID, Name, Price, Stock, Type,Date, Image) VALUES (@ID, @Name, @Price, @Stock, @Type,@Date,@ImageData)";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -88,6 +94,8 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@Stock", Stock);
             cmd.Parameters.AddWithValue("@Type", Type);
             cmd.Parameters.AddWithValue("@ImageData", imageData);
+            cmd.Parameters.AddWithValue("@Date", orderDateTime);
+
 
             try
             {

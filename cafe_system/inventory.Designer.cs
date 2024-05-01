@@ -61,9 +61,6 @@
             this.Inven_btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.inven_dataGrid = new Guna.UI.WinForms.GunaDataGridView();
-            this._cafe_systemDataSet1 = new cafe_system._cafe_systemDataSet1();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventoryTableAdapter = new cafe_system._cafe_systemDataSet1TableAdapters.inventoryTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +68,9 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._cafe_systemDataSet1 = new cafe_system._cafe_systemDataSet1();
+            this.inventoryTableAdapter = new cafe_system._cafe_systemDataSet1TableAdapters.inventoryTableAdapter();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Inven_imagebox)).BeginInit();
@@ -80,8 +80,8 @@
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inven_dataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // Inven_btnDelete
@@ -327,7 +327,7 @@
             this.inven_Pname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_Pname.HoverState.Parent = this.inven_Pname;
             this.inven_Pname.Location = new System.Drawing.Point(238, 85);
-            this.inven_Pname.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            this.inven_Pname.Margin = new System.Windows.Forms.Padding(16);
             this.inven_Pname.Name = "inven_Pname";
             this.inven_Pname.PasswordChar = '\0';
             this.inven_Pname.PlaceholderText = "";
@@ -356,7 +356,7 @@
             this.inven_pId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_pId.HoverState.Parent = this.inven_pId;
             this.inven_pId.Location = new System.Drawing.Point(237, 23);
-            this.inven_pId.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.inven_pId.Margin = new System.Windows.Forms.Padding(7);
             this.inven_pId.Name = "inven_pId";
             this.inven_pId.PasswordChar = '\0';
             this.inven_pId.PlaceholderText = "";
@@ -469,7 +469,7 @@
             this.inven_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_search.HoverState.Parent = this.inven_search;
             this.inven_search.Location = new System.Drawing.Point(15, 23);
-            this.inven_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inven_search.Margin = new System.Windows.Forms.Padding(4);
             this.inven_search.Name = "inven_search";
             this.inven_search.PasswordChar = '\0';
             this.inven_search.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(146)))), ((int)(((byte)(142)))));
@@ -530,14 +530,14 @@
             this.inven_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.inven_dataGrid.AutoGenerateColumns = false;
             this.inven_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.inven_dataGrid.BackgroundColor = System.Drawing.Color.White;
+            this.inven_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.inven_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.inven_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.inven_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -584,7 +584,7 @@
             this.inven_dataGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.inven_dataGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.inven_dataGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.inven_dataGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.inven_dataGrid.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.inven_dataGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.inven_dataGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.inven_dataGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -600,20 +600,6 @@
             this.inven_dataGrid.ThemeStyle.RowsStyle.Height = 22;
             this.inven_dataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.inven_dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // _cafe_systemDataSet1
-            // 
-            this._cafe_systemDataSet1.DataSetName = "_cafe_systemDataSet1";
-            this._cafe_systemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "inventory";
-            this.inventoryBindingSource.DataSource = this._cafe_systemDataSet1;
-            // 
-            // inventoryTableAdapter
-            // 
-            this.inventoryTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -657,6 +643,20 @@
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "inventory";
+            this.inventoryBindingSource.DataSource = this._cafe_systemDataSet1;
+            // 
+            // _cafe_systemDataSet1
+            // 
+            this._cafe_systemDataSet1.DataSetName = "_cafe_systemDataSet1";
+            this._cafe_systemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryTableAdapter
+            // 
+            this.inventoryTableAdapter.ClearBeforeFill = true;
+            // 
             // inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -679,8 +679,8 @@
             this.guna2Panel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.inven_dataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
