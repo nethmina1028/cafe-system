@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Downloads\Guna crack\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>C:\Users\nethm\Downloads\softwares usable\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
@@ -122,6 +119,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_cafe_systemDataSet.xsd</DependentUpon>
     </Compile>
+
     <Compile Include="_cafe_systemDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,6 +135,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_cafe_systemDataSet3.xsd</DependentUpon>
     </Compile>
+
     <EmbeddedResource Include="addAccount.resx">
       <DependentUpon>addAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +196,7 @@
     <None Include="_cafe_systemDataSet.xss">
       <DependentUpon>_cafe_systemDataSet.xsd</DependentUpon>
     </None>
+
     <None Include="_cafe_systemDataSet1.xsc">
       <DependentUpon>_cafe_systemDataSet1.xsd</DependentUpon>
     </None>
@@ -230,6 +230,7 @@
     <None Include="_cafe_systemDataSet3.xss">
       <DependentUpon>_cafe_systemDataSet3.xsd</DependentUpon>
     </None>
+
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
