@@ -1,15 +1,20 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Suite;
+using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Net.WebRequestMethods;
 
 namespace cafe_system
 {
@@ -20,6 +25,11 @@ namespace cafe_system
         public settings()
         {
             InitializeComponent();
+            int red = 113;
+            int green = 72;
+            int blue = 61;
+            Color customcolor = Color.FromArgb(red, green, blue);
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = customcolor;
         }
         public bool TopLevel { get; internal set; }
 
@@ -43,8 +53,6 @@ namespace cafe_system
         private void settings_Load(object sender, EventArgs e)
         {
             datagridview();
-
-
         }
         public void datagridview()
         {
