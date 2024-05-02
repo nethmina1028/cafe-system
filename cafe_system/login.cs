@@ -65,6 +65,7 @@ namespace cafe_system
                                 MessageBox.Show("Login Sucess!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 home ho = new home();
+                                ho.SetUsername(txt_user.Text);
                                 ho.Show();
                                 this.Hide();
 

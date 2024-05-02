@@ -1,8 +1,10 @@
 ﻿using Guna.UI2.WinForms;
+using Guna.UI2.WinForms.Suite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +16,14 @@ namespace cafe_system
     public partial class home : Form
     {
         private Timer hometimer;
+        private string con1 = "Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;";
+
+
+        public void SetUsername(string username)
+        {
+            lbl_username.Text = "" + username;
+        }
+
         public home()
         { 
             InitializeComponent();
@@ -161,8 +171,60 @@ namespace cafe_system
             sidepanel.Top = btn_logout.Top;
         }
 
+        public enum UserRole
+        {
+            None,
+            Manager,
+            Cashier,
+        }
+
+
         private void home_Load(object sender, EventArgs e)
         {
+            string username = lbl_username.Text.ToLower();
+            UserRole userrole = GetUserRoleFromDatabase(username);
+            AdjustUIBasedOnRole(userrole);
+        }
+        private UserRole GetUserRoleFromDatabase(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(con1))
+            {
+                connection.Open();
+                string query = "SELECT JobRole FROM Employee WHERE EmployeeName = @username";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@username", username);
+
+
+
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    // Parse the role from the database result
+                    // Assuming the Role column contains either "Manager" or "Cashier"
+                    string role = result.ToString();
+                    return role == "Manager" ? UserRole.Manager : UserRole.Cashier;
+                }
+                else
+                {
+                    // User not found in the database
+                    MessageBox.Show("Invalid username. Please try again.");
+                    return UserRole.None;
+                }
+            }
+        }
+        private void AdjustUIBasedOnRole(UserRole userRole)
+        {
+            // Disable or hide controls based on user role
+            if (userRole == UserRole.Cashier)
+            {
+                // Disable access to forms other than Home and Menu
+                btn_inventory.Enabled = false;
+                btn_reports.Enabled = false;
+                btn_employee.Enabled = false;
+                btn_settings.Enabled = false;
+
+            }
+
 
         }
 
