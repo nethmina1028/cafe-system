@@ -191,12 +191,11 @@ namespace cafe_system
             try
             {
                 connection.Open();
-                string query = "SELECT TOP 5 o.Name, SUM(o.Quantity) AS TotalQuantity, i.Stock " +
-                               "FROM [Oder] o " +
-                               "INNER JOIN inventory i ON o.Name = i.Name " +
-                               "WHERE o.OrderDate = @TodayDate " +
-                               "GROUP BY o.Name, i.Stock " +
-                               "ORDER BY TotalQuantity DESC";
+                string query = "SELECT TOP 5 Name, SUM(Quantity) AS TotalQuantity " +
+                   "FROM [Oder] " +
+                   "WHERE OrderDate = @TodayDate " +
+                   "GROUP BY Name " +
+                   "ORDER BY TotalQuantity DESC";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
                 SqlDataReader reader = command.ExecuteReader();
@@ -207,7 +206,8 @@ namespace cafe_system
                 {
                     string productName = reader["Name"].ToString();
                     int totalQuantity = Convert.ToInt32(reader["TotalQuantity"]);
-                    int maxStock = Convert.ToInt32(reader["Stock"]);
+                    int maxStock = Convert.ToInt32(Console.ReadLine());
+                    maxStock = 20;
 
                     switch (rank)
                     {
