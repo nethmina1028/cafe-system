@@ -182,21 +182,21 @@ namespace cafe_system
             }
 
         }
-    
+
 
         private void DisplayTopSellingProducts()
         {
-
             SqlConnection connection = new SqlConnection(connectionString);
 
             try
             {
                 connection.Open();
-                string query = "SELECT TOP 5 Name, SUM(Quantity) AS TotalQuantity " +
-                   "FROM [Oder] " +
-                   "WHERE OrderDate = @TodayDate " + 
-                   "GROUP BY Name " +
-                   "ORDER BY TotalQuantity DESC";
+                string query = "SELECT TOP 5 o.Name, SUM(o.Quantity) AS TotalQuantity, i.Stock " +
+                               "FROM [Oder] o " +
+                               "INNER JOIN inventory i ON o.Name = i.Name " +
+                               "WHERE o.OrderDate = @TodayDate " +
+                               "GROUP BY o.Name, i.Stock " +
+                               "ORDER BY TotalQuantity DESC";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
                 SqlDataReader reader = command.ExecuteReader();
@@ -207,30 +207,36 @@ namespace cafe_system
                 {
                     string productName = reader["Name"].ToString();
                     int totalQuantity = Convert.ToInt32(reader["TotalQuantity"]);
+                    int maxStock = Convert.ToInt32(reader["Stock"]);
 
                     switch (rank)
                     {
                         case 1:
+                            guna2ProgressBar1.Maximum = maxStock;
                             guna2ProgressBar1.Value = totalQuantity;
                             guna2TextBox1.Text = productName;
                             guna2TextBox2.Text = $"{totalQuantity}";
                             break;
                         case 2:
+                            guna2ProgressBar2.Maximum = maxStock;
                             guna2ProgressBar2.Value = totalQuantity;
                             guna2TextBox8.Text = productName;
                             guna2TextBox3.Text = $"{totalQuantity}";
                             break;
                         case 3:
+                            guna2ProgressBar3.Maximum = maxStock;
                             guna2ProgressBar3.Value = totalQuantity;
                             guna2TextBox9.Text = productName;
                             guna2TextBox4.Text = $"{totalQuantity}";
                             break;
                         case 4:
+                            guna2ProgressBar4.Maximum = maxStock;
                             guna2ProgressBar4.Value = totalQuantity;
                             guna2TextBox10.Text = productName;
                             guna2TextBox6.Text = $"{totalQuantity}";
                             break;
                         case 5:
+                            guna2ProgressBar5.Maximum = maxStock;
                             guna2ProgressBar5.Value = totalQuantity;
                             guna2TextBox11.Text = productName;
                             guna2TextBox7.Text = $"{totalQuantity}";
@@ -249,7 +255,6 @@ namespace cafe_system
                 if (connection.State == System.Data.ConnectionState.Open)
                     connection.Close();
             }
-
         }
 
         public bool TopLevel { get; internal set; }
