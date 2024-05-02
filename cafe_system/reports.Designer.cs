@@ -41,22 +41,17 @@
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.report_dataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._cafe_systemDataSet1 = new cafe_system._cafe_systemDataSet1();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.oderTableAdapter = new cafe_system._cafe_systemDataSet1TableAdapters.OderTableAdapter();
+            this.report_dataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.report_dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.report_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -165,34 +160,41 @@
             this.label5.Size = new System.Drawing.Size(1715, 1);
             this.label5.TabIndex = 33;
             // 
+            // oderBindingSource
+            // 
+            this.oderBindingSource.DataMember = "Oder";
+            this.oderBindingSource.DataSource = this._cafe_systemDataSet1;
+            // 
+            // _cafe_systemDataSet1
+            // 
+            this._cafe_systemDataSet1.DataSetName = "_cafe_systemDataSet1";
+            this._cafe_systemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // oderTableAdapter
+            // 
+            this.oderTableAdapter.ClearBeforeFill = true;
+            // 
             // report_dataGrid
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.report_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.report_dataGrid.AutoGenerateColumns = false;
             this.report_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.report_dataGrid.BackgroundColor = System.Drawing.Color.White;
             this.report_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.report_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.report_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.report_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.report_dataGrid.ColumnHeadersHeight = 50;
-            this.report_dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.orderIDDataGridViewTextBoxColumn,
-            this.orderDateDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn});
-            this.report_dataGrid.DataSource = this.oderBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -201,13 +203,13 @@
             this.report_dataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.report_dataGrid.EnableHeadersVisualStyles = false;
             this.report_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.report_dataGrid.Location = new System.Drawing.Point(19, 228);
+            this.report_dataGrid.Location = new System.Drawing.Point(4, 199);
             this.report_dataGrid.Name = "report_dataGrid";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.report_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
@@ -215,7 +217,7 @@
             this.report_dataGrid.RowHeadersWidth = 51;
             this.report_dataGrid.RowTemplate.Height = 24;
             this.report_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.report_dataGrid.Size = new System.Drawing.Size(1678, 714);
+            this.report_dataGrid.Size = new System.Drawing.Size(1722, 786);
             this.report_dataGrid.TabIndex = 35;
             this.report_dataGrid.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.report_dataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -240,55 +242,6 @@
             this.report_dataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.report_dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // orderIDDataGridViewTextBoxColumn
-            // 
-            this.orderIDDataGridViewTextBoxColumn.DataPropertyName = "OrderID";
-            this.orderIDDataGridViewTextBoxColumn.HeaderText = "OrderID";
-            this.orderIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orderIDDataGridViewTextBoxColumn.Name = "orderIDDataGridViewTextBoxColumn";
-            // 
-            // orderDateDataGridViewTextBoxColumn
-            // 
-            this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate";
-            this.orderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate";
-            this.orderDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // oderBindingSource
-            // 
-            this.oderBindingSource.DataMember = "Oder";
-            this.oderBindingSource.DataSource = this._cafe_systemDataSet1;
-            // 
-            // _cafe_systemDataSet1
-            // 
-            this._cafe_systemDataSet1.DataSetName = "_cafe_systemDataSet1";
-            this._cafe_systemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // oderTableAdapter
-            // 
-            this.oderTableAdapter.ClearBeforeFill = true;
-            // 
             // reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,9 +259,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel11.ResumeLayout(false);
             this.guna2Panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.report_dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.report_dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,15 +274,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2DataGridView report_dataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource oderBindingSource;
         private _cafe_systemDataSet1 _cafe_systemDataSet1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private _cafe_systemDataSet1TableAdapters.OderTableAdapter oderTableAdapter;
+        private Guna.UI2.WinForms.Guna2DataGridView report_dataGrid;
     }
 }

@@ -124,6 +124,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_cafe_systemDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_cafe_systemDataSetOrdersTable1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_cafe_systemDataSetOrdersTable1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_cafe_systemDataSetreportsDatasetTable5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_cafe_systemDataSetreportsDatasetTable5.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addAccount.resx">
       <DependentUpon>addAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +204,28 @@
     </None>
     <None Include="_cafe_systemDataSet11.xss">
       <DependentUpon>_cafe_systemDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetOrdersTable1.xsc">
+      <DependentUpon>_cafe_systemDataSetOrdersTable1.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetOrdersTable1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_cafe_systemDataSetOrdersTable1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_cafe_systemDataSetOrdersTable1.xss">
+      <DependentUpon>_cafe_systemDataSetOrdersTable1.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetreportsDatasetTable5.xsc">
+      <DependentUpon>_cafe_systemDataSetreportsDatasetTable5.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetreportsDatasetTable5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_cafe_systemDataSetreportsDatasetTable5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_cafe_systemDataSetreportsDatasetTable5.xss">
+      <DependentUpon>_cafe_systemDataSetreportsDatasetTable5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
