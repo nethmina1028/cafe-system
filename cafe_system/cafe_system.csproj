@@ -113,6 +113,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_cafe_systemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_cafe_systemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_cafe_systemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_cafe_systemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_cafe_systemDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_cafe_systemDataSetemployee1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_cafe_systemDataSetemployee1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_cafe_systemDataSetEmployeeTable3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_cafe_systemDataSetEmployeeTable3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addAccount.resx">
       <DependentUpon>addAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +189,50 @@
     </None>
     <None Include="_cafe_systemDataSet.xss">
       <DependentUpon>_cafe_systemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSet1.xsc">
+      <DependentUpon>_cafe_systemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_cafe_systemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_cafe_systemDataSet1.xss">
+      <DependentUpon>_cafe_systemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSet2.xsc">
+      <DependentUpon>_cafe_systemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_cafe_systemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_cafe_systemDataSet2.xss">
+      <DependentUpon>_cafe_systemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetemployee1.xsc">
+      <DependentUpon>_cafe_systemDataSetemployee1.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetemployee1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_cafe_systemDataSetemployee1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_cafe_systemDataSetemployee1.xss">
+      <DependentUpon>_cafe_systemDataSetemployee1.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetEmployeeTable3.xsc">
+      <DependentUpon>_cafe_systemDataSetEmployeeTable3.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetEmployeeTable3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_cafe_systemDataSetEmployeeTable3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_cafe_systemDataSetEmployeeTable3.xss">
+      <DependentUpon>_cafe_systemDataSetEmployeeTable3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
