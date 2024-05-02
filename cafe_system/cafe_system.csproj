@@ -124,10 +124,10 @@
     <Compile Include="settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="_cafe_systemDataSet.Designer.cs">
+    <Compile Include="_cafe_systemDataSetEmployeeTable3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_cafe_systemDataSet.xsd</DependentUpon>
+      <DependentUpon>_cafe_systemDataSetEmployeeTable3.xsd</DependentUpon>
     </Compile>
     <Compile Include="_cafe_systemDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -186,16 +186,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_cafe_systemDataSet.xsc">
-      <DependentUpon>_cafe_systemDataSet.xsd</DependentUpon>
+    <None Include="_cafe_systemDataSetEmployeeTable3.xsc">
+      <DependentUpon>_cafe_systemDataSetEmployeeTable3.xsd</DependentUpon>
     </None>
-    <None Include="_cafe_systemDataSet.xsd">
+    <None Include="_cafe_systemDataSetEmployeeTable3.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_cafe_systemDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>_cafe_systemDataSetEmployeeTable3.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_cafe_systemDataSet.xss">
-      <DependentUpon>_cafe_systemDataSet.xsd</DependentUpon>
+    <None Include="_cafe_systemDataSetEmployeeTable3.xss">
+      <DependentUpon>_cafe_systemDataSetEmployeeTable3.xsd</DependentUpon>
     </None>
     <None Include="_cafe_systemDataSet1.xsc">
       <DependentUpon>_cafe_systemDataSet1.xsd</DependentUpon>
