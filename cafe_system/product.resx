@@ -117,26 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAWBJREFUSEvtVNFVwzAMzAiM0BE6AiOwAWzQbkB/+hyn2CLOAGUDRugIjJAROgLo
-        HDk4jR2XfHPv6Uc6nSVFSnULRWqjnSHtbM/27a2zX40zZ0WnR6H9DdoRBAexjA0PqI2klNE4OscCdWcv
-        qrXvqjUH3ZnPOMbW3yWuO3odk7htRTRLgo8f+gi8xtmLhNIYZvpbyYHoQUJJ1NxF4CtnXsQ9B2Y2EhOV
-        3oL4Ya72Cv5i1Wjdk3im4irCz12KyXYYCCCLqwjdvT2FvCPRVtxTrBHGPo95ud3moD+EmtdNXEXwAe2D
-        cLbiaIWupY0IwI5LTi+uOeK2TnzK4s6CP/Iu8HVpfDWvzSjOxyLuGSai/voK6wkCiHES5ohuho7MHusY
-        xf0/40hNer4xEuI56+PT1q19Foll4EzD0cSGa8NK4gOj0kn8XnEAAmEUqT+ZIi5grXgJ/+JJxOKL/+k1
-        gPggWlU/Jh22r8EJppIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="oderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>274, 17</value>
-  </metadata>
-  <metadata name="_cafe_systemDataSetReports3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="oderTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>461, 17</value>
-  </metadata>
 </root>
