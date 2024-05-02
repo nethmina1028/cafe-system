@@ -139,6 +139,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_cafe_systemDataSetEmployeeTable7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_cafe_systemDataSetReports3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_cafe_systemDataSetReports3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addAccount.resx">
       <DependentUpon>addAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +228,17 @@
     </None>
     <None Include="_cafe_systemDataSetEmployeeTable7.xss">
       <DependentUpon>_cafe_systemDataSetEmployeeTable7.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetReports3.xsc">
+      <DependentUpon>_cafe_systemDataSetReports3.xsd</DependentUpon>
+    </None>
+    <None Include="_cafe_systemDataSetReports3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_cafe_systemDataSetReports3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_cafe_systemDataSetReports3.xss">
+      <DependentUpon>_cafe_systemDataSetReports3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
