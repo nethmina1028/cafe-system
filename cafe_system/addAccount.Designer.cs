@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addAccount));
             this.txt_confirmpass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
@@ -38,6 +39,14 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AdAcoountBtn_add = new Guna.UI2.WinForms.Guna2Button();
             this.AdAcoountBtn_close = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_confirmpass
@@ -209,11 +218,61 @@
             this.AdAcoountBtn_close.Text = "Close";
             this.AdAcoountBtn_close.Click += new System.EventHandler(this.AdAcoountBtn_close_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.BackgroundImage")));
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(79, 64);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox1.TabIndex = 23;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.BackgroundImage")));
+            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(90, 134);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox2.TabIndex = 24;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.BackgroundImage")));
+            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(105, 204);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox3.TabIndex = 25;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.BackgroundImage")));
+            this.guna2PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(38, 274);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox4.TabIndex = 26;
+            this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
+            // 
             // addAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(218)))), ((int)(((byte)(201)))));
             this.ClientSize = new System.Drawing.Size(574, 437);
+            this.Controls.Add(this.guna2PictureBox4);
+            this.Controls.Add(this.guna2PictureBox3);
+            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.AdAcoountBtn_add);
             this.Controls.Add(this.AdAcoountBtn_close);
             this.Controls.Add(this.txt_confirmpass);
@@ -229,6 +288,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.addAccount_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +308,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button AdAcoountBtn_add;
         private Guna.UI2.WinForms.Guna2Button AdAcoountBtn_close;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
     }
 }
