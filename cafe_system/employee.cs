@@ -29,12 +29,6 @@ namespace cafe_system
         public employee()
         {
             InitializeComponent();
-            int red = 113;
-            int green = 72;
-            int blue = 61;
-            Color customcolor = Color.FromArgb(red, green, blue);
-            emp_dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = customcolor;
-            
             con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
             adapter = new SqlDataAdapter();
             dataSet = new DataSet();
@@ -119,7 +113,7 @@ namespace cafe_system
             string Address = textEmp_address.Text;
             byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole,  NIC, PhoneNo,Address,Photo) VALUES (@EmployeeId, @EmployeeName, @JobRole, @NIC, @PhoneNo,@Address,@Photo)";
+            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole,  NIC, PhoneNo,Address) VALUES (@EmployeeId, @EmployeeName, @JobRole, @NIC, @PhoneNo,@Address)";
 
 
 
@@ -132,18 +126,6 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@NIC", NIC);
             cmd.Parameters.AddWithValue("@PhoneNO", PhoneNo);
             cmd.Parameters.AddWithValue("@Address", Address);
-            cmd.Parameters.AddWithValue("@Photo", imageData);//set binary formatted image to paramete
-            //converting image to binary format to store in sql database.
-            //converting image to binary format to store in sql database.
-            //MemoryStream ms = new MemoryStream();
-            //img.Save(ms, img.RawFormat);
-
-
-
-            //cmd.Parameters.AddWithValue("@Photo", imageData);//set binary formatted image to paramete
-            //cmd.ExecuteNonQuery(); //save to table
-
-
 
             try
             {
@@ -245,7 +227,7 @@ namespace cafe_system
 
             byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole,  NIC, PhoneNo,Address,Photo) VALUES (@EmployeeId, @EmployeeName, @JobRole,  @NIC, @PhoneNo,@Address,@Photo)";
+            string query = "INSERT INTO [Employee] (EmployeeId, EmployeeName, JobRole,  NIC, PhoneNo,Address) VALUES (@EmployeeId, @EmployeeName, @JobRole,  @NIC, @PhoneNo,@Address)";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -256,14 +238,6 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@NIC", NIC);
             cmd.Parameters.AddWithValue("@PhoneNO", PhoneNo);
             cmd.Parameters.AddWithValue("@Address", Address);
-            cmd.Parameters.AddWithValue("@Photo", imageData);//set binary formatted image to paramete
-           // MemoryStream ms = new MemoryStream();
-            //img.Save(ms, img.RawFormat);
-
-
-
-            //cmd.Parameters.AddWithValue("@Photo", imageData);//set binary formatted image to paramete
-            //cmd.ExecuteNonQuery(); //save to table
 
             try
             {
@@ -303,7 +277,7 @@ namespace cafe_system
             string Address = textEmp_address.Text;
             byte[] imageData = File.ReadAllBytes(imagePath);
 
-            string query = "UPDATE [employee] SET EmployeeName = @EmployeeName, JobRole = @JobRole, NIC = @NIC,PhoneNo=@PhoneNo,Address=@Address,Photo=@Photo  WHERE EmployeeId = @EmployeeId";
+            string query = "UPDATE [employee] SET EmployeeName = @EmployeeName, JobRole = @JobRole, NIC = @NIC,PhoneNo=@PhoneNo,Address=@Address  WHERE EmployeeId = @EmployeeId";
 
             SqlCommand cmd = new SqlCommand(query, con1);
 
@@ -314,14 +288,6 @@ namespace cafe_system
             cmd.Parameters.AddWithValue("@NIC", NIC);
             cmd.Parameters.AddWithValue("@PhoneNO", PhoneNo);
             cmd.Parameters.AddWithValue("@Address", Address);
-            cmd.Parameters.AddWithValue("@Photo", imageData);//set binary formatted image to paramete
-            //MemoryStream ms = new MemoryStream();
-            //img.Save(ms, img.RawFormat);
-
-
-
-            //cmd.Parameters.AddWithValue("@Photo", imageData);//set binary formatted image to paramete
-            //cmd.ExecuteNonQuery(); //save to table
 
             try
             {
@@ -379,7 +345,7 @@ namespace cafe_system
             {
                 int selectedRowIndex = emp_dataGridView2.SelectedRows[0].Index;
 
-                int EmployeeId = Convert.ToInt32(emp_dataGridView2.Rows[selectedRowIndex].Cells[0].Value);
+                int EmployeeId = Convert.ToInt32(emp_dataGridView2.Rows[selectedRowIndex].Cells[1].Value);
 
                 Console.WriteLine("Deleting employee with ID: " + EmployeeId);
 
@@ -438,11 +404,6 @@ namespace cafe_system
         }
 
         private void emp_dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtEmp_Id_TextChanged(object sender, EventArgs e)
         {
 
         }

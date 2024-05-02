@@ -20,9 +20,9 @@ namespace cafe_system {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("_cafe_systemDataSetEmployeeTable3")]
+    [global::System.Xml.Serialization.XmlRootAttribute("_cafe_systemDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _cafe_systemDataSetEmployeeTable3 : global::System.Data.DataSet {
+    public partial class _cafe_systemDataSet : global::System.Data.DataSet {
         
         private EmployeeDataTable tableEmployee;
         
@@ -30,7 +30,7 @@ namespace cafe_system {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public _cafe_systemDataSetEmployeeTable3() {
+        public _cafe_systemDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace cafe_system {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected _cafe_systemDataSetEmployeeTable3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected _cafe_systemDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace cafe_system {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _cafe_systemDataSetEmployeeTable3 cln = ((_cafe_systemDataSetEmployeeTable3)(base.Clone()));
+            _cafe_systemDataSet cln = ((_cafe_systemDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace cafe_system {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "_cafe_systemDataSetEmployeeTable3";
+            this.DataSetName = "_cafe_systemDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/_cafe_systemDataSetEmployeeTable3.xsd";
+            this.Namespace = "http://tempuri.org/_cafe_systemDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEmployee = new EmployeeDataTable();
@@ -225,7 +225,7 @@ namespace cafe_system {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _cafe_systemDataSetEmployeeTable3 ds = new _cafe_systemDataSetEmployeeTable3();
+            _cafe_systemDataSet ds = new _cafe_systemDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,13 +279,15 @@ namespace cafe_system {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EmployeeDataTable : global::System.Data.TypedTableBase<EmployeeRow> {
             
+            private global::System.Data.DataColumn columnPhoto;
+            
             private global::System.Data.DataColumn columnEmployeeID;
             
             private global::System.Data.DataColumn columnEmployeeName;
             
             private global::System.Data.DataColumn columnJobRole;
             
-            private global::System.Data.DataColumn columnPhoneNo;
+            private global::System.Data.DataColumn columnBin;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -322,6 +324,14 @@ namespace cafe_system {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PhotoColumn {
+                get {
+                    return this.columnPhoto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn EmployeeIDColumn {
                 get {
                     return this.columnEmployeeID;
@@ -346,9 +356,9 @@ namespace cafe_system {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PhoneNoColumn {
+            public global::System.Data.DataColumn BinColumn {
                 get {
-                    return this.columnPhoneNo;
+                    return this.columnBin;
                 }
             }
             
@@ -389,13 +399,14 @@ namespace cafe_system {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EmployeeRow AddEmployeeRow(int EmployeeID, string EmployeeName, string JobRole, int PhoneNo) {
+            public EmployeeRow AddEmployeeRow(byte[] Photo, int EmployeeID, string EmployeeName, string JobRole, byte[] Bin) {
                 EmployeeRow rowEmployeeRow = ((EmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Photo,
                         EmployeeID,
                         EmployeeName,
                         JobRole,
-                        PhoneNo};
+                        Bin};
                 rowEmployeeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmployeeRow);
                 return rowEmployeeRow;
@@ -425,23 +436,26 @@ namespace cafe_system {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnPhoto = base.Columns["Photo"];
                 this.columnEmployeeID = base.Columns["EmployeeID"];
                 this.columnEmployeeName = base.Columns["EmployeeName"];
                 this.columnJobRole = base.Columns["JobRole"];
-                this.columnPhoneNo = base.Columns["PhoneNo"];
+                this.columnBin = base.Columns["Bin"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnPhoto = new global::System.Data.DataColumn("Photo", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoto);
                 this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeID);
                 this.columnEmployeeName = new global::System.Data.DataColumn("EmployeeName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeName);
                 this.columnJobRole = new global::System.Data.DataColumn("JobRole", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJobRole);
-                this.columnPhoneNo = new global::System.Data.DataColumn("PhoneNo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNo);
+                this.columnBin = new global::System.Data.DataColumn("Bin", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBin);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEmployeeID}, true));
                 this.columnEmployeeID.AllowDBNull = false;
@@ -450,7 +464,6 @@ namespace cafe_system {
                 this.columnEmployeeName.MaxLength = 50;
                 this.columnJobRole.AllowDBNull = false;
                 this.columnJobRole.MaxLength = 50;
-                this.columnPhoneNo.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -518,7 +531,7 @@ namespace cafe_system {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _cafe_systemDataSetEmployeeTable3 ds = new _cafe_systemDataSetEmployeeTable3();
+                _cafe_systemDataSet ds = new _cafe_systemDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -593,6 +606,22 @@ namespace cafe_system {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public byte[] Photo {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableEmployee.PhotoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Photo\' in table \'Employee\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployee.PhotoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int EmployeeID {
                 get {
                     return ((int)(this[this.tableEmployee.EmployeeIDColumn]));
@@ -626,13 +655,42 @@ namespace cafe_system {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int PhoneNo {
+            public byte[] Bin {
                 get {
-                    return ((int)(this[this.tableEmployee.PhoneNoColumn]));
+                    try {
+                        return ((byte[])(this[this.tableEmployee.BinColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Bin\' in table \'Employee\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableEmployee.PhoneNoColumn] = value;
+                    this[this.tableEmployee.BinColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPhotoNull() {
+                return this.IsNull(this.tableEmployee.PhotoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPhotoNull() {
+                this[this.tableEmployee.PhotoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsBinNull() {
+                return this.IsNull(this.tableEmployee.BinColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetBinNull() {
+                this[this.tableEmployee.BinColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -671,7 +729,7 @@ namespace cafe_system {
         }
     }
 }
-namespace cafe_system._cafe_systemDataSetEmployeeTable3TableAdapters {
+namespace cafe_system._cafe_systemDataSetTableAdapters {
     
     
     /// <summary>
@@ -795,34 +853,33 @@ namespace cafe_system._cafe_systemDataSetEmployeeTable3TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Employee";
+            tableMapping.ColumnMappings.Add("Photo", "Photo");
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             tableMapping.ColumnMappings.Add("EmployeeName", "EmployeeName");
             tableMapping.ColumnMappings.Add("JobRole", "JobRole");
-            tableMapping.ColumnMappings.Add("PhoneNo", "PhoneNo");
+            tableMapping.ColumnMappings.Add("Bin", "Bin");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Employee] WHERE (([EmployeeID] = @Original_EmployeeID) AND ([E" +
-                "mployeeName] = @Original_EmployeeName) AND ([JobRole] = @Original_JobRole) AND (" +
-                "[PhoneNo] = @Original_PhoneNo))";
+                "mployeeName] = @Original_EmployeeName) AND ([JobRole] = @Original_JobRole))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JobRole", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JobRole", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Employee] SET [EmployeeID] = @EmployeeID, [EmployeeName] = @EmployeeName, [JobRole] = @JobRole, [PhoneNo] = @PhoneNo WHERE (([EmployeeID] = @Original_EmployeeID) AND ([EmployeeName] = @Original_EmployeeName) AND ([JobRole] = @Original_JobRole) AND ([PhoneNo] = @Original_PhoneNo));
-SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeID = @EmployeeID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Employee] SET [Photo] = @Photo, [EmployeeID] = @EmployeeID, [EmployeeName] = @EmployeeName, [JobRole] = @JobRole, [Bin] = @Bin WHERE (([EmployeeID] = @Original_EmployeeID) AND ([EmployeeName] = @Original_EmployeeName) AND ([JobRole] = @Original_JobRole));
+SELECT Photo, EmployeeID, EmployeeName, JobRole, Bin FROM Employee WHERE (EmployeeID = @EmployeeID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@JobRole", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JobRole", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bin", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JobRole", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JobRole", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -838,7 +895,7 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM dbo.Employee";
+            this._commandCollection[0].CommandText = "SELECT Photo, EmployeeID, EmployeeName, JobRole, Bin FROM dbo.Employee";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -846,7 +903,7 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_cafe_systemDataSetEmployeeTable3.EmployeeDataTable dataTable) {
+        public virtual int Fill(_cafe_systemDataSet.EmployeeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -859,9 +916,9 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _cafe_systemDataSetEmployeeTable3.EmployeeDataTable GetData() {
+        public virtual _cafe_systemDataSet.EmployeeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _cafe_systemDataSetEmployeeTable3.EmployeeDataTable dataTable = new _cafe_systemDataSetEmployeeTable3.EmployeeDataTable();
+            _cafe_systemDataSet.EmployeeDataTable dataTable = new _cafe_systemDataSet.EmployeeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -869,14 +926,14 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_cafe_systemDataSetEmployeeTable3.EmployeeDataTable dataTable) {
+        public virtual int Update(_cafe_systemDataSet.EmployeeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_cafe_systemDataSetEmployeeTable3 dataSet) {
+        public virtual int Update(_cafe_systemDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Employee");
         }
         
@@ -899,7 +956,7 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_EmployeeID, string Original_EmployeeName, string Original_JobRole, int Original_PhoneNo) {
+        public virtual int Delete(int Original_EmployeeID, string Original_EmployeeName, string Original_JobRole) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_EmployeeID));
             if ((Original_EmployeeName == null)) {
                 throw new global::System.ArgumentNullException("Original_EmployeeName");
@@ -913,7 +970,6 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_JobRole));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_PhoneNo));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -934,35 +990,45 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int EmployeeID, string EmployeeName, string JobRole, int PhoneNo, int Original_EmployeeID, string Original_EmployeeName, string Original_JobRole, int Original_PhoneNo) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(EmployeeID));
+        public virtual int Update(byte[] Photo, int EmployeeID, string EmployeeName, string JobRole, byte[] Bin, int Original_EmployeeID, string Original_EmployeeName, string Original_JobRole) {
+            if ((Photo == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte[])(Photo));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(EmployeeID));
             if ((EmployeeName == null)) {
                 throw new global::System.ArgumentNullException("EmployeeName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(EmployeeName));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(EmployeeName));
             }
             if ((JobRole == null)) {
                 throw new global::System.ArgumentNullException("JobRole");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(JobRole));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(JobRole));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(PhoneNo));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_EmployeeID));
+            if ((Bin == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((byte[])(Bin));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_EmployeeID));
             if ((Original_EmployeeName == null)) {
                 throw new global::System.ArgumentNullException("Original_EmployeeName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_EmployeeName));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_EmployeeName));
             }
             if ((Original_JobRole == null)) {
                 throw new global::System.ArgumentNullException("Original_JobRole");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_JobRole));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_JobRole));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_PhoneNo));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -983,8 +1049,8 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string EmployeeName, string JobRole, int PhoneNo, int Original_EmployeeID, string Original_EmployeeName, string Original_JobRole, int Original_PhoneNo) {
-            return this.Update(Original_EmployeeID, EmployeeName, JobRole, PhoneNo, Original_EmployeeID, Original_EmployeeName, Original_JobRole, Original_PhoneNo);
+        public virtual int Update(byte[] Photo, string EmployeeName, string JobRole, byte[] Bin, int Original_EmployeeID, string Original_EmployeeName, string Original_JobRole) {
+            return this.Update(Photo, Original_EmployeeID, EmployeeName, JobRole, Bin, Original_EmployeeID, Original_EmployeeName, Original_JobRole);
         }
     }
     
@@ -1079,7 +1145,7 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(_cafe_systemDataSetEmployeeTable3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(_cafe_systemDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1098,7 +1164,7 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(_cafe_systemDataSetEmployeeTable3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(_cafe_systemDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1116,7 +1182,7 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(_cafe_systemDataSetEmployeeTable3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(_cafe_systemDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1158,7 +1224,7 @@ SELECT EmployeeID, EmployeeName, JobRole, PhoneNo FROM Employee WHERE (EmployeeI
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(_cafe_systemDataSetEmployeeTable3 dataSet) {
+        public virtual int UpdateAll(_cafe_systemDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
