@@ -58,20 +58,19 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.emp_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.emp_dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this._cafe_systemDataSet = new cafe_system._cafe_systemDataSet();
+            this._cafe_systemDataSetEmployeeTable7 = new cafe_system._cafe_systemDataSetEmployeeTable7();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new cafe_system._cafe_systemDataSetTableAdapters.EmployeeTableAdapter();
-            this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.employeeTableAdapter = new cafe_system._cafe_systemDataSetEmployeeTable7TableAdapters.EmployeeTableAdapter();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.binDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.phoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSetEmployeeTable7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -493,48 +492,47 @@
             // 
             // emp_dataGridView2
             // 
-            this.emp_dataGridView2.AllowDrop = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             this.emp_dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.emp_dataGridView2.AutoGenerateColumns = false;
             this.emp_dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.emp_dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.emp_dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(236)))), ((int)(((byte)(224)))));
             this.emp_dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emp_dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.emp_dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.emp_dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.emp_dataGridView2.ColumnHeadersHeight = 20;
+            this.emp_dataGridView2.ColumnHeadersHeight = 50;
             this.emp_dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.photoDataGridViewImageColumn,
             this.employeeIDDataGridViewTextBoxColumn,
             this.employeeNameDataGridViewTextBoxColumn,
             this.jobRoleDataGridViewTextBoxColumn,
-            this.binDataGridViewImageColumn});
+            this.phoneNoDataGridViewTextBoxColumn});
             this.emp_dataGridView2.DataSource = this.employeeBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(236)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(236)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.emp_dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.emp_dataGridView2.EnableHeadersVisualStyles = false;
             this.emp_dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.emp_dataGridView2.Location = new System.Drawing.Point(35, 119);
+            this.emp_dataGridView2.Location = new System.Drawing.Point(16, 119);
             this.emp_dataGridView2.Name = "emp_dataGridView2";
             this.emp_dataGridView2.RowHeadersVisible = false;
-            this.emp_dataGridView2.RowHeadersWidth = 60;
+            this.emp_dataGridView2.RowHeadersWidth = 50;
             this.emp_dataGridView2.RowTemplate.Height = 24;
             this.emp_dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.emp_dataGridView2.Size = new System.Drawing.Size(1681, 428);
+            this.emp_dataGridView2.Size = new System.Drawing.Size(1390, 431);
             this.emp_dataGridView2.TabIndex = 9;
             this.emp_dataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -542,14 +540,14 @@
             this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.emp_dataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.emp_dataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.emp_dataGridView2.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(236)))), ((int)(((byte)(224)))));
             this.emp_dataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.emp_dataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.emp_dataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.emp_dataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.emp_dataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.emp_dataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.emp_dataGridView2.ThemeStyle.HeaderStyle.Height = 20;
+            this.emp_dataGridView2.ThemeStyle.HeaderStyle.Height = 50;
             this.emp_dataGridView2.ThemeStyle.ReadOnly = false;
             this.emp_dataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.emp_dataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -558,28 +556,20 @@
             this.emp_dataGridView2.ThemeStyle.RowsStyle.Height = 24;
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.emp_dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.emp_dataGridView2_CellContentClick);
             // 
-            // _cafe_systemDataSet
+            // _cafe_systemDataSetEmployeeTable7
             // 
-            this._cafe_systemDataSet.DataSetName = "_cafe_systemDataSet";
-            this._cafe_systemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._cafe_systemDataSetEmployeeTable7.DataSetName = "_cafe_systemDataSetEmployeeTable7";
+            this._cafe_systemDataSetEmployeeTable7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this._cafe_systemDataSet;
+            this.employeeBindingSource.DataSource = this._cafe_systemDataSetEmployeeTable7;
             // 
             // employeeTableAdapter
             // 
             this.employeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // photoDataGridViewImageColumn
-            // 
-            this.photoDataGridViewImageColumn.DataPropertyName = "Photo";
-            this.photoDataGridViewImageColumn.HeaderText = "Photo";
-            this.photoDataGridViewImageColumn.MinimumWidth = 6;
-            this.photoDataGridViewImageColumn.Name = "photoDataGridViewImageColumn";
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
@@ -602,12 +592,12 @@
             this.jobRoleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.jobRoleDataGridViewTextBoxColumn.Name = "jobRoleDataGridViewTextBoxColumn";
             // 
-            // binDataGridViewImageColumn
+            // phoneNoDataGridViewTextBoxColumn
             // 
-            this.binDataGridViewImageColumn.DataPropertyName = "Bin";
-            this.binDataGridViewImageColumn.HeaderText = "Bin";
-            this.binDataGridViewImageColumn.MinimumWidth = 6;
-            this.binDataGridViewImageColumn.Name = "binDataGridViewImageColumn";
+            this.phoneNoDataGridViewTextBoxColumn.DataPropertyName = "PhoneNo";
+            this.phoneNoDataGridViewTextBoxColumn.HeaderText = "PhoneNo";
+            this.phoneNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNoDataGridViewTextBoxColumn.Name = "phoneNoDataGridViewTextBoxColumn";
             // 
             // employee
             // 
@@ -627,7 +617,7 @@
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSetEmployeeTable7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -659,13 +649,12 @@
         private Guna.UI2.WinForms.Guna2ComboBox typebEmp_jobrole;
         private Guna.UI2.WinForms.Guna2Button img_bttn;
         private Guna.UI2.WinForms.Guna2DataGridView emp_dataGridView2;
-        private System.Windows.Forms.DataGridViewImageColumn photoDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jobRoleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn binDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private _cafe_systemDataSet _cafe_systemDataSet;
-        private _cafe_systemDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
+        private _cafe_systemDataSetEmployeeTable7 _cafe_systemDataSetEmployeeTable7;
+        private _cafe_systemDataSetEmployeeTable7TableAdapters.EmployeeTableAdapter employeeTableAdapter;
     }
 }
