@@ -59,20 +59,20 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.emp_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.emp_dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this._cafe_systemDataSetEmployeeTable3 = new cafe_system._cafe_systemDataSetEmployeeTable3();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new cafe_system._cafe_systemDataSetEmployeeTable3TableAdapters.EmployeeTableAdapter();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._cafe_systemDataSetEmployeeTable3 = new cafe_system._cafe_systemDataSetEmployeeTable3();
+            this.employeeTableAdapter = new cafe_system._cafe_systemDataSetEmployeeTable3TableAdapters.EmployeeTableAdapter();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSetEmployeeTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSetEmployeeTable3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -112,7 +112,7 @@
             this.empBtn_add.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empBtn_add.ForeColor = System.Drawing.Color.White;
             this.empBtn_add.HoverState.Parent = this.empBtn_add;
-            this.empBtn_add.Location = new System.Drawing.Point(584, 305);
+            this.empBtn_add.Location = new System.Drawing.Point(581, 305);
             this.empBtn_add.Name = "empBtn_add";
             this.empBtn_add.ShadowDecoration.Parent = this.empBtn_add;
             this.empBtn_add.Size = new System.Drawing.Size(140, 47);
@@ -495,7 +495,7 @@
             // emp_dataGridView2
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(236)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.emp_dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.emp_dataGridView2.AutoGenerateColumns = false;
             this.emp_dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -504,7 +504,7 @@
             this.emp_dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.emp_dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
@@ -519,7 +519,7 @@
             this.phoneNoDataGridViewTextBoxColumn});
             this.emp_dataGridView2.DataSource = this.employeeBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(236)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -567,20 +567,6 @@
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.emp_dataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // _cafe_systemDataSetEmployeeTable3
-            // 
-            this._cafe_systemDataSetEmployeeTable3.DataSetName = "_cafe_systemDataSetEmployeeTable3";
-            this._cafe_systemDataSetEmployeeTable3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this._cafe_systemDataSetEmployeeTable3;
-            // 
-            // employeeTableAdapter
-            // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
-            // 
             // employeeIDDataGridViewTextBoxColumn
             // 
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
@@ -609,6 +595,20 @@
             this.phoneNoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phoneNoDataGridViewTextBoxColumn.Name = "phoneNoDataGridViewTextBoxColumn";
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this._cafe_systemDataSetEmployeeTable3;
+            // 
+            // _cafe_systemDataSetEmployeeTable3
+            // 
+            this._cafe_systemDataSetEmployeeTable3.DataSetName = "_cafe_systemDataSetEmployeeTable3";
+            this._cafe_systemDataSetEmployeeTable3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
             // employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -627,8 +627,8 @@
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emp_dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSetEmployeeTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cafe_systemDataSetEmployeeTable3)).EndInit();
             this.ResumeLayout(false);
 
         }
