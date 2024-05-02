@@ -29,6 +29,11 @@ namespace cafe_system
         public employee()
         {
             InitializeComponent();
+            int red = 113;
+            int green = 72;
+            int blue = 61;
+            Color customcolor = Color.FromArgb(red, green, blue);
+            emp_dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = customcolor;
             con1 = new SqlConnection(@"Server=tcp:cafesystem.database.windows.net,1433;Initial Catalog=cafe-system;Persist Security Info=False;User ID=cafesystem;Password=Mugandmufine$;MultipleActiveResultSets=False;Encrypt=True;");
             adapter = new SqlDataAdapter();
             dataSet = new DataSet();
@@ -345,7 +350,7 @@ namespace cafe_system
             {
                 int selectedRowIndex = emp_dataGridView2.SelectedRows[0].Index;
 
-                int EmployeeId = Convert.ToInt32(emp_dataGridView2.Rows[selectedRowIndex].Cells[1].Value);
+                int EmployeeId = Convert.ToInt32(emp_dataGridView2.Rows[selectedRowIndex].Cells[0].Value);
 
                 Console.WriteLine("Deleting employee with ID: " + EmployeeId);
 
