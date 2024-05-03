@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidepanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
             this.btn_settings = new Guna.UI2.WinForms.Guna2Button();
@@ -40,14 +42,12 @@
             this.btn_menu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_home = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_username = new System.Windows.Forms.Label();
             this.lbl_dateTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel_home = new Guna.UI2.WinForms.Guna2Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -65,19 +65,44 @@
             this.guna2Panel1.Controls.Add(this.btn_home);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(251, 687);
+            this.guna2Panel1.Size = new System.Drawing.Size(335, 846);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.ForeColor = System.Drawing.Color.White;
+            this.lbl_username.Location = new System.Drawing.Point(107, 110);
+            this.lbl_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(96, 30);
+            this.lbl_username.TabIndex = 1;
+            this.lbl_username.Text = "Nethmin";
+            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(131, 33);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 55);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.White;
-            this.sidepanel.Location = new System.Drawing.Point(0, 144);
-            this.sidepanel.Margin = new System.Windows.Forms.Padding(2);
+            this.sidepanel.Location = new System.Drawing.Point(0, 177);
+            this.sidepanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sidepanel.Name = "sidepanel";
             this.sidepanel.ShadowDecoration.Parent = this.sidepanel;
-            this.sidepanel.Size = new System.Drawing.Size(13, 70);
+            this.sidepanel.Size = new System.Drawing.Size(17, 86);
             this.sidepanel.TabIndex = 0;
             this.sidepanel.MouseHover += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -94,10 +119,11 @@
             this.btn_logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_logout.ImageOffset = new System.Drawing.Point(30, 0);
             this.btn_logout.ImageSize = new System.Drawing.Size(24, 20);
-            this.btn_logout.Location = new System.Drawing.Point(0, 605);
+            this.btn_logout.Location = new System.Drawing.Point(0, 745);
+            this.btn_logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.ShadowDecoration.Parent = this.btn_logout;
-            this.btn_logout.Size = new System.Drawing.Size(251, 70);
+            this.btn_logout.Size = new System.Drawing.Size(335, 86);
             this.btn_logout.TabIndex = 6;
             this.btn_logout.Text = "   Logout";
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
@@ -114,10 +140,11 @@
             this.btn_settings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_settings.ImageOffset = new System.Drawing.Point(30, 0);
             this.btn_settings.ImageSize = new System.Drawing.Size(22, 20);
-            this.btn_settings.Location = new System.Drawing.Point(0, 524);
+            this.btn_settings.Location = new System.Drawing.Point(0, 645);
+            this.btn_settings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.ShadowDecoration.Parent = this.btn_settings;
-            this.btn_settings.Size = new System.Drawing.Size(251, 70);
+            this.btn_settings.Size = new System.Drawing.Size(335, 86);
             this.btn_settings.TabIndex = 5;
             this.btn_settings.Text = "    Settings";
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
@@ -134,10 +161,11 @@
             this.btn_employee.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_employee.ImageOffset = new System.Drawing.Point(30, 0);
             this.btn_employee.ImageSize = new System.Drawing.Size(25, 20);
-            this.btn_employee.Location = new System.Drawing.Point(0, 448);
+            this.btn_employee.Location = new System.Drawing.Point(0, 551);
+            this.btn_employee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_employee.Name = "btn_employee";
             this.btn_employee.ShadowDecoration.Parent = this.btn_employee;
-            this.btn_employee.Size = new System.Drawing.Size(251, 70);
+            this.btn_employee.Size = new System.Drawing.Size(335, 86);
             this.btn_employee.TabIndex = 4;
             this.btn_employee.Text = "       Employee";
             this.btn_employee.Click += new System.EventHandler(this.btn_empoyee_Click);
@@ -153,10 +181,11 @@
             this.btn_reports.Image = ((System.Drawing.Image)(resources.GetObject("btn_reports.Image")));
             this.btn_reports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_reports.ImageOffset = new System.Drawing.Point(30, 0);
-            this.btn_reports.Location = new System.Drawing.Point(0, 372);
+            this.btn_reports.Location = new System.Drawing.Point(0, 458);
+            this.btn_reports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_reports.Name = "btn_reports";
             this.btn_reports.ShadowDecoration.Parent = this.btn_reports;
-            this.btn_reports.Size = new System.Drawing.Size(251, 70);
+            this.btn_reports.Size = new System.Drawing.Size(335, 86);
             this.btn_reports.TabIndex = 3;
             this.btn_reports.Text = "    Reports";
             this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
@@ -172,10 +201,11 @@
             this.btn_inventory.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventory.Image")));
             this.btn_inventory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_inventory.ImageOffset = new System.Drawing.Point(30, 0);
-            this.btn_inventory.Location = new System.Drawing.Point(0, 296);
+            this.btn_inventory.Location = new System.Drawing.Point(0, 364);
+            this.btn_inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_inventory.Name = "btn_inventory";
             this.btn_inventory.ShadowDecoration.Parent = this.btn_inventory;
-            this.btn_inventory.Size = new System.Drawing.Size(251, 70);
+            this.btn_inventory.Size = new System.Drawing.Size(335, 86);
             this.btn_inventory.TabIndex = 2;
             this.btn_inventory.Text = "       Inventory";
             this.btn_inventory.Click += new System.EventHandler(this.btn_inventory_Click);
@@ -191,10 +221,11 @@
             this.btn_menu.Image = ((System.Drawing.Image)(resources.GetObject("btn_menu.Image")));
             this.btn_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_menu.ImageOffset = new System.Drawing.Point(30, 0);
-            this.btn_menu.Location = new System.Drawing.Point(0, 220);
+            this.btn_menu.Location = new System.Drawing.Point(0, 271);
+            this.btn_menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_menu.Name = "btn_menu";
             this.btn_menu.ShadowDecoration.Parent = this.btn_menu;
-            this.btn_menu.Size = new System.Drawing.Size(251, 70);
+            this.btn_menu.Size = new System.Drawing.Size(335, 86);
             this.btn_menu.TabIndex = 1;
             this.btn_menu.Text = "Menu";
             this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
@@ -211,10 +242,11 @@
             this.btn_home.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_home.ImageOffset = new System.Drawing.Point(30, 0);
             this.btn_home.ImageSize = new System.Drawing.Size(25, 20);
-            this.btn_home.Location = new System.Drawing.Point(0, 144);
+            this.btn_home.Location = new System.Drawing.Point(0, 177);
+            this.btn_home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_home.Name = "btn_home";
             this.btn_home.ShadowDecoration.Parent = this.btn_home;
-            this.btn_home.Size = new System.Drawing.Size(251, 70);
+            this.btn_home.Size = new System.Drawing.Size(335, 86);
             this.btn_home.TabIndex = 0;
             this.btn_home.Text = "Home";
             this.btn_home.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -224,34 +256,13 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             this.guna2Panel2.Controls.Add(this.lbl_dateTime);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(251, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(335, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(904, 58);
+            this.guna2Panel2.Size = new System.Drawing.Size(1205, 71);
             this.guna2Panel2.TabIndex = 1;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(98, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.AutoSize = true;
-            this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.ForeColor = System.Drawing.Color.White;
-            this.lbl_username.Location = new System.Drawing.Point(80, 89);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(77, 23);
-            this.lbl_username.TabIndex = 1;
-            this.lbl_username.Text = "Nethmin";
-            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_dateTime
             // 
@@ -259,8 +270,8 @@
             this.lbl_dateTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             this.lbl_dateTime.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dateTime.ForeColor = System.Drawing.Color.White;
-            this.lbl_dateTime.Location = new System.Drawing.Point(850, 27);
-            this.lbl_dateTime.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_dateTime.Location = new System.Drawing.Point(1133, 33);
+            this.lbl_dateTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbl_dateTime.Name = "lbl_dateTime";
             this.lbl_dateTime.Size = new System.Drawing.Size(3, 2);
             this.lbl_dateTime.TabIndex = 0;
@@ -270,10 +281,11 @@
             // panel_home
             // 
             this.panel_home.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_home.Location = new System.Drawing.Point(251, 58);
+            this.panel_home.Location = new System.Drawing.Point(335, 71);
+            this.panel_home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_home.Name = "panel_home";
             this.panel_home.ShadowDecoration.Parent = this.panel_home;
-            this.panel_home.Size = new System.Drawing.Size(904, 629);
+            this.panel_home.Size = new System.Drawing.Size(1205, 775);
             this.panel_home.TabIndex = 2;
             // 
             // timer1
@@ -282,22 +294,24 @@
             // 
             // home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 687);
+            this.ClientSize = new System.Drawing.Size(1540, 846);
             this.Controls.Add(this.panel_home);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mug & Muffin Cafe";
+            this.Text = " Mug & Muffin Cafe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.home_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
