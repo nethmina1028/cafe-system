@@ -40,6 +40,8 @@
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.AutoRoundedCorners = true;
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.Controls.Add(this.prodName);
             this.guna2Panel1.Controls.Add(this.img);
@@ -54,7 +56,8 @@
             this.prodName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.prodName.AutoSize = true;
             this.prodName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodName.Location = new System.Drawing.Point(41, 140);
+            this.prodName.ForeColor = System.Drawing.Color.GhostWhite;
+            this.prodName.Location = new System.Drawing.Point(47, 141);
             this.prodName.Name = "prodName";
             this.prodName.Size = new System.Drawing.Size(62, 28);
             this.prodName.TabIndex = 1;
@@ -62,12 +65,14 @@
             // 
             // img
             // 
+            this.img.AutoRoundedCorners = true;
             this.img.BackColor = System.Drawing.SystemColors.Control;
-            this.img.BorderRadius = 40;
-            this.img.Location = new System.Drawing.Point(-3, -3);
+            this.img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.img.BorderRadius = 20;
+            this.img.Location = new System.Drawing.Point(1, 2);
             this.img.Name = "img";
             this.img.ShadowDecoration.Parent = this.img;
-            this.img.Size = new System.Drawing.Size(179, 136);
+            this.img.Size = new System.Drawing.Size(170, 136);
             this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img.TabIndex = 0;
             this.img.TabStop = false;

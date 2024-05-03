@@ -18,7 +18,7 @@ namespace cafe_system.Class_BLL
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT MAX(OrderID) FROM Opps";
+                string query = "SELECT MAX(OrderID) FROM Oder";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -57,7 +57,7 @@ namespace cafe_system.Class_BLL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO Opps(OrderID,OrderDate,Name,Quantity,Amount) " +
+                string query = "INSERT INTO Oder(OrderID,OrderDate,Name,Quantity,Amount) " +
                                "VALUES (@OrderID,@OrderDate,@Name,@Quantity,@Amount)";
 
                 SqlCommand command = new SqlCommand(query, connection);

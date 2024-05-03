@@ -58,15 +58,15 @@
             this.Inven_btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.inven_dataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._cafe_systemDataSet1 = new cafe_system._cafe_systemDataSet1();
-            this.inventoryTableAdapter = new cafe_system._cafe_systemDataSet1TableAdapters.inventoryTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._cafe_systemDataSet1 = new cafe_system._cafe_systemDataSet1();
+            this.inventoryTableAdapter = new cafe_system._cafe_systemDataSet1TableAdapters.inventoryTableAdapter();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Inven_imagebox)).BeginInit();
@@ -89,10 +89,11 @@
             this.Inven_btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnDelete.ForeColor = System.Drawing.Color.White;
             this.Inven_btnDelete.HoverState.Parent = this.Inven_btnDelete;
-            this.Inven_btnDelete.Location = new System.Drawing.Point(801, 4);
+            this.Inven_btnDelete.Location = new System.Drawing.Point(1068, 5);
+            this.Inven_btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Inven_btnDelete.Name = "Inven_btnDelete";
             this.Inven_btnDelete.ShadowDecoration.Parent = this.Inven_btnDelete;
-            this.Inven_btnDelete.Size = new System.Drawing.Size(122, 38);
+            this.Inven_btnDelete.Size = new System.Drawing.Size(163, 47);
             this.Inven_btnDelete.TabIndex = 15;
             this.Inven_btnDelete.Text = "Delete";
             this.Inven_btnDelete.Click += new System.EventHandler(this.Inven_btnDelete_Click);
@@ -108,10 +109,11 @@
             this.Inven_btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnClear.ForeColor = System.Drawing.Color.White;
             this.Inven_btnClear.HoverState.Parent = this.Inven_btnClear;
-            this.Inven_btnClear.Location = new System.Drawing.Point(668, 4);
+            this.Inven_btnClear.Location = new System.Drawing.Point(891, 5);
+            this.Inven_btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Inven_btnClear.Name = "Inven_btnClear";
             this.Inven_btnClear.ShadowDecoration.Parent = this.Inven_btnClear;
-            this.Inven_btnClear.Size = new System.Drawing.Size(122, 38);
+            this.Inven_btnClear.Size = new System.Drawing.Size(163, 47);
             this.Inven_btnClear.TabIndex = 14;
             this.Inven_btnClear.Text = "Clear";
             this.Inven_btnClear.Click += new System.EventHandler(this.Inven_btnClear_Click);
@@ -127,10 +129,11 @@
             this.Inven_btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnUpdate.ForeColor = System.Drawing.Color.White;
             this.Inven_btnUpdate.HoverState.Parent = this.Inven_btnUpdate;
-            this.Inven_btnUpdate.Location = new System.Drawing.Point(536, 4);
+            this.Inven_btnUpdate.Location = new System.Drawing.Point(715, 5);
+            this.Inven_btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Inven_btnUpdate.Name = "Inven_btnUpdate";
             this.Inven_btnUpdate.ShadowDecoration.Parent = this.Inven_btnUpdate;
-            this.Inven_btnUpdate.Size = new System.Drawing.Size(122, 38);
+            this.Inven_btnUpdate.Size = new System.Drawing.Size(163, 47);
             this.Inven_btnUpdate.TabIndex = 13;
             this.Inven_btnUpdate.Text = "Update";
             this.Inven_btnUpdate.Click += new System.EventHandler(this.Inven_btnUpdate_Click);
@@ -146,10 +149,11 @@
             this.Inven_btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnAdd.ForeColor = System.Drawing.Color.White;
             this.Inven_btnAdd.HoverState.Parent = this.Inven_btnAdd;
-            this.Inven_btnAdd.Location = new System.Drawing.Point(404, 4);
+            this.Inven_btnAdd.Location = new System.Drawing.Point(539, 5);
+            this.Inven_btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Inven_btnAdd.Name = "Inven_btnAdd";
             this.Inven_btnAdd.ShadowDecoration.Parent = this.Inven_btnAdd;
-            this.Inven_btnAdd.Size = new System.Drawing.Size(122, 38);
+            this.Inven_btnAdd.Size = new System.Drawing.Size(163, 47);
             this.Inven_btnAdd.TabIndex = 12;
             this.Inven_btnAdd.Text = "Add";
             this.Inven_btnAdd.Click += new System.EventHandler(this.Inven_btnAdd_Click);
@@ -161,10 +165,11 @@
             this.guna2Panel4.Controls.Add(this.Inven_btnClear);
             this.guna2Panel4.Controls.Add(this.Inven_btnUpdate);
             this.guna2Panel4.Controls.Add(this.Inven_btnAdd);
-            this.guna2Panel4.Location = new System.Drawing.Point(3, 693);
+            this.guna2Panel4.Location = new System.Drawing.Point(4, 853);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(1283, 69);
+            this.guna2Panel4.Size = new System.Drawing.Size(1711, 85);
             this.guna2Panel4.TabIndex = 10;
             // 
             // guna2Panel2
@@ -184,10 +189,11 @@
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel2.Location = new System.Drawing.Point(15, 486);
+            this.guna2Panel2.Location = new System.Drawing.Point(20, 598);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1271, 205);
+            this.guna2Panel2.Size = new System.Drawing.Size(1695, 252);
             this.guna2Panel2.TabIndex = 9;
             // 
             // Inven_btnUpload
@@ -200,10 +206,11 @@
             this.Inven_btnUpload.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnUpload.ForeColor = System.Drawing.Color.White;
             this.Inven_btnUpload.HoverState.Parent = this.Inven_btnUpload;
-            this.Inven_btnUpload.Location = new System.Drawing.Point(866, 150);
+            this.Inven_btnUpload.Location = new System.Drawing.Point(1155, 185);
+            this.Inven_btnUpload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Inven_btnUpload.Name = "Inven_btnUpload";
             this.Inven_btnUpload.ShadowDecoration.Parent = this.Inven_btnUpload;
-            this.Inven_btnUpload.Size = new System.Drawing.Size(172, 20);
+            this.Inven_btnUpload.Size = new System.Drawing.Size(229, 25);
             this.Inven_btnUpload.TabIndex = 11;
             this.Inven_btnUpload.Text = "Upload";
             this.Inven_btnUpload.Click += new System.EventHandler(this.Inven_btnUpload_Click);
@@ -212,10 +219,11 @@
             // 
             this.Inven_imagebox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Inven_imagebox.Image = ((System.Drawing.Image)(resources.GetObject("Inven_imagebox.Image")));
-            this.Inven_imagebox.Location = new System.Drawing.Point(866, 11);
+            this.Inven_imagebox.Location = new System.Drawing.Point(1155, 14);
+            this.Inven_imagebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Inven_imagebox.Name = "Inven_imagebox";
             this.Inven_imagebox.ShadowDecoration.Parent = this.Inven_imagebox;
-            this.Inven_imagebox.Size = new System.Drawing.Size(172, 137);
+            this.Inven_imagebox.Size = new System.Drawing.Size(229, 169);
             this.Inven_imagebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Inven_imagebox.TabIndex = 10;
             this.Inven_imagebox.TabStop = false;
@@ -238,10 +246,11 @@
             this.inven_typebox.HoverState.Parent = this.inven_typebox;
             this.inven_typebox.ItemHeight = 30;
             this.inven_typebox.ItemsAppearance.Parent = this.inven_typebox;
-            this.inven_typebox.Location = new System.Drawing.Point(237, 141);
+            this.inven_typebox.Location = new System.Drawing.Point(316, 174);
+            this.inven_typebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inven_typebox.Name = "inven_typebox";
             this.inven_typebox.ShadowDecoration.Parent = this.inven_typebox;
-            this.inven_typebox.Size = new System.Drawing.Size(197, 36);
+            this.inven_typebox.Size = new System.Drawing.Size(261, 36);
             this.inven_typebox.TabIndex = 9;
             // 
             // Inven_stock
@@ -262,14 +271,14 @@
             this.Inven_stock.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Inven_stock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Inven_stock.HoverState.Parent = this.Inven_stock;
-            this.Inven_stock.Location = new System.Drawing.Point(563, 85);
-            this.Inven_stock.Margin = new System.Windows.Forms.Padding(37, 36, 37, 36);
+            this.Inven_stock.Location = new System.Drawing.Point(751, 105);
+            this.Inven_stock.Margin = new System.Windows.Forms.Padding(49, 44, 49, 44);
             this.Inven_stock.Name = "Inven_stock";
             this.Inven_stock.PasswordChar = '\0';
             this.Inven_stock.PlaceholderText = "";
             this.Inven_stock.SelectedText = "";
             this.Inven_stock.ShadowDecoration.Parent = this.Inven_stock;
-            this.Inven_stock.Size = new System.Drawing.Size(196, 37);
+            this.Inven_stock.Size = new System.Drawing.Size(261, 46);
             this.Inven_stock.TabIndex = 8;
             // 
             // inven_price
@@ -291,14 +300,14 @@
             this.inven_price.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.inven_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_price.HoverState.Parent = this.inven_price;
-            this.inven_price.Location = new System.Drawing.Point(563, 23);
-            this.inven_price.Margin = new System.Windows.Forms.Padding(37, 36, 37, 36);
+            this.inven_price.Location = new System.Drawing.Point(751, 28);
+            this.inven_price.Margin = new System.Windows.Forms.Padding(49, 44, 49, 44);
             this.inven_price.Name = "inven_price";
             this.inven_price.PasswordChar = '\0';
             this.inven_price.PlaceholderText = "";
             this.inven_price.SelectedText = "";
             this.inven_price.ShadowDecoration.Parent = this.inven_price;
-            this.inven_price.Size = new System.Drawing.Size(196, 37);
+            this.inven_price.Size = new System.Drawing.Size(261, 46);
             this.inven_price.TabIndex = 7;
             // 
             // inven_Pname
@@ -320,14 +329,14 @@
             this.inven_Pname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.inven_Pname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_Pname.HoverState.Parent = this.inven_Pname;
-            this.inven_Pname.Location = new System.Drawing.Point(238, 85);
-            this.inven_Pname.Margin = new System.Windows.Forms.Padding(16);
+            this.inven_Pname.Location = new System.Drawing.Point(317, 105);
+            this.inven_Pname.Margin = new System.Windows.Forms.Padding(21, 20, 21, 20);
             this.inven_Pname.Name = "inven_Pname";
             this.inven_Pname.PasswordChar = '\0';
             this.inven_Pname.PlaceholderText = "";
             this.inven_Pname.SelectedText = "";
             this.inven_Pname.ShadowDecoration.Parent = this.inven_Pname;
-            this.inven_Pname.Size = new System.Drawing.Size(196, 37);
+            this.inven_Pname.Size = new System.Drawing.Size(261, 46);
             this.inven_Pname.TabIndex = 6;
             // 
             // inven_pId
@@ -349,14 +358,14 @@
             this.inven_pId.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.inven_pId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_pId.HoverState.Parent = this.inven_pId;
-            this.inven_pId.Location = new System.Drawing.Point(237, 23);
-            this.inven_pId.Margin = new System.Windows.Forms.Padding(7);
+            this.inven_pId.Location = new System.Drawing.Point(316, 28);
+            this.inven_pId.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.inven_pId.Name = "inven_pId";
             this.inven_pId.PasswordChar = '\0';
             this.inven_pId.PlaceholderText = "";
             this.inven_pId.SelectedText = "";
             this.inven_pId.ShadowDecoration.Parent = this.inven_pId;
-            this.inven_pId.Size = new System.Drawing.Size(196, 37);
+            this.inven_pId.Size = new System.Drawing.Size(261, 46);
             this.inven_pId.TabIndex = 5;
             // 
             // label5
@@ -366,9 +375,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(494, 92);
+            this.label5.Location = new System.Drawing.Point(659, 113);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 23);
+            this.label5.Size = new System.Drawing.Size(65, 30);
             this.label5.TabIndex = 4;
             this.label5.Text = "Stock";
             // 
@@ -379,9 +389,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(494, 31);
+            this.label4.Location = new System.Drawing.Point(659, 38);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 23);
+            this.label4.Size = new System.Drawing.Size(60, 30);
             this.label4.TabIndex = 3;
             this.label4.Text = "Price";
             // 
@@ -392,9 +403,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(162, 142);
+            this.label3.Location = new System.Drawing.Point(216, 175);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 23);
+            this.label3.Size = new System.Drawing.Size(60, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "Type";
             // 
@@ -405,9 +417,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(94, 89);
+            this.label2.Location = new System.Drawing.Point(125, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.Size = new System.Drawing.Size(152, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "Product Name";
             // 
@@ -418,9 +431,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(123, 28);
+            this.label1.Location = new System.Drawing.Point(164, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 23);
+            this.label1.Size = new System.Drawing.Size(115, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product ID";
             // 
@@ -429,10 +443,11 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(229, 32);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(305, 39);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(29, 27);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
@@ -454,15 +469,15 @@
             this.inven_search.FocusedState.Parent = this.inven_search;
             this.inven_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.inven_search.HoverState.Parent = this.inven_search;
-            this.inven_search.Location = new System.Drawing.Point(15, 23);
-            this.inven_search.Margin = new System.Windows.Forms.Padding(4);
+            this.inven_search.Location = new System.Drawing.Point(20, 28);
+            this.inven_search.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.inven_search.Name = "inven_search";
             this.inven_search.PasswordChar = '\0';
             this.inven_search.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(146)))), ((int)(((byte)(142)))));
             this.inven_search.PlaceholderText = "Search using Product ID";
             this.inven_search.SelectedText = "";
             this.inven_search.ShadowDecoration.Parent = this.inven_search;
-            this.inven_search.Size = new System.Drawing.Size(248, 38);
+            this.inven_search.Size = new System.Drawing.Size(331, 47);
             this.inven_search.TabIndex = 0;
             this.inven_search.TextOffset = new System.Drawing.Point(20, 0);
             // 
@@ -474,10 +489,11 @@
             this.guna2Panel1.Controls.Add(this.Inven_btnSearch);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.inven_search);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 3);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1289, 86);
+            this.guna2Panel1.Size = new System.Drawing.Size(1719, 106);
             this.guna2Panel1.TabIndex = 7;
             // 
             // Inven_btnSearch
@@ -490,10 +506,11 @@
             this.Inven_btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inven_btnSearch.ForeColor = System.Drawing.Color.White;
             this.Inven_btnSearch.HoverState.Parent = this.Inven_btnSearch;
-            this.Inven_btnSearch.Location = new System.Drawing.Point(295, 23);
+            this.Inven_btnSearch.Location = new System.Drawing.Point(393, 28);
+            this.Inven_btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Inven_btnSearch.Name = "Inven_btnSearch";
             this.Inven_btnSearch.ShadowDecoration.Parent = this.Inven_btnSearch;
-            this.Inven_btnSearch.Size = new System.Drawing.Size(105, 38);
+            this.Inven_btnSearch.Size = new System.Drawing.Size(140, 47);
             this.Inven_btnSearch.TabIndex = 3;
             this.Inven_btnSearch.Text = "Search";
             this.Inven_btnSearch.Click += new System.EventHandler(this.Inven_btnSearch_Click);
@@ -504,9 +521,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.inven_dataGrid);
-            this.panel1.Location = new System.Drawing.Point(0, 183);
+            this.panel1.Location = new System.Drawing.Point(0, 225);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1289, 308);
+            this.panel1.Size = new System.Drawing.Size(1719, 379);
             this.panel1.TabIndex = 8;
             // 
             // inven_dataGrid
@@ -521,9 +539,9 @@
             this.inven_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(72)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.inven_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -546,7 +564,8 @@
             this.inven_dataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.inven_dataGrid.EnableHeadersVisualStyles = false;
             this.inven_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.inven_dataGrid.Location = new System.Drawing.Point(15, 20);
+            this.inven_dataGrid.Location = new System.Drawing.Point(20, 25);
+            this.inven_dataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inven_dataGrid.Name = "inven_dataGrid";
             this.inven_dataGrid.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -558,8 +577,9 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.inven_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.inven_dataGrid.RowHeadersVisible = false;
+            this.inven_dataGrid.RowHeadersWidth = 51;
             this.inven_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.inven_dataGrid.Size = new System.Drawing.Size(1038, 267);
+            this.inven_dataGrid.Size = new System.Drawing.Size(1384, 329);
             this.inven_dataGrid.TabIndex = 0;
             this.inven_dataGrid.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.inven_dataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -584,6 +604,54 @@
             this.inven_dataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.inven_dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stockDataGridViewTextBoxColumn
+            // 
+            this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
+            this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
+            this.stockDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            this.stockDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // inventoryBindingSource
             // 
             this.inventoryBindingSource.DataMember = "inventory";
@@ -598,59 +666,18 @@
             // 
             this.inventoryTableAdapter.ClearBeforeFill = true;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stockDataGridViewTextBoxColumn
-            // 
-            this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
-            this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
-            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
-            this.stockDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // inventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "inventory";
-            this.Size = new System.Drawing.Size(1289, 765);
+            this.Size = new System.Drawing.Size(1719, 942);
             this.Load += new System.EventHandler(this.inventory_Load);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);

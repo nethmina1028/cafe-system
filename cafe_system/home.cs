@@ -63,6 +63,8 @@ namespace cafe_system
             lbl_dateTime.Text = DateTime.Now.ToString();
         }
 
+        
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             sidepanel.Height = btn_home.Height; // Side Panel of the home button 
@@ -84,6 +86,10 @@ namespace cafe_system
         {
             sidepanel.Height = btn_menu.Height; // Side Panel of the menu button 
             sidepanel.Top = btn_menu.Top;
+
+         
+
+
 
             menu men = new menu();
             men.TopLevel = false;
@@ -173,18 +179,18 @@ namespace cafe_system
 
         public enum UserRole
         {
-            None,
-            Manager,
-            Cashier,
+            None,     
+            ShiftSupervisor,  
+            Cashier 
         }
-
-
         private void home_Load(object sender, EventArgs e)
         {
             string username = lbl_username.Text.ToLower();
             UserRole userrole = GetUserRoleFromDatabase(username);
             AdjustUIBasedOnRole(userrole);
+
         }
+
         private UserRole GetUserRoleFromDatabase(string username)
         {
             using (SqlConnection connection = new SqlConnection(con1))
@@ -192,21 +198,19 @@ namespace cafe_system
                 connection.Open();
                 string query = "SELECT JobRole FROM Employee WHERE EmployeeName = @username";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@Username", username);
 
 
 
                 object result = command.ExecuteScalar();
                 if (result != null)
                 {
-                    // Parse the role from the database result
-                    // Assuming the Role column contains either "Manager" or "Cashier"
                     string role = result.ToString();
-                    return role == "Manager" ? UserRole.Manager : UserRole.Cashier;
+                    return role == "Shift Supervisor" ? UserRole.ShiftSupervisor : UserRole.Cashier;
                 }
                 else
                 {
-                    // User not found in the database
+                    
                     MessageBox.Show("Invalid username. Please try again.");
                     return UserRole.None;
                 }
@@ -214,15 +218,29 @@ namespace cafe_system
         }
         private void AdjustUIBasedOnRole(UserRole userRole)
         {
-            // Disable or hide controls based on user role
+            
             if (userRole == UserRole.Cashier)
             {
-                // Disable access to forms other than Home and Menu
+               
                 btn_inventory.Enabled = false;
                 btn_reports.Enabled = false;
                 btn_employee.Enabled = false;
                 btn_settings.Enabled = false;
 
+                Color disabledBackColor = Color.Transparent; 
+                Color disabledForeColor = SystemColors.GrayText; 
+
+                btn_inventory.FillColor = disabledBackColor;
+                btn_inventory.ForeColor = disabledForeColor;
+
+                btn_reports.FillColor = disabledBackColor;
+                btn_reports.ForeColor = disabledForeColor;
+
+                btn_employee.FillColor = disabledBackColor;
+                btn_employee.ForeColor = disabledForeColor;
+
+                btn_settings.FillColor = disabledBackColor;
+                btn_settings.ForeColor = disabledForeColor;
             }
 
 

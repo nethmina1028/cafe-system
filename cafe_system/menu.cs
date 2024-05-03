@@ -13,7 +13,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using Image = System.Drawing.Image;
-
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf;
+using System.Drawing.Printing;
 
 
 namespace cafe_system
@@ -27,7 +29,11 @@ namespace cafe_system
             InitializeComponent();
             generateProducctCards();
 
-
+            int red = 113;
+            int green = 72;
+            int blue = 61;
+            Color customcolor = Color.FromArgb(red, green, blue);
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = customcolor;
 
         }
 
@@ -129,14 +135,13 @@ namespace cafe_system
                     guna2DataGridView1.DataSource = dataTable;
                  
 
-                    // Update label text with the calculated total amount
-
+                   
                 }
                 // Add the clicked card's data to the DataTable
                 // dataTable.Rows.Add(rowData["Name"].ToString(), (decimal)rowData["Price"]); // Add more fields as needed
 
-                // Set the DataTable as the DataSource for the DataGridView
-                // Check if the product already exists in the DataTable
+               
+
                 DataRow existingRow = dataTable.AsEnumerable().FirstOrDefault(
                     row => row.Field<string>("Name") == rowData.Field<string>("Name"));
 
@@ -216,69 +221,150 @@ namespace cafe_system
                 
             }
         }
-       
 
+        private string GenerateReceipt(int orderID, DataTable orderItems, decimal totalAmount)
+        {
+            StringBuilder receiptBuilder = new StringBuilder();
+
+            receiptBuilder.AppendLine("----- Receipt -----");
+            receiptBuilder.AppendLine($"Order ID: {orderID}");
+            receiptBuilder.AppendLine("Items:");
+
+            foreach (DataRow row in orderItems.Rows)
+            {
+                string itemName = row["Name"].ToString();
+                int quantity = Convert.ToInt32(row["Qty"]);
+                decimal amount = Convert.ToDecimal(row["Amount"]);
+
+                receiptBuilder.AppendLine($"{itemName} x {quantity}  ${amount}");
+            }
+
+            receiptBuilder.AppendLine($"Total Amount: ${totalAmount}");
+            receiptBuilder.AppendLine("--------------------");
+
+            return receiptBuilder.ToString();
+        }
+
+
+        private void SaveReceiptAsPdf(string receiptText, string filePath)
+        {
+            // Create a new PDF document
+            PdfDocument document = new PdfDocument();
+            PdfPage page = document.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XFont font = new XFont("Arial", 12);
+
+            // Draw receipt text on the PDF
+            XRect rect = new XRect(40, 40, page.Width.Point - 80, page.Height.Point - 80);
+            gfx.DrawString(receiptText, font, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+            // Save the PDF document
+            document.Save(filePath);
+            document.Close();
+        }
+
+        private void PrintPdf(string filePath)
+        {
+            try
+            {
+                // Print the PDF 
+                using (PrintDocument pd = new PrintDocument())
+                {
+                    pd.PrintPage += (sender, e) =>
+                    {
+                        e.Graphics.DrawImage(Image.FromFile(filePath), e.MarginBounds);
+                    };
+
+                    pd.Print();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error printing receipt: {ex.Message}");
+            }
+        }
 
 
         private void btn_pay_Click(object sender, EventArgs e)
+      
+
         {
-          
             ClassBLL2 objBLL2 = new ClassBLL2();
 
-            // Get the latest OrderID from the database
+
             int latestOrderID = objBLL2.GetLatestOrderID();
 
-            // Increment the latest OrderID to generate a new OrderID
+
             int newOrderID = objBLL2.IncrementOrderID(latestOrderID);
 
-
             DateTime orderDateTime = DateTime.Now;
-            
-           
+
             decimal totalAmount = CalculateTotalAmount(guna2DataGridView1.DataSource as DataTable);
 
-            // Iterate through DataGridView rows to save each product as a separate order item
-            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            // Check if there are any items in the DataGridView
+            if (guna2DataGridView1.Rows.Count > 0)
             {
-               
-
-
-                if (row.Cells["Name"] != null && row.Cells["Name"].Value != null)
+                try
                 {
-                    string productName = row.Cells["Name"].Value.ToString();
-                   
-                    Console.WriteLine("Product Name: " + productName);
 
-                    
 
-                    // int productId = Convert.ToInt32(row.Cells["ID"].Value); // Assuming "ID" is the column name for item ID
-                    int quantity = Convert.ToInt32(row.Cells["Qty"].Value);
-                    decimal amount = Convert.ToDecimal(row.Cells["Amount"].Value);
+                    foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+                    {
+                        if (row.Cells["Name"] != null && row.Cells["Name"].Value != null)
+                        {
+                            string productName = row.Cells["Name"].Value.ToString();
+                            int quantity = Convert.ToInt32(row.Cells["Qty"].Value);
+                            decimal amount = Convert.ToDecimal(row.Cells["Amount"].Value);
 
-                    
-                    objBLL2.SaveOrder(orderDateTime, productName, quantity, amount, newOrderID);
+
+                            objBLL2.SaveOrder(orderDateTime, productName, quantity, amount, newOrderID);
+                        }
+                    }
+
+                   // MessageBox.Show("Order saved successfully.");
                 }
-                else
+                catch (Exception ex)
                 {
-                    
-                    Console.WriteLine("Error: The cell value is null.");
+                    MessageBox.Show($"Error saving order: {ex.Message}");
                 }
+                finally
+                {
 
-               
+                  
+                    DataTable orderItems = guna2DataGridView1.DataSource as DataTable;
+               //     decimal totalAmount = CalculateTotalAmount(orderItems);
+
+                    string receipt = GenerateReceipt(newOrderID, orderItems, totalAmount);
+
+                    
+                    MessageBox.Show(receipt, "Receipt");
+
+                    
+                    string receiptFilePath = "receipt.pdf";
+                    SaveReceiptAsPdf(receipt, receiptFilePath);
+
+                    
+                    PrintPdf(receiptFilePath);
+
+                    btn_clear_Click(sender, e);
+
+
+                    oder_Id.Text = newOrderID.ToString();
+                }
             }
-
-            
-            MessageBox.Show("Order(s) saved successfully.");
-
-        
-
-            btn_clear_Click(sender, e);
-
-            oder_Id.Text = newOrderID.ToString();
-            
+            else
+            {
+                MessageBox.Show("No items selected to process.");
+            }
         }
-       
+
+
+
+
+
+
 
 
     }
+
 }
