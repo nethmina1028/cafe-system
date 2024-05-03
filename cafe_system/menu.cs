@@ -129,14 +129,15 @@ namespace cafe_system
                     guna2DataGridView1.DataSource = dataTable;
                  
 
-                    // Update label text with the calculated total amount
-
+                   
                 }
                 // Add the clicked card's data to the DataTable
                 // dataTable.Rows.Add(rowData["Name"].ToString(), (decimal)rowData["Price"]); // Add more fields as needed
 
                 // Set the DataTable as the DataSource for the DataGridView
                 // Check if the product already exists in the DataTable
+
+
                 DataRow existingRow = dataTable.AsEnumerable().FirstOrDefault(
                     row => row.Field<string>("Name") == rowData.Field<string>("Name"));
 
