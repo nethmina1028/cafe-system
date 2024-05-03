@@ -27,7 +27,11 @@ namespace cafe_system
             InitializeComponent();
             generateProducctCards();
 
-
+            int red = 113;
+            int green = 72;
+            int blue = 61;
+            Color customcolor = Color.FromArgb(red, green, blue);
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = customcolor;
 
         }
 
