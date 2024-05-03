@@ -63,6 +63,8 @@ namespace cafe_system
             lbl_dateTime.Text = DateTime.Now.ToString();
         }
 
+        
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             sidepanel.Height = btn_home.Height; // Side Panel of the home button 
@@ -84,6 +86,10 @@ namespace cafe_system
         {
             sidepanel.Height = btn_menu.Height; // Side Panel of the menu button 
             sidepanel.Top = btn_menu.Top;
+
+         
+
+
 
             menu men = new menu();
             men.TopLevel = false;

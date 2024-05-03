@@ -140,9 +140,7 @@ namespace cafe_system
                 // Add the clicked card's data to the DataTable
                 // dataTable.Rows.Add(rowData["Name"].ToString(), (decimal)rowData["Price"]); // Add more fields as needed
 
-                // Set the DataTable as the DataSource for the DataGridView
-                // Check if the product already exists in the DataTable
-
+               
 
                 DataRow existingRow = dataTable.AsEnumerable().FirstOrDefault(
                     row => row.Field<string>("Name") == rowData.Field<string>("Name"));
@@ -269,7 +267,7 @@ namespace cafe_system
         {
             try
             {
-                // Print the PDF file using default printer
+                // Print the PDF 
                 using (PrintDocument pd = new PrintDocument())
                 {
                     pd.PrintPage += (sender, e) =>
@@ -288,73 +286,7 @@ namespace cafe_system
 
 
         private void btn_pay_Click(object sender, EventArgs e)
-        /* {
-
-             ClassBLL2 objBLL2 = new ClassBLL2();
-
-
-             int latestOrderID = objBLL2.GetLatestOrderID();
-
-
-             int newOrderID = objBLL2.IncrementOrderID(latestOrderID);
-
-
-             DateTime orderDateTime = DateTime.Now;
-
-
-             decimal totalAmount = CalculateTotalAmount(guna2DataGridView1.DataSource as DataTable);
-
-
-             foreach (DataGridViewRow row in guna2DataGridView1.Rows)
-             {
-
-
-
-                 if (row.Cells["Name"] != null && row.Cells["Name"].Value != null)
-                 {
-                     string productName = row.Cells["Name"].Value.ToString();
-
-                     Console.WriteLine("Product Name: " + productName);
-
-
-
-                     // int productId = Convert.ToInt32(row.Cells["ID"].Value); // Assuming "ID" is the column name for item ID
-                     int quantity = Convert.ToInt32(row.Cells["Qty"].Value);
-                     decimal amount = Convert.ToDecimal(row.Cells["Amount"].Value);
-
-
-                     objBLL2.SaveOrder(orderDateTime, productName, quantity, amount, newOrderID);
-                 }
-                 else
-                 {
-
-                     Console.WriteLine("Error: The cell value is null.");
-                 }
-
-
-             }
-
-
-             MessageBox.Show("Order(s) saved successfully.");
-
-
-
-             btn_clear_Click(sender, e);
-
-             oder_Id.Text = newOrderID.ToString();
-
-             //
-
-
-
-
-
-         }
-
-
-
-     } 
-       */
+      
 
         {
             ClassBLL2 objBLL2 = new ClassBLL2();
