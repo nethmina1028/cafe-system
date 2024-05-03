@@ -169,6 +169,10 @@ namespace cafe_system
         {
             sidepanel.Height = btn_logout.Height; // Side Panel of the logout button 
             sidepanel.Top = btn_logout.Top;
+
+            login log = new login();
+            log.Show();
+            this.Hide();
         }
 
         public enum UserRole
