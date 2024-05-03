@@ -171,12 +171,74 @@ namespace cafe_system
             sidepanel.Top = btn_logout.Top;
         }
 
-
+        public enum UserRole
+        {
+            None,     
+            ShiftSupervisor,  
+            Cashier 
+        }
         private void home_Load(object sender, EventArgs e)
         {
-            
+            string username = lbl_username.Text.ToLower();
+            UserRole userrole = GetUserRoleFromDatabase(username);
+            AdjustUIBasedOnRole(userrole);
+
         }
-        
+
+        private UserRole GetUserRoleFromDatabase(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(con1))
+            {
+                connection.Open();
+                string query = "SELECT JobRole FROM Employee WHERE EmployeeName = @username";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Username", username);
+
+
+
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    string role = result.ToString();
+                    return role == "Shift Supervisor" ? UserRole.ShiftSupervisor : UserRole.Cashier;
+                }
+                else
+                {
+                    
+                    MessageBox.Show("Invalid username. Please try again.");
+                    return UserRole.None;
+                }
+            }
+        }
+        private void AdjustUIBasedOnRole(UserRole userRole)
+        {
+            
+            if (userRole == UserRole.Cashier)
+            {
+               
+                btn_inventory.Enabled = false;
+                btn_reports.Enabled = false;
+                btn_employee.Enabled = false;
+                btn_settings.Enabled = false;
+
+                Color disabledBackColor = Color.Transparent; 
+                Color disabledForeColor = SystemColors.GrayText; 
+
+                btn_inventory.FillColor = disabledBackColor;
+                btn_inventory.ForeColor = disabledForeColor;
+
+                btn_reports.FillColor = disabledBackColor;
+                btn_reports.ForeColor = disabledForeColor;
+
+                btn_employee.FillColor = disabledBackColor;
+                btn_employee.ForeColor = disabledForeColor;
+
+                btn_settings.FillColor = disabledBackColor;
+                btn_settings.ForeColor = disabledForeColor;
+            }
+
+
+        }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
